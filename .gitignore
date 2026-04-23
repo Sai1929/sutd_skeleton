@@ -1,6 +1,7 @@
-# Environment secrets — NEVER commit
+# Environment variables (contain API keys — never commit)
 .env
 .env.*
+*.env
 !.env.example
 
 # Python
@@ -19,22 +20,31 @@ build/
 venv/
 env/
 
-# ML model artifacts (large binary files)
-models/
-
 # IDE
 .vscode/
 .idea/
+*.iml
 *.swp
 *.swo
 
-# Alembic auto-generated (keep versions/ but not these)
-alembic/__pycache__/
+# OS
+.DS_Store
+Thumbs.db
 
 # Logs
 *.log
 logs/
 
-# OS
-.DS_Store
-Thumbs.db
+# Model weights / large binaries
+*.bin
+*.pt
+*.ckpt
+models/
+
+# Alembic (keep versions, ignore pycache)
+ehs_backend/alembic/__pycache__/
+alembic/__pycache__/
+
+# Frontend build artifacts & dependencies
+ehs_frontend/node_modules/
+ehs_frontend/dist/

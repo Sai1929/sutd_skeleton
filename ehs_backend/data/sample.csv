@@ -1,0 +1,1143 @@
+Main Activity,Sub-Activity,Hazard,Initial_L,Initial_S,Initial_Risk,Control_Measures,Residual_L,Residual_S,Residual_Risk
+Work at Height,Scaffold erection,Fall from scaffold due to incomplete guardrails during installation,4,5,20,"Install guardrails progressively, use full body harness",2,5,10
+Work at Height,Scaffold use,Worker falls from platform due to missing edge protection,4,5,20,Ensure guardrails and toe boards are in place; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Slip and fall on wet roof surface after rainfall,3,5,15,Use anti-slip footwear and suspend work during rain,2,5,10
+Work at Height,Roof inspection,Fall through fragile roof panel during inspection activity,4,5,20,Install covers and warning signage; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Ladder work,Fall due to improper ladder angle on uneven ground,3,4,12,Secure ladder and maintain correct angle; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Facade work,Worker loses balance while handling materials at height in windy conditions,3,5,15,Use lifelines and secure materials,2,5,10
+Electrical Works,Cable installation,Electric shock from exposed live conductor,3,5,15,Isolate power supply and use insulated tools,1,5,5
+Electrical Works,Cable laying,Shock due to damaged cable insulation in wet environment,3,5,15,Inspect cables and use residual current device; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Panel testing,Arc flash during live panel testing without adequate PPE,3,5,15,Use arc-rated PPE and follow permit-to-work,1,5,5
+Electrical Works,Maintenance,Unexpected energization due to failure in lockout procedure,3,5,15,Implement lockout-tagout system,1,5,5
+Electrical Works,Temporary power,Overloaded extension cables causing overheating and fire risk,3,4,12,Use properly rated cables and avoid overloading; Obtain hot work permit and station fire extinguisher,2,3,6
+Excavation,Trenching,Collapse of trench due to unstable soil conditions,4,5,20,Install shoring and conduct soil assessment,2,5,10
+Excavation,Trenching,Trench wall failure after heavy rainfall leading to burial,4,5,20,Provide drainage and reinforcement; Use safety harness and lanyard at all times,2,5,10
+Excavation,Deep excavation,Ground collapse due to groundwater seepage,4,5,20,Implement dewatering system,2,5,10
+Excavation,Utility excavation,Striking underground electrical cable due to poor detection,3,5,15,Conduct utility scanning before excavation; Apply lockout tagout and use insulated gloves,1,5,5
+Excavation,Earthmoving,Worker struck by excavator due to blind spot,4,5,20,Assign banksman and segregate work zones,2,5,10
+Lifting Operations,Crane lifting,Load dropped due to failure of lifting sling,4,5,20,Inspect lifting gear before use,2,5,10
+Lifting Operations,Crane lifting,Uncontrolled load swing caused by sudden wind,3,5,15,Use taglines and monitor weather,2,5,10
+Lifting Operations,Rigging,Improper sling angle causing load imbalance,3,4,12,Ensure correct rigging method; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Tandem lifting,Miscoordination between cranes leading to instability,3,5,15,Appoint lifting supervisor and follow plan,2,5,10
+Lifting Operations,Material lifting,Load falls due to improper securing,4,5,20,Secure load using proper techniques; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Concrete pouring,Formwork collapse due to excessive loading during pour,4,5,20,Follow design limits and inspect formwork,2,5,10
+Concrete Works,Formwork erection,Fall from height while installing formwork panels,4,5,20,Use fall protection systems; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Finishing,Slip on wet concrete surface causing minor injury,3,2,6,Maintain housekeeping and signage,2,2,4
+Concrete Works,Reinforcement work,Injury from exposed rebar causing impalement risk,3,5,15,Install rebar caps,2,4,8
+Welding Works,Arc welding,Eye injury due to exposure to welding arc radiation,3,3,9,Use welding helmet with proper filter,1,2,2
+Welding Works,Arc welding,Fume inhalation in poorly ventilated confined space,3,5,15,Provide local exhaust ventilation,1,5,5
+Welding Works,Gas cutting,Sparks igniting nearby combustible materials,3,5,15,Clear flammable materials and assign fire watch,1,5,5
+Welding Works,Hot work,Burn injury from contact with hot metal surfaces,3,4,12,Use heat-resistant gloves,2,3,6
+Material Handling,Manual lifting,Back strain due to repetitive lifting of heavy loads,4,3,12,Provide mechanical aids and training,2,2,4
+Material Handling,Manual handling,Injury due to improper lifting posture,4,3,12,Train workers on proper lifting techniques,2,2,4
+Material Handling,Forklift operation,Collision with pedestrian at blind corner,4,5,20,Install mirrors and segregate pathways,2,5,10
+Material Handling,Forklift operation,Forklift overturn due to excessive speed while turning,3,5,15,Enforce speed limits and training,2,4,8
+Demolition,Wall demolition,Collapse of partially demolished wall,4,5,20,Follow demolition sequence and provide support,2,5,10
+Demolition,Structural demolition,Falling debris impacting nearby workers,4,5,20,Establish exclusion zones; Use safety harness and lanyard at all times,2,5,10
+Demolition,Interior demolition,Exposure to airborne dust particles,3,3,9,Use respiratory protection,2,2,4
+Confined Space,Tank entry,Toxic gas exposure due to poor ventilation,3,5,15,Conduct gas testing and provide ventilation,1,5,5
+Confined Space,Manhole work,Oxygen deficiency inside confined space,3,5,15,Continuous monitoring and ventilation,1,5,5
+Confined Space,Sewer work,Sudden release of hazardous gases during cleaning,3,5,15,Use gas detectors and standby personnel,1,5,5
+Chemical Handling,Painting,Inhalation of solvent vapors in enclosed space,3,4,12,Use respirator and ventilation,2,3,6
+Chemical Handling,Solvent use,Fire caused by ignition of flammable vapors,3,5,15,Eliminate ignition sources; Provide respiratory mask and ensure ventilation,1,5,5
+Chemical Handling,Epoxy application,Skin irritation due to chemical exposure,3,2,6,Use gloves and protective clothing,2,2,4
+Piling Works,Bored piling,Borehole collapse due to unstable ground,3,5,15,Install casing and monitor conditions,2,5,10
+Piling Works,Pile driving,Excessive noise causing hearing damage,4,3,12,Provide hearing protection,2,2,4
+Piling Works,Equipment setup,Rig instability due to uneven ground,3,5,15,Level and stabilize equipment,2,5,10
+Site Preparation,Land clearing,Worker struck by moving equipment due to poor visibility,4,5,20,Use spotter and high-visibility PPE,2,5,10
+Site Preparation,Grading,Vehicle skidding on loose or muddy ground,3,4,12,Stabilize surface and control speed,2,3,6
+Site Preparation,General work,Trip hazard due to scattered debris,3,2,6,Maintain housekeeping,2,2,4
+Work at Height,Scaffold inspection,Fall due to missing inspection tag and unsafe scaffold condition,4,5,20,Implement scaffold tagging system and inspections; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Edge work,Worker falls from open edge without guardrails,4,5,20,Install edge protection and safety barriers; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof maintenance,Loss of balance while carrying tools on sloped roof,3,5,15,Use tool lanyards and fall arrest system,2,5,10
+Work at Height,Ladder access,Slip while descending ladder due to contaminated footwear,3,4,12,Maintain clean footwear and ladder grips,2,3,6
+Work at Height,Platform work,Fall due to overreaching beyond platform limits,3,5,15,Train workers to avoid overreaching; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Cable pulling,Electric shock from damaged insulation during pulling activity,3,5,15,Inspect cables before installation; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Switchboard work,Arc flash due to improper isolation during maintenance,3,5,15,Apply lockout-tagout and test isolation,1,5,5
+Electrical Works,Temporary wiring,Fire risk from overheated temporary cables,3,4,12,Use certified cables and proper load distribution; Obtain hot work permit and station fire extinguisher,2,3,6
+Electrical Works,Testing,Electric shock during testing of live circuits without PPE,3,5,15,Use insulated gloves and tools,1,5,5
+Electrical Works,Installation,Contact with concealed live wiring during drilling,3,5,15,Scan walls before drilling,1,5,5
+Excavation,Trench work,Collapse due to unsupported trench walls in loose soil,4,5,20,Install trench support system,2,5,10
+Excavation,Excavation near structure,Foundation instability caused by nearby excavation,4,5,20,Conduct structural assessment,2,5,10
+Excavation,Manual digging,Worker injury from striking buried objects,3,4,12,Use detection tools and PPE,2,3,6
+Excavation,Deep pit excavation,Water accumulation weakening excavation walls,4,5,20,Provide pumping and drainage system,2,5,10
+Excavation,Backfilling,Worker struck by moving compaction equipment,4,5,20,Establish exclusion zones,2,5,10
+Lifting Operations,Crane lifting,Load falls due to improper rigging method,4,5,20,Ensure certified riggers and proper slinging; Use safety harness and lanyard at all times,2,5,10
+Lifting Operations,Crane operation,Collision with structure due to poor visibility,3,5,15,Use signalman and cameras,2,5,10
+Lifting Operations,Lifting heavy equipment,Failure of lifting gear due to lack of inspection,3,5,15,Inspect lifting equipment regularly,2,5,10
+Lifting Operations,Material hoisting,Load swing hitting nearby workers,3,5,15,Use taglines and restrict access,2,5,10
+Lifting Operations,Mobile crane setup,Crane instability due to uneven ground,3,5,15,Level ground and use outriggers properly,2,5,10
+Concrete Works,Concrete pouring,Formwork leakage causing sudden structural failure,4,5,20,Inspect formwork integrity,2,5,10
+Concrete Works,Reinforcement work,Cuts from sharp steel reinforcement edges,3,3,9,Use gloves and protective gear,2,2,4
+Concrete Works,Formwork dismantling,Fall during removal of elevated formwork panels,4,5,20,Use fall protection equipment; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Surface finishing,Slip due to wet and uneven concrete surface,3,2,6,Maintain clean working area,2,2,4
+Concrete Works,Concrete mixing,Exposure to cement dust causing respiratory irritation,3,3,9,Use dust masks and ventilation,2,2,4
+Welding Works,Arc welding,Exposure to intense light causing eye injury,3,3,9,Use welding helmet with proper filter,1,2,2
+Welding Works,Hot work,Burn injury from contact with hot metal surfaces,3,4,12,Use heat-resistant gloves,2,3,6
+Welding Works,Gas cutting,Gas leak leading to fire or explosion,3,5,15,Check hoses and connections; Provide respiratory mask and ensure ventilation,1,5,5
+Welding Works,Confined welding,Fume buildup due to lack of ventilation,3,5,15,Provide forced ventilation,1,5,5
+Welding Works,Grinding,Sparks igniting combustible materials nearby,3,5,15,Clear flammable materials,1,5,5
+Material Handling,Manual lifting,Muscle strain from lifting heavy materials repeatedly,4,3,12,Provide lifting aids and training,2,2,4
+Material Handling,Manual handling,Injury from carrying awkward shaped loads,3,3,9,Use team lifting,2,2,4
+Material Handling,Forklift use,Collision due to restricted visibility while carrying load,4,5,20,Drive in reverse when load blocks view,2,5,10
+Material Handling,Forklift operation,Forklift overturn on uneven surface,3,5,15,Operate on stable surfaces,2,4,8
+Material Handling,Storage,Materials falling from improperly stacked loads,3,4,12,Follow proper stacking procedures; Use safety harness and lanyard at all times,2,3,6
+Demolition,Wall demolition,Unexpected collapse of wall during breaking works,4,5,20,Follow demolition sequence,2,5,10
+Demolition,Concrete breaking,Flying debris causing injury to workers,4,4,16,Use face shields and barriers,2,3,6
+Demolition,Structural removal,Collapse due to removal of load-bearing elements,4,5,20,Obtain engineering approval,2,5,10
+Demolition,Interior stripping,Exposure to airborne dust and particles,3,3,9,Use respiratory protection,2,2,4
+Demolition,Equipment use,Noise exposure from demolition equipment,4,3,12,Provide hearing protection,2,2,4
+Confined Space,Tank cleaning,Exposure to toxic vapors during cleaning process,3,5,15,Ventilate and monitor gas levels; Provide respiratory mask and ensure ventilation,1,5,5
+Confined Space,Sewer entry,Oxygen deficiency causing asphyxiation risk,3,5,15,Continuous gas monitoring,1,5,5
+Confined Space,Inspection work,Limited access delaying emergency rescue,3,5,15,Provide rescue plan and standby team,1,5,5
+Confined Space,Maintenance work,Heat stress due to poor air circulation,3,4,12,Provide ventilation and rest breaks,2,3,6
+Confined Space,Entry work,Slip hazard due to wet confined surfaces,3,3,9,Ensure proper footing and housekeeping; Provide respiratory mask and ensure ventilation,2,2,4
+Chemical Handling,Painting,Skin irritation from prolonged paint exposure,3,2,6,Use gloves and protective clothing,2,2,4
+Chemical Handling,Solvent cleaning,Fire hazard due to flammable vapors,3,5,15,Store chemicals properly,1,5,5
+Chemical Handling,Chemical mixing,Toxic fumes released during incorrect mixing,3,5,15,Follow SDS guidelines strictly; Provide respiratory mask and ensure ventilation,1,5,5
+Chemical Handling,Storage,Chemical leakage causing exposure risk,3,4,12,Use proper containers and labeling; Wear chemical resistant gloves and protective apron,2,3,6
+Chemical Handling,Application work,Inhalation of airborne chemicals in enclosed space,3,4,12,Use respirator and ventilation,2,3,6
+Piling Works,Bored piling,Collapse of borehole due to unstable soil conditions,3,5,15,Install casing and monitor soil,2,5,10
+Piling Works,Pile driving,Exposure to excessive noise from piling equipment,4,3,12,Use hearing protection,2,2,4
+Piling Works,Equipment setup,Instability of piling rig on uneven ground,3,5,15,Level ground before setup,2,5,10
+Piling Works,Drilling,Contact with underground obstruction causing equipment damage,3,4,12,Conduct pre-drilling survey,2,3,6
+Piling Works,Operation,Worker struck by moving piling equipment,4,5,20,Establish safety zones,2,5,10
+Site Preparation,Land clearing,Worker struck by moving machinery due to blind spots,4,5,20,Use spotter and signals,2,5,10
+Site Preparation,Grading,Vehicle skidding on loose soil surface,3,4,12,Compact ground and control speed,2,3,6
+Site Preparation,Debris removal,Injury from sharp debris during cleanup,3,3,9,Use gloves and PPE,2,2,4
+Site Preparation,Temporary access,Trip hazard from uneven temporary pathways,3,2,6,Level surfaces and maintain paths,2,2,4
+Site Preparation,General work,Dust inhalation due to dry site conditions,3,3,9,Apply water suppression; Provide respiratory mask and ensure ventilation,2,2,4
+Work at Height,Scaffold modification,Fall during alteration of scaffold without proper edge protection,4,5,20,Install temporary guardrails and use harness,2,5,10
+Work at Height,Roof repair,Fall while stepping on fragile roofing sheet,4,5,20,Provide crawl boards and warning signs,2,5,10
+Work at Height,Edge work,Worker slips near open edge due to debris accumulation,3,5,15,Maintain housekeeping and install barriers; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Platform work,Fall due to sudden movement while handling materials at height,3,5,15,Use fall arrest system and secure materials,2,5,10
+Work at Height,Ladder work,Loss of footing due to unstable ladder base,3,4,12,Secure ladder and inspect before use; Use safety harness and lanyard at all times,2,3,6
+Electrical Works,Installation,Shock from contact with concealed wiring during drilling,3,5,15,Use cable detection tools; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Cable routing,Overheating cables due to improper bundling,3,4,12,Ensure proper spacing and ventilation,2,3,6
+Electrical Works,Maintenance,Electric shock from using damaged tools,3,5,15,Inspect tools before use; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Panel work,Arc flash caused by loose electrical connections,3,5,15,Tighten connections and inspect panels; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Temporary setup,Fire due to overloaded temporary distribution board,3,4,12,Use correct load rating and circuit protection; Obtain hot work permit and station fire extinguisher,2,3,6
+Excavation,Trenching,Collapse due to excavation near heavy equipment movement,4,5,20,Install support systems and restrict loads,2,5,10
+Excavation,Excavation work,Fall into open excavation due to lack of barricade,3,4,12,Install guardrails and warning signs; Use safety harness and lanyard at all times,2,3,6
+Excavation,Deep excavation,Wall failure due to prolonged exposure without support,4,5,20,Provide continuous support system,2,5,10
+Excavation,Utility work,Damage to underground services causing hazardous exposure,3,5,15,Conduct utility mapping,1,5,5
+Excavation,Backfilling,Worker struck by reversing equipment,4,5,20,Use spotter and alarms,2,5,10
+Lifting Operations,Crane lifting,Load drop due to improper hook engagement,4,5,20,Ensure proper hook locking mechanism,2,5,10
+Lifting Operations,Crane operation,Collision due to operator blind spots,3,5,15,Use cameras and signalman,2,5,10
+Lifting Operations,Rigging,Failure of sling due to wear and tear,3,5,15,Inspect and replace damaged slings,2,5,10
+Lifting Operations,Material lifting,Load striking nearby structure during lifting,3,4,12,Maintain clearance and control movement,2,3,6
+Lifting Operations,Mobile crane,Instability due to improper outrigger deployment,3,5,15,Fully extend outriggers and level ground,2,5,10
+Concrete Works,Concrete pouring,Formwork failure due to inadequate support spacing,4,5,20,Follow design specifications,2,5,10
+Concrete Works,Rebar work,Trips caused by protruding reinforcement bars,3,3,9,Install rebar caps and maintain access,2,2,4
+Concrete Works,Formwork removal,Fall from height during dismantling process,4,5,20,Use proper access and fall protection; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Surface work,Slip due to spilled concrete on walking path,3,2,6,Clean spills immediately,2,2,4
+Concrete Works,Mixing operation,Exposure to airborne cement dust,3,3,9,Use masks and ventilation,2,2,4
+Welding Works,Arc welding,Eye injury due to exposure to arc light,3,3,9,Wear approved welding helmet,1,2,2
+Welding Works,Hot work,Fire risk from sparks contacting combustible materials,3,5,15,Clear area and use fire watch,1,5,5
+Welding Works,Gas cutting,Gas cylinder leak causing fire hazard,3,5,15,Check regulators and connections; Provide respiratory mask and ensure ventilation,1,5,5
+Welding Works,Grinding,Sparks causing burns to nearby workers,3,4,12,Use protective screens; Obtain hot work permit and station fire extinguisher,2,3,6
+Welding Works,Confined welding,Fume inhalation due to limited airflow,3,5,15,Provide ventilation system,1,5,5
+Material Handling,Manual lifting,Injury from lifting load beyond capacity,4,3,12,Follow safe lifting limits,2,2,4
+Material Handling,Manual transport,Foot injury from dropped materials,3,3,9,Wear safety footwear,2,2,4
+Material Handling,Forklift use,Collision due to speeding in work area,4,5,20,Enforce speed limits,2,5,10
+Material Handling,Forklift operation,Load falling due to improper stacking,3,4,12,Stack loads securely; Use safety harness and lanyard at all times,2,3,6
+Material Handling,Storage,Collapse of stacked materials,3,4,12,Maintain proper stacking height,2,3,6
+Demolition,Wall demolition,Falling debris due to uncontrolled breaking sequence,4,5,20,Follow systematic demolition plan; Use safety harness and lanyard at all times,2,5,10
+Demolition,Concrete demolition,Injury from flying fragments,4,4,16,Use protective barriers and PPE,2,3,6
+Demolition,Structural demolition,Collapse due to removal of key supports,4,5,20,Conduct structural analysis,2,5,10
+Demolition,Interior work,Dust exposure during demolition,3,3,9,Use dust suppression and masks; Provide respiratory mask and ensure ventilation,2,2,4
+Demolition,Equipment operation,Noise hazard from heavy equipment,4,3,12,Provide hearing protection,2,2,4
+Confined Space,Tank entry,Exposure to toxic gases during entry,3,5,15,Test atmosphere before entry; Provide respiratory mask and ensure ventilation,1,5,5
+Confined Space,Sewer work,Oxygen deficiency due to poor ventilation,3,5,15,Provide continuous air supply; Provide respiratory mask and ensure ventilation,1,5,5
+Confined Space,Inspection work,Delayed rescue due to restricted entry point,3,5,15,Prepare rescue plan,1,5,5
+Confined Space,Maintenance,Heat stress due to confined environment,3,4,12,Provide cooling and rest breaks; Provide respiratory mask and ensure ventilation,2,3,6
+Confined Space,Entry,Slip hazard due to wet surfaces,3,3,9,Use anti-slip footwear,2,2,4
+Chemical Handling,Painting,Exposure to paint fumes causing irritation,3,3,9,Use respirators,2,2,4
+Chemical Handling,Solvent use,Fire hazard from improper storage of flammable liquids,3,5,15,Store in approved containers; Obtain hot work permit and station fire extinguisher,1,5,5
+Chemical Handling,Mixing,Release of toxic fumes due to incorrect chemical mixing,3,5,15,Follow SDS instructions; Provide respiratory mask and ensure ventilation,1,5,5
+Chemical Handling,Storage,Chemical spill causing exposure risk,3,4,12,Use spill containment measures; Wear chemical resistant gloves and protective apron,2,3,6
+Chemical Handling,Application,Skin burns due to chemical contact,3,3,9,Wear protective clothing,2,2,4
+Piling Works,Bored piling,Collapse due to weak soil conditions,3,5,15,Install casing and monitor,2,5,10
+Piling Works,Pile driving,Noise exposure from piling activity,4,3,12,Use hearing protection,2,2,4
+Piling Works,Setup,Equipment instability due to uneven base,3,5,15,Stabilize equipment,2,5,10
+Piling Works,Drilling,Damage to underground utilities,3,5,15,Conduct pre-drill survey,1,5,5
+Piling Works,Operation,Worker struck by moving rig,4,5,20,Define exclusion zones,2,5,10
+Site Preparation,Land clearing,Worker struck by moving plant equipment,4,5,20,Use trained operator and spotter,2,5,10
+Site Preparation,Grading,Vehicle slipping on loose surface,3,4,12,Compact surface,2,3,6
+Site Preparation,Cleanup,Cuts from handling sharp debris,3,3,9,Wear gloves,2,2,4
+Site Preparation,Access setup,Trip hazard from uneven temporary walkways,3,2,6,Level walkways,2,2,4
+Site Preparation,General work,Dust inhalation from dry conditions,3,3,9,Use water suppression; Provide respiratory mask and ensure ventilation,2,2,4
+Work at Height,Scaffold access,Fall while climbing scaffold due to missing access ladder,4,5,20,Provide secured access ladder and inspect regularly; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof installation,Worker falls due to unsecured roofing materials shifting underfoot,4,5,20,Secure materials and use fall protection; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Edge protection,Fall from height due to removal of guardrails during work,4,5,20,Reinstall guardrails immediately after removal; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Maintenance work,Fall due to distraction while working near open edge,3,5,15,Provide supervision and barriers; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Elevated platform,Worker loses balance due to sudden platform movement,3,5,15,Stabilize platform and train operators; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Cable installation,Electric shock due to contact with partially exposed conductor,3,5,15,Ensure full insulation before energizing; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Panel maintenance,Arc flash caused by short circuit during maintenance,3,5,15,Use arc-rated PPE and proper procedures,1,5,5
+Electrical Works,Temporary wiring,Overheating cables due to excessive current load,3,4,12,Install circuit breakers and monitor load,2,3,6
+Electrical Works,Inspection,Shock hazard due to failure to verify isolation,3,5,15,Test circuits before work; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Installation,Contact with live wires due to improper labeling,3,5,15,Ensure proper labeling of circuits; Apply lockout tagout and use insulated gloves,1,5,5
+Excavation,Trenching,Collapse due to lack of trench support in sandy soil,4,5,20,Install trench boxes or shoring,2,5,10
+Excavation,Deep excavation,Ground collapse caused by adjacent traffic vibration,4,5,20,Monitor vibration and reinforce walls; Wear hearing protection and ear defenders,2,5,10
+Excavation,Utility excavation,Exposure to gas line due to inaccurate mapping,3,5,15,Conduct utility detection survey; Provide respiratory mask and ensure ventilation,1,5,5
+Excavation,Backfilling,Worker struck by compactor during operation,4,5,20,Maintain safe distance and use signals,2,5,10
+Excavation,Excavation work,Fall into excavation pit due to lack of barricade,3,4,12,Install guardrails and warning signs; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Crane lifting,Load dropped due to failure of lifting hook latch,4,5,20,Use safety latch hooks and inspect,2,5,10
+Lifting Operations,Crane operation,Collision with overhead structure due to poor planning,3,5,15,Conduct lifting plan and clearance checks,2,5,10
+Lifting Operations,Rigging,Improper sling attachment causing load instability,3,4,12,Train riggers and inspect setup,2,3,6
+Lifting Operations,Material lifting,Load swing due to sudden crane movement,3,5,15,Control crane speed and use taglines,2,5,10
+Lifting Operations,Mobile crane,Crane tipping due to soft ground conditions,3,5,15,Stabilize ground and deploy outriggers,2,5,10
+Concrete Works,Concrete pouring,Formwork collapse due to excessive vibration during pour,4,5,20,Control vibration and inspect formwork; Wear hearing protection and ear defenders,2,5,10
+Concrete Works,Reinforcement work,Cuts from handling sharp rebar ends,3,3,9,Use gloves and install caps,2,2,4
+Concrete Works,Formwork erection,Fall from height while positioning formwork panels,4,5,20,Use proper access and harness,2,5,10
+Concrete Works,Finishing,Slip hazard from slurry accumulation on floor,3,2,6,Clean surfaces regularly,2,2,4
+Concrete Works,Material handling,Injury from manual handling of heavy concrete bags,4,3,12,Use lifting aids,2,2,4
+Welding Works,Arc welding,Eye damage due to exposure to welding arc,3,3,9,Wear appropriate welding helmet,1,2,2
+Welding Works,Hot work,Fire caused by sparks landing on flammable waste,3,5,15,Clear waste and assign fire watch,1,5,5
+Welding Works,Gas cutting,Explosion due to improper gas cylinder storage,3,5,15,Store cylinders upright and secured; Provide respiratory mask and ensure ventilation,1,5,5
+Welding Works,Grinding,Burn injury from hot metal fragments,3,4,12,Use protective clothing,2,3,6
+Welding Works,Confined welding,Fume inhalation due to lack of ventilation,3,5,15,Install exhaust ventilation,1,5,5
+Material Handling,Manual lifting,Back injury from improper lifting technique,4,3,12,Provide ergonomic training,2,2,4
+Material Handling,Manual handling,Hand injury from sharp edges of materials,3,3,9,Wear cut-resistant gloves,2,2,4
+Material Handling,Forklift operation,Collision due to poor visibility in congested area,4,5,20,Use designated pathways and signals,2,5,10
+Material Handling,Forklift use,Load falling due to unstable stacking,3,4,12,Secure loads properly; Use safety harness and lanyard at all times,2,3,6
+Material Handling,Storage,Stack collapse due to excessive height,3,4,12,Limit stacking height; Use safety harness and lanyard at all times,2,3,6
+Demolition,Wall removal,Unexpected collapse due to hidden structural weakness,4,5,20,Conduct structural assessment,2,5,10
+Demolition,Concrete breaking,Flying debris causing injury to nearby workers,4,4,16,Install barriers and PPE,2,3,6
+Demolition,Structural demolition,Collapse due to removal of support elements,4,5,20,Follow engineered demolition sequence,2,5,10
+Demolition,Interior work,Dust inhalation from demolition debris,3,3,9,Use dust suppression and masks; Provide respiratory mask and ensure ventilation,2,2,4
+Demolition,Equipment operation,Hearing damage from prolonged noise exposure,4,3,12,Provide hearing protection,2,2,4
+Confined Space,Tank entry,Toxic gas exposure due to inadequate ventilation,3,5,15,Test atmosphere and ventilate; Provide respiratory mask and ensure ventilation,1,5,5
+Confined Space,Sewer work,Oxygen deficiency leading to suffocation risk,3,5,15,Continuous gas monitoring,1,5,5
+Confined Space,Maintenance work,Restricted entry delaying emergency evacuation,3,5,15,Prepare rescue plan,1,5,5
+Confined Space,Inspection,Heat stress due to confined conditions,3,4,12,Provide rest breaks and ventilation,2,3,6
+Confined Space,Entry,Slip hazard from wet internal surfaces,3,3,9,Use anti-slip footwear,2,2,4
+Chemical Handling,Painting,Inhalation of paint fumes causing respiratory irritation,3,3,9,Use respirators,2,2,4
+Chemical Handling,Solvent use,Fire due to improper handling of flammable liquids,3,5,15,Store and handle properly; Obtain hot work permit and station fire extinguisher,1,5,5
+Chemical Handling,Mixing,Release of toxic gases due to incompatible chemicals,3,5,15,Follow SDS guidelines; Provide respiratory mask and ensure ventilation,1,5,5
+Chemical Handling,Storage,Leakage from damaged containers,3,4,12,Inspect containers regularly,2,3,6
+Chemical Handling,Application,Skin burns due to chemical splashes,3,3,9,Wear protective clothing,2,2,4
+Piling Works,Bored piling,Collapse of borehole due to unstable soil layers,3,5,15,Use casing and monitor conditions,2,5,10
+Piling Works,Pile driving,Noise hazard from continuous piling operations,4,3,12,Provide hearing protection,2,2,4
+Piling Works,Setup,Instability of rig due to uneven setup surface,3,5,15,Level and secure rig,2,5,10
+Piling Works,Drilling,Damage to underground utilities during drilling,3,5,15,Conduct survey before drilling,1,5,5
+Piling Works,Operation,Worker struck by moving equipment,4,5,20,Establish safety perimeter,2,5,10
+Site Preparation,Land clearing,Worker struck by moving machinery due to blind spots,4,5,20,Use spotter and alarms,2,5,10
+Site Preparation,Grading,Vehicle losing traction on loose soil surface,3,4,12,Compact and stabilize ground,2,3,6
+Site Preparation,Cleanup,Injury from handling sharp construction debris,3,3,9,Use gloves and PPE,2,2,4
+Site Preparation,Temporary access,Trip hazard from uneven access routes,3,2,6,Maintain level pathways,2,2,4
+Site Preparation,General work,Dust exposure causing respiratory discomfort,3,3,9,Apply water suppression; Provide respiratory mask and ensure ventilation,2,2,4
+Work at Height,Scaffold work,Fall while stepping onto incomplete scaffold platform during early erection phase,4,5,20,Restrict access until fully erected and inspected; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Loss of footing due to loose debris accumulating near roof edge,3,5,15,Clear debris and install edge protection,2,5,10
+Work at Height,Facade work,Worker falls while reaching beyond safe working distance on suspended platform,3,5,15,Use fall arrest system and reposition platform,2,5,10
+Work at Height,Maintenance,Fall during inspection due to inadequate lighting conditions,3,5,15,Provide sufficient temporary lighting; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Ladder work,Fall caused by using ladder on sloped and unstable surface,3,4,12,Stabilize ladder and secure footing; Use safety harness and lanyard at all times,2,3,6
+Electrical Works,Cable installation,Electric shock when handling partially energized cable during installation,3,5,15,Verify isolation before handling,1,5,5
+Electrical Works,Panel work,Arc flash triggered by accidental short circuit during tightening of terminals,3,5,15,Use insulated tools and arc-rated PPE,1,5,5
+Electrical Works,Maintenance,Shock due to failure to detect backfeed from secondary source,3,5,15,Test all sources and isolate completely; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Temporary setup,Overheating of cables due to poor ventilation in confined routing space,3,4,12,Improve cable routing and ventilation,2,3,6
+Electrical Works,Inspection,Contact with live components due to missing protective covers,3,5,15,Install covers and enforce lockout procedures,1,5,5
+Excavation,Trenching,Collapse caused by heavy rain weakening trench sidewalls overnight,4,5,20,Inspect daily and install support systems,2,5,10
+Excavation,Deep excavation,Soil failure due to prolonged exposure without reinforcement,4,5,20,Provide staged support installation,2,5,10
+Excavation,Utility excavation,Damage to underground gas pipe leading to hazardous leak,3,5,15,Use detection equipment and permits; Provide respiratory mask and ensure ventilation,1,5,5
+Excavation,Earthworks,Worker struck by reversing dump truck in active excavation zone,4,5,20,Use spotter and reversing alarms,2,5,10
+Excavation,Backfilling,Entrapment hazard due to sudden collapse of partially filled trench,4,5,20,Compact layers and control access,2,5,10
+Lifting Operations,Crane lifting,Load dropped when lifting gear fails under excessive load,4,5,20,Verify load limits and inspect gear,2,5,10
+Lifting Operations,Crane operation,Collision with adjacent structure due to poor lift path planning,3,5,15,Plan lift path and ensure clearance,2,5,10
+Lifting Operations,Rigging,Improper securing of load leading to shift during lifting,3,4,12,Ensure correct rigging techniques,2,3,6
+Lifting Operations,Material lifting,Sudden load swing due to abrupt crane movement,3,5,15,Operate crane smoothly and use taglines,2,5,10
+Lifting Operations,Mobile crane,Instability caused by ground subsidence under outriggers,3,5,15,Assess ground bearing capacity,2,5,10
+Concrete Works,Concrete pouring,Formwork collapse due to uneven distribution of concrete load,4,5,20,Monitor pour sequence and load distribution,2,5,10
+Concrete Works,Rebar work,Worker trips over scattered reinforcement materials on walkway,3,3,9,Maintain clear access routes,2,2,4
+Concrete Works,Formwork removal,Fall during dismantling due to lack of proper working platform,4,5,20,Provide proper access platforms; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Finishing,Slip hazard caused by wet slurry left unattended,3,2,6,Clean area promptly,2,2,4
+Concrete Works,Mixing,Exposure to airborne cement particles during dry mixing process,3,3,9,Use dust control measures,2,2,4
+Welding Works,Arc welding,Eye injury from exposure to welding arc without proper shield,3,3,9,Ensure use of welding helmet,1,2,2
+Welding Works,Hot work,Fire initiated by sparks landing on combustible insulation material,3,5,15,Remove combustible materials; Obtain hot work permit and station fire extinguisher,1,5,5
+Welding Works,Gas cutting,Explosion risk due to leaking gas hose connection,3,5,15,Inspect hoses and secure fittings; Provide respiratory mask and ensure ventilation,1,5,5
+Welding Works,Grinding,Burn injury from contact with hot metal debris,3,4,12,Wear protective clothing,2,3,6
+Welding Works,Confined welding,Toxic fumes accumulating in enclosed workspace,3,5,15,Install exhaust ventilation system,1,5,5
+Material Handling,Manual lifting,Strain injury from lifting loads beyond safe weight limits,4,3,12,Provide mechanical lifting aids,2,2,4
+Material Handling,Manual handling,Injury caused by awkward posture while carrying bulky items,3,3,9,Train on safe handling techniques,2,2,4
+Material Handling,Forklift operation,Collision with worker due to blind corner in warehouse layout,4,5,20,Install mirrors and signage,2,5,10
+Material Handling,Forklift use,Load falling during transport due to unstable stacking,3,4,12,Secure load before movement; Use safety harness and lanyard at all times,2,3,6
+Material Handling,Storage,Collapse of stored materials due to improper stacking arrangement,3,4,12,Follow stacking guidelines,2,3,6
+Demolition,Wall demolition,Unexpected collapse during partial removal of structure,4,5,20,Follow engineered demolition sequence,2,5,10
+Demolition,Concrete breaking,Flying fragments causing injuries to nearby workers,4,4,16,Install protective barriers,2,3,6
+Demolition,Structural demolition,Failure due to removal of key structural supports prematurely,4,5,20,Conduct engineering review,2,5,10
+Demolition,Interior work,Dust exposure from demolition activities affecting breathing,3,3,9,Use dust suppression and PPE; Provide respiratory mask and ensure ventilation,2,2,4
+Demolition,Equipment use,Hearing damage from prolonged exposure to demolition noise,4,3,12,Provide hearing protection,2,2,4
+Confined Space,Tank entry,Exposure to toxic atmosphere due to insufficient pre-entry testing,3,5,15,Conduct gas testing before entry,1,5,5
+Confined Space,Sewer work,Oxygen deficiency caused by displacement from other gases,3,5,15,Use continuous gas monitoring,1,5,5
+Confined Space,Maintenance,Delayed rescue due to lack of standby personnel,3,5,15,Assign trained standby personnel,1,5,5
+Confined Space,Inspection,Heat stress due to high temperature in enclosed area,3,4,12,Provide ventilation and rest breaks,2,3,6
+Confined Space,Entry,Slip hazard due to wet internal surfaces and poor footing,3,3,9,Use anti-slip footwear,2,2,4
+Chemical Handling,Painting,Inhalation of paint vapors in poorly ventilated indoor area,3,3,9,Provide ventilation and respirators,2,2,4
+Chemical Handling,Solvent use,Fire caused by ignition of volatile solvent vapors,3,5,15,Eliminate ignition sources; Provide respiratory mask and ensure ventilation,1,5,5
+Chemical Handling,Mixing,Toxic gas release due to mixing incompatible chemicals,3,5,15,Follow SDS instructions strictly; Provide respiratory mask and ensure ventilation,1,5,5
+Chemical Handling,Storage,Leakage from improperly sealed chemical containers,3,4,12,Inspect and seal containers properly; Wear chemical resistant gloves and protective apron,2,3,6
+Chemical Handling,Application,Skin irritation from repeated exposure to chemical agents,3,3,9,Use protective gloves and clothing; Wear chemical resistant gloves and protective apron,2,2,4
+Piling Works,Bored piling,Borehole collapse due to unstable subsurface conditions,3,5,15,Install casing and monitor soil,2,5,10
+Piling Works,Pile driving,Noise exposure exceeding safe limits during prolonged operations,4,3,12,Use hearing protection,2,2,4
+Piling Works,Setup,Instability of piling rig due to uneven or soft ground,3,5,15,Prepare stable working platform,2,5,10
+Piling Works,Drilling,Damage to buried utilities during drilling operation,3,5,15,Conduct utility survey,1,5,5
+Piling Works,Operation,Worker struck by moving piling equipment,4,5,20,Define restricted zones,2,5,10
+Site Preparation,Land clearing,Worker struck by moving excavator due to limited visibility,4,5,20,Use trained spotter,2,5,10
+Site Preparation,Grading,Vehicle losing traction on wet and loose soil surface,3,4,12,Stabilize and compact ground,2,3,6
+Site Preparation,Cleanup,Injury caused by sharp debris during manual handling,3,3,9,Wear appropriate PPE,2,2,4
+Site Preparation,Temporary access,Trip hazard from uneven temporary walkways,3,2,6,Maintain even walking surfaces,2,2,4
+Site Preparation,General work,Dust inhalation due to dry environmental conditions,3,3,9,Apply water suppression techniques; Provide respiratory mask and ensure ventilation,2,2,4
+Work at Height,Scaffold work,Fall due to missing guardrails during early morning setup,4,5,20,Install guardrails before access; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Slip on dusty roof surface reducing traction,3,5,15,Clean surface and use anti-slip footwear,2,5,10
+Work at Height,Facade work,Fall while repositioning platform without securing harness,4,5,20,Ensure harness is anchored at all times,2,5,10
+Work at Height,Inspection,Fall due to poor visibility during night inspection,3,5,15,Provide adequate lighting; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Ladder work,Loss of balance while carrying tools up ladder,3,4,12,Use tool belt and maintain three-point contact; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Platform work,Fall caused by sudden movement of mobile platform,3,5,15,Stabilize platform and train operators; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Maintenance,Fall due to stepping on unsecured temporary cover,4,5,20,Secure covers and mark clearly,2,5,10
+Work at Height,Roof access,Fall while accessing roof without proper access point,4,5,20,Provide safe access system; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Edge work,Fall due to distraction from nearby simultaneous work,3,5,15,Implement work coordination; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Scaffold dismantling,Fall during dismantling due to removal of guardrails prematurely,4,5,20,Follow dismantling sequence; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Cable work,Electric shock due to damaged insulation on cable,3,5,15,Inspect cables before use; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Panel work,Arc flash due to loose terminal connections,3,5,15,Tighten connections and inspect; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Maintenance,Shock from unexpected backfeed in system,3,5,15,Verify isolation from all sources,1,5,5
+Electrical Works,Installation,Contact with live wire during drilling operation,3,5,15,Use cable detection equipment; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Temporary wiring,Overheating due to overloading of extension cables,3,4,12,Use proper rated cables,2,3,6
+Electrical Works,Inspection,Shock hazard from exposed conductive parts,3,5,15,Install protective covers; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Testing,Arc flash during testing of energized equipment,3,5,15,Use arc-rated PPE,1,5,5
+Electrical Works,Repair,Shock due to use of faulty tools,3,5,15,Inspect tools regularly; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Connection work,Incorrect wiring causing short circuit,3,4,12,Follow wiring diagrams,2,3,6
+Electrical Works,DB setup,Fire risk due to improper load distribution,3,4,12,Balance electrical load; Obtain hot work permit and station fire extinguisher,2,3,6
+Excavation,Trenching,Collapse due to loose sandy soil without support,4,5,20,Install trench support,2,5,10
+Excavation,Deep excavation,Wall collapse after prolonged exposure to weather,4,5,20,Provide reinforcement systems,2,5,10
+Excavation,Utility excavation,Damage to underground cable causing hazard,3,5,15,Conduct utility scan,1,5,5
+Excavation,Earthworks,Worker struck by moving excavator,4,5,20,Use banksman,2,5,10
+Excavation,Backfilling,Entrapment due to collapse during compaction,4,5,20,Control compaction process,2,5,10
+Excavation,Pit excavation,Fall into open pit due to lack of barricade,3,4,12,Install barriers; Use safety harness and lanyard at all times,2,3,6
+Excavation,Manual digging,Injury from sharp buried object,3,3,9,Use PPE and tools,2,2,4
+Excavation,Trenching,Water ingress weakening trench structure,4,5,20,Provide dewatering system,2,5,10
+Excavation,Excavation near road,Collapse due to traffic vibration,4,5,20,Monitor and reinforce walls; Wear hearing protection and ear defenders,2,5,10
+Excavation,Excavation work,Worker slipping into trench due to loose soil,3,4,12,Maintain safe edges,2,3,6
+Lifting Operations,Crane lifting,Load dropped due to sling failure under stress,4,5,20,Inspect lifting gear,2,5,10
+Lifting Operations,Crane work,Collision with structure due to poor planning,3,5,15,Plan lifting path,2,5,10
+Lifting Operations,Rigging,Improper sling angle causing imbalance,3,4,12,Train riggers; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Material lifting,Load swing hitting workers during lifting,3,5,15,Use taglines,2,5,10
+Lifting Operations,Mobile crane,Crane instability on uneven terrain,3,5,15,Level ground,2,5,10
+Lifting Operations,Hoisting,Load falling due to improper securing,4,5,20,Secure load properly; Use safety harness and lanyard at all times,2,5,10
+Lifting Operations,Crane lifting,Hook disengagement causing load drop,4,5,20,Use safety latch hooks,2,5,10
+Lifting Operations,Material handling,Load shift during lifting due to uneven weight,3,4,12,Balance load,2,3,6
+Lifting Operations,Crane operation,Operator error due to fatigue,3,5,15,Provide rest breaks,2,5,10
+Lifting Operations,Rigging,Hand injury during rigging setup,3,3,9,Wear gloves,2,2,4
+Concrete Works,Concrete pouring,Formwork collapse due to excessive pressure,4,5,20,Follow design limits,2,5,10
+Concrete Works,Rebar work,Injury from exposed reinforcement bars,3,5,15,Install caps,2,4,8
+Concrete Works,Formwork removal,Fall from height during dismantling,4,5,20,Use fall protection; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Finishing,Slip due to wet surface,3,2,6,Maintain housekeeping,2,2,4
+Concrete Works,Mixing,Dust inhalation during mixing process,3,3,9,Use masks; Provide respiratory mask and ensure ventilation,2,2,4
+Concrete Works,Pouring,Concrete splash causing skin irritation,3,3,9,Use protective clothing,2,2,4
+Concrete Works,Transport,Injury from moving concrete buckets,3,4,12,Control movement,2,3,6
+Concrete Works,Formwork erection,Collapse due to improper installation,4,5,20,Inspect before use,2,5,10
+Concrete Works,Finishing,Trip hazard due to tools left on surface,3,2,6,Maintain housekeeping,2,2,4
+Concrete Works,Material handling,Back injury from lifting cement bags,4,3,12,Use lifting aids,2,2,4
+Welding Works,Arc welding,Eye injury from arc exposure,3,3,9,Wear welding helmet,1,2,2
+Welding Works,Hot work,Fire caused by sparks near flammable materials,3,5,15,Clear flammables,1,5,5
+Welding Works,Gas cutting,Gas leak causing explosion risk,3,5,15,Check connections; Provide respiratory mask and ensure ventilation,1,5,5
+Welding Works,Grinding,Burn injury from sparks,3,4,12,Use PPE; Obtain hot work permit and station fire extinguisher,2,3,6
+Welding Works,Confined welding,Fume accumulation causing inhalation risk,3,5,15,Provide ventilation,1,5,5
+Welding Works,Arc welding,Electric shock from welding machine,3,5,15,Inspect equipment; Apply lockout tagout and use insulated gloves,1,5,5
+Welding Works,Hot work,Burn injury from hot surfaces,3,4,12,Use gloves,2,3,6
+Welding Works,Gas cutting,Improper cylinder handling causing hazard,3,5,15,Secure cylinders,1,5,5
+Welding Works,Grinding,Eye injury from flying particles,3,3,9,Use face shield,2,2,4
+Welding Works,Hot work,Fire risk due to poor housekeeping,3,5,15,Maintain clean area; Obtain hot work permit and station fire extinguisher,1,5,5
+Work at Height,Scaffold work,Fall due to simultaneous work causing distraction and loss of balance,3,5,15,Coordinate activities and enforce exclusion zones; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Fall caused by strong wind while handling large materials,3,5,15,Monitor weather and secure materials; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Facade cleaning,Slip due to wet surface combined with improper footwear,3,5,15,Use anti-slip footwear and harness,2,5,10
+Work at Height,Inspection,Fall due to misjudging edge distance in low light conditions,3,5,15,Improve lighting and mark edges; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Ladder work,Fall caused by overreaching while performing task at height,3,4,12,Reposition ladder frequently; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Platform work,Loss of balance due to sudden equipment vibration,3,5,15,Stabilize equipment before use; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Maintenance,Fall due to fatigue during extended working hours,3,5,15,Implement work-rest cycles; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof access,Fall due to improper access route combined with slippery surface,4,5,20,Provide safe access and anti-slip measures; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Edge work,Fall while avoiding moving equipment near edge,3,5,15,Separate work zones; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Scaffold dismantling,Fall due to miscommunication between workers during dismantling,4,5,20,Use clear communication protocol,2,5,10
+Electrical Works,Cable work,Electric shock due to wet conditions combined with damaged insulation,3,5,15,Ensure dry environment and inspect cables; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Panel work,Arc flash due to incorrect sequence during maintenance,3,5,15,Follow proper procedure and supervision; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Maintenance,Shock caused by assumption of isolation without verification,3,5,15,Test before touch; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Installation,Contact with hidden live wiring due to lack of updated drawings,3,5,15,Verify drawings and scan area,1,5,5
+Electrical Works,Temporary wiring,Fire risk from cable overheating in confined routing area,3,4,12,Ensure ventilation and load control,2,3,6
+Electrical Works,Inspection,Shock from exposed terminals due to missing covers,3,5,15,Install covers immediately; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Testing,Arc flash during energization under time pressure,3,5,15,Avoid rushing and follow permit system; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Repair,Electric shock from faulty grounding system,3,5,15,Check grounding before work; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Connection work,Short circuit caused by incorrect wiring under poor lighting,3,4,12,Improve lighting and double-check wiring,2,3,6
+Electrical Works,DB setup,Fire due to uneven load distribution and overheating,3,4,12,Balance loads and monitor temperature; Obtain hot work permit and station fire extinguisher,2,3,6
+Excavation,Trenching,Collapse due to combined effects of water ingress and vibration,4,5,20,Provide shoring and monitor vibration; Wear hearing protection and ear defenders,2,5,10
+Excavation,Deep excavation,Wall failure caused by prolonged exposure and poor drainage,4,5,20,Install drainage and support systems,2,5,10
+Excavation,Utility excavation,Gas leak due to accidental strike of underground pipeline,3,5,15,Use detection tools and permits; Provide respiratory mask and ensure ventilation,1,5,5
+Excavation,Earthworks,Worker struck due to blind spot and poor communication,4,5,20,Assign banksman and communication system,2,5,10
+Excavation,Backfilling,Entrapment due to collapse during compaction with heavy equipment,4,5,20,Control compaction sequence,2,5,10
+Excavation,Pit excavation,Fall into excavation during low visibility conditions,3,4,12,Install lighting and barricades; Use safety harness and lanyard at all times,2,3,6
+Excavation,Manual digging,Injury from sharp objects hidden in soil,3,3,9,Use protective gloves,2,2,4
+Excavation,Trenching,Soil collapse caused by surcharge load near trench edge,4,5,20,Keep loads away from edge; Use safety harness and lanyard at all times,2,5,10
+Excavation,Excavation near structure,Foundation instability due to adjacent excavation,4,5,20,Conduct structural assessment,2,5,10
+Excavation,Excavation work,Slip into trench due to loose soil and wet surface,3,4,12,Maintain stable access,2,3,6
+Lifting Operations,Crane lifting,Load drop due to simultaneous lifting and miscommunication,4,5,20,Use designated signalman,2,5,10
+Lifting Operations,Crane work,Collision due to limited visibility and congested site conditions,3,5,15,Improve site layout and visibility,2,5,10
+Lifting Operations,Rigging,Load instability caused by uneven weight and incorrect sling use,3,4,12,Ensure load balance,2,3,6
+Lifting Operations,Material lifting,Load swing due to sudden wind and poor control,3,5,15,Monitor weather and use taglines,2,5,10
+Lifting Operations,Mobile crane,Crane tipping due to combined soft ground and overload,3,5,15,Assess ground and load capacity,2,5,10
+Lifting Operations,Hoisting,Load falling due to improper securing under rushed conditions,4,5,20,Verify securing before lift; Use safety harness and lanyard at all times,2,5,10
+Lifting Operations,Crane lifting,Hook disengagement due to improper locking and vibration,4,5,20,Check hook safety latch; Wear hearing protection and ear defenders,2,5,10
+Lifting Operations,Material handling,Load shift due to uneven distribution and sudden stop,3,4,12,Stabilize load,2,3,6
+Lifting Operations,Crane operation,Operator fatigue leading to delayed reaction,3,5,15,Provide rest breaks,2,5,10
+Lifting Operations,Rigging,Hand injury during rigging due to lack of coordination,3,3,9,Ensure clear communication,2,2,4
+Concrete Works,Concrete pouring,Formwork collapse due to combined overloading and poor support,4,5,20,Inspect and follow design limits,2,5,10
+Concrete Works,Rebar work,Trip hazard from scattered materials and poor housekeeping,3,3,9,Maintain clean work area,2,2,4
+Concrete Works,Formwork removal,Fall during dismantling due to unstable working platform,4,5,20,Provide proper access; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Finishing,Slip due to wet surface and poor lighting conditions,3,2,6,Improve lighting and housekeeping,2,2,4
+Concrete Works,Mixing,Dust inhalation due to dry mixing and poor ventilation,3,3,9,Use masks and ventilation,2,2,4
+Concrete Works,Pouring,Skin irritation due to prolonged contact with wet concrete,3,3,9,Use protective clothing,2,2,4
+Concrete Works,Transport,Injury due to uncontrolled movement of concrete bucket,3,4,12,Control lifting operations,2,3,6
+Concrete Works,Formwork erection,Collapse due to incorrect installation under time pressure,4,5,20,Inspect installation,2,5,10
+Concrete Works,Finishing,Trip hazard due to tools left on walking path,3,2,6,Maintain housekeeping,2,2,4
+Concrete Works,Material handling,Back injury due to repetitive lifting without rest,4,3,12,Provide rest and aids,2,2,4
+Welding Works,Arc welding,Eye injury due to missing or improper eye protection,3,3,9,Use approved welding helmet,1,2,2
+Welding Works,Hot work,Fire caused by sparks in poorly maintained work area,3,5,15,Maintain housekeeping; Obtain hot work permit and station fire extinguisher,1,5,5
+Welding Works,Gas cutting,Explosion risk from improper cylinder storage and handling,3,5,15,Secure and store cylinders properly; Obtain hot work permit and station fire extinguisher,1,5,5
+Welding Works,Grinding,Burn injury from contact with hot fragments,3,4,12,Use protective clothing,2,3,6
+Welding Works,Confined welding,Fume accumulation causing respiratory hazard,3,5,15,Provide ventilation,1,5,5
+Welding Works,Arc welding,Electric shock from damaged welding cables,3,5,15,Inspect equipment; Apply lockout tagout and use insulated gloves,1,5,5
+Welding Works,Hot work,Burn injury from contact with heated surfaces,3,4,12,Use gloves,2,3,6
+Welding Works,Gas cutting,Fire hazard due to gas leakage near ignition source,3,5,15,Check leaks and isolate sources; Provide respiratory mask and ensure ventilation,1,5,5
+Welding Works,Grinding,Eye injury from flying particles due to lack of protection,3,3,9,Use face shield,2,2,4
+Welding Works,Hot work,Fire risk due to accumulation of combustible waste,3,5,15,Remove waste materials; Obtain hot work permit and station fire extinguisher,1,5,5
+Material Handling,Manual lifting,Muscle strain due to repetitive lifting under time pressure,4,3,12,Provide mechanical aids,2,2,4
+Material Handling,Manual handling,Hand injury due to improper grip on sharp materials,3,3,9,Use gloves,2,2,4
+Material Handling,Forklift operation,Collision due to congested work area and poor visibility,4,5,20,Improve layout and signage,2,5,10
+Material Handling,Forklift use,Load falling due to sudden braking and unstable stacking,3,4,12,Secure load properly; Use safety harness and lanyard at all times,2,3,6
+Material Handling,Storage,Collapse of materials due to uneven stacking base,3,4,12,Ensure stable stacking,2,3,6
+Demolition,Wall demolition,Collapse due to uncontrolled demolition sequence,4,5,20,Follow engineered sequence,2,5,10
+Demolition,Concrete breaking,Flying debris causing injuries in nearby area,4,4,16,Install barriers,2,3,6
+Demolition,Structural demolition,Collapse due to removal of critical supports,4,5,20,Conduct structural review,2,5,10
+Demolition,Interior work,Dust inhalation due to lack of suppression measures,3,3,9,Use water spray; Provide respiratory mask and ensure ventilation,2,2,4
+Demolition,Equipment use,Hearing damage from prolonged noise exposure,4,3,12,Provide ear protection,2,2,4
+Confined Space,Tank entry,Toxic gas exposure due to inadequate ventilation and monitoring,3,5,15,Ventilate and monitor continuously; Provide respiratory mask and ensure ventilation,1,5,5
+Confined Space,Sewer work,Oxygen deficiency due to displacement by other gases,3,5,15,Use gas detectors,1,5,5
+Confined Space,Maintenance,Delayed rescue due to lack of trained standby personnel,3,5,15,Assign trained standby,1,5,5
+Confined Space,Inspection,Heat stress due to poor airflow and high temperature,3,4,12,Provide ventilation and rest breaks,2,3,6
+Confined Space,Entry,Slip hazard due to wet surfaces and limited space,3,3,9,Use anti-slip footwear,2,2,4
+Chemical Handling,Painting,Inhalation of fumes due to poor ventilation in enclosed area,3,3,9,Provide ventilation,2,2,4
+Chemical Handling,Solvent use,Fire caused by ignition of flammable vapors,3,5,15,Eliminate ignition sources; Provide respiratory mask and ensure ventilation,1,5,5
+Chemical Handling,Mixing,Toxic reaction due to mixing incompatible chemicals,3,5,15,Follow SDS strictly; Provide respiratory mask and ensure ventilation,1,5,5
+Chemical Handling,Storage,Leakage due to damaged containers,3,4,12,Inspect containers,2,3,6
+Chemical Handling,Application,Skin irritation due to repeated exposure,3,3,9,Use protective PPE,2,2,4
+Piling Works,Bored piling,Collapse due to unstable soil and groundwater presence,3,5,15,Install casing and monitor,2,5,10
+Piling Works,Pile driving,Noise exposure exceeding limits over long duration,4,3,12,Use hearing protection,2,2,4
+Piling Works,Setup,Instability due to uneven and soft ground conditions,3,5,15,Prepare stable base,2,5,10
+Piling Works,Drilling,Damage to underground utilities due to lack of survey,3,5,15,Conduct survey,1,5,5
+Piling Works,Operation,Worker struck by moving piling equipment in restricted space,4,5,20,Define exclusion zone,2,5,10
+Site Preparation,Land clearing,Worker struck by machinery due to poor visibility and coordination,4,5,20,Use spotter and signals,2,5,10
+Site Preparation,Grading,Vehicle skidding due to wet and loose soil conditions,3,4,12,Stabilize surface,2,3,6
+Site Preparation,Cleanup,Injury from sharp debris during manual handling,3,3,9,Wear gloves,2,2,4
+Site Preparation,Temporary access,Trip hazard due to uneven and poorly maintained walkway,3,2,6,Maintain pathways,2,2,4
+Site Preparation,General work,Dust inhalation due to dry weather and site conditions,3,3,9,Use water suppression; Provide respiratory mask and ensure ventilation,2,2,4
+Work at Height,Scaffold work,Fall due to stepping on unsecured plank during partial scaffold completion,4,5,20,Ensure planks are secured and inspected; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Loss of balance while carrying materials across uneven roof surface,3,5,15,Use proper access paths and fall protection; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Facade work,Fall caused by sudden wind while handling large panel at height,3,5,15,Suspend work during high wind conditions; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Inspection,Fall due to distraction from simultaneous nearby activities,3,5,15,Implement work coordination plan; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Ladder work,Fall due to ladder placed on unstable ground surface,3,4,12,Secure ladder base and inspect ground; Use safety harness and lanyard at all times,2,3,6
+Electrical Works,Cable installation,Electric shock from contact with energized cable during installation,3,5,15,Ensure complete isolation before work,1,5,5
+Electrical Works,Panel maintenance,Arc flash caused by accidental bridging of terminals,3,5,15,Use insulated tools and PPE,1,5,5
+Electrical Works,Inspection,Shock hazard due to missing insulation on exposed conductor,3,5,15,Reinstate insulation immediately; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Temporary setup,Overheating of cables due to confined routing space,3,4,12,Improve cable routing and ventilation,2,3,6
+Electrical Works,Testing,Shock during testing due to failure to confirm isolation,3,5,15,Test circuits before handling; Apply lockout tagout and use insulated gloves,1,5,5
+Excavation,Trenching,Collapse due to unstable soil combined with heavy rainfall,4,5,20,Install trench support and drainage; Use safety harness and lanyard at all times,2,5,10
+Excavation,Deep excavation,Wall failure caused by lack of reinforcement over time,4,5,20,Provide staged support system,2,5,10
+Excavation,Utility excavation,Damage to underground services due to inaccurate survey data,3,5,15,Conduct detailed scanning,1,5,5
+Excavation,Earthworks,Worker struck due to blind spot of moving machinery,4,5,20,Use spotter and alarms,2,5,10
+Excavation,Backfilling,Entrapment hazard during compaction due to unstable trench wall,4,5,20,Stabilize trench before compaction,2,5,10
+Lifting Operations,Crane lifting,Load dropped due to failure of worn lifting sling,4,5,20,Inspect and replace lifting gear,2,5,10
+Lifting Operations,Crane operation,Collision with structure due to poor visibility during lift,3,5,15,Use signalman and cameras,2,5,10
+Lifting Operations,Rigging,Improper load securing causing load shift during lifting,3,4,12,Ensure correct rigging technique,2,3,6
+Lifting Operations,Material lifting,Load swing due to sudden crane movement in windy conditions,3,5,15,Use taglines and monitor weather,2,5,10
+Lifting Operations,Mobile crane,Crane tipping due to soft ground under outriggers,3,5,15,Assess ground bearing capacity,2,5,10
+Concrete Works,Concrete pouring,Formwork collapse due to uneven load distribution during pouring,4,5,20,Control pour rate and inspect formwork,2,5,10
+Concrete Works,Rebar work,Trip hazard caused by protruding reinforcement bars,3,3,9,Install protective caps,2,2,4
+Concrete Works,Formwork removal,Fall due to unstable working surface during dismantling,4,5,20,Provide stable working platform; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Finishing,Slip hazard due to slurry accumulation on surface,3,2,6,Maintain clean work area,2,2,4
+Concrete Works,Mixing,Dust inhalation from dry cement mixing process,3,3,9,Use masks and ventilation,2,2,4
+Welding Works,Arc welding,Eye injury from exposure to arc without proper shielding,3,3,9,Use approved welding helmet,1,2,2
+Welding Works,Hot work,Fire caused by sparks contacting combustible materials nearby,3,5,15,Remove combustibles and assign fire watch,1,5,5
+Welding Works,Gas cutting,Explosion risk due to leaking gas hose connection,3,5,15,Inspect and secure hoses; Provide respiratory mask and ensure ventilation,1,5,5
+Welding Works,Grinding,Burn injury from hot metal fragments,3,4,12,Wear protective clothing,2,3,6
+Welding Works,Confined welding,Fume accumulation due to lack of ventilation,3,5,15,Provide exhaust ventilation,1,5,5
+Material Handling,Manual lifting,Back strain from lifting heavy loads without assistance,4,3,12,Use mechanical aids,2,2,4
+Material Handling,Manual handling,Hand injury from sharp material edges,3,3,9,Use gloves; Use safety harness and lanyard at all times,2,2,4
+Material Handling,Forklift operation,Collision due to obstructed view while carrying load,4,5,20,Operate in reverse when vision blocked,2,5,10
+Material Handling,Forklift use,Load falling due to improper stacking on pallet,3,4,12,Secure loads before transport; Use safety harness and lanyard at all times,2,3,6
+Material Handling,Storage,Collapse of stacked materials due to uneven base,3,4,12,Ensure level stacking surface,2,3,6
+Demolition,Wall demolition,Unexpected collapse due to hidden structural weakness,4,5,20,Conduct structural assessment,2,5,10
+Demolition,Concrete breaking,Flying debris causing injury to nearby workers,4,4,16,Install protective barriers,2,3,6
+Demolition,Structural demolition,Collapse due to removal of load-bearing components,4,5,20,Follow engineered demolition plan,2,5,10
+Demolition,Interior work,Dust inhalation from demolition debris,3,3,9,Use dust suppression; Provide respiratory mask and ensure ventilation,2,2,4
+Demolition,Equipment use,Noise exposure causing hearing damage,4,3,12,Provide hearing protection,2,2,4
+Confined Space,Tank entry,Toxic gas exposure due to inadequate ventilation,3,5,15,Conduct gas testing and ventilate,1,5,5
+Confined Space,Sewer work,Oxygen deficiency caused by gas displacement,3,5,15,Use continuous monitoring; Provide respiratory mask and ensure ventilation,1,5,5
+Confined Space,Maintenance,Delayed rescue due to lack of standby personnel,3,5,15,Assign trained standby,1,5,5
+Confined Space,Inspection,Heat stress due to confined environment and poor airflow,3,4,12,Provide ventilation and breaks,2,3,6
+Confined Space,Entry,Slip hazard from wet confined surfaces,3,3,9,Use anti-slip footwear,2,2,4
+Chemical Handling,Painting,Inhalation of paint fumes in enclosed space,3,3,9,Provide ventilation and respirators,2,2,4
+Chemical Handling,Solvent use,Fire caused by ignition of flammable vapors,3,5,15,Eliminate ignition sources; Provide respiratory mask and ensure ventilation,1,5,5
+Chemical Handling,Mixing,Toxic reaction from mixing incompatible chemicals,3,5,15,Follow SDS instructions; Provide respiratory mask and ensure ventilation,1,5,5
+Chemical Handling,Storage,Leakage from improperly sealed containers,3,4,12,Inspect containers regularly,2,3,6
+Chemical Handling,Application,Skin irritation from repeated exposure to chemicals,3,3,9,Use protective clothing,2,2,4
+Piling Works,Bored piling,Borehole collapse due to unstable soil layers,3,5,15,Install casing and monitor,2,5,10
+Piling Works,Pile driving,Noise exposure exceeding safe limits,4,3,12,Provide hearing protection,2,2,4
+Piling Works,Setup,Instability of piling rig due to uneven ground,3,5,15,Level and stabilize rig,2,5,10
+Piling Works,Drilling,Damage to underground utilities due to lack of survey,3,5,15,Conduct pre-drilling survey,1,5,5
+Piling Works,Operation,Worker struck by moving piling equipment,4,5,20,Define exclusion zones,2,5,10
+Site Preparation,Land clearing,Worker struck by moving equipment due to blind spots,4,5,20,Use spotter and signals,2,5,10
+Site Preparation,Grading,Vehicle skidding on loose or wet ground,3,4,12,Stabilize surface,2,3,6
+Site Preparation,Cleanup,Injury from sharp debris during manual handling,3,3,9,Wear gloves,2,2,4
+Site Preparation,Temporary access,Trip hazard from uneven walking surfaces,3,2,6,Maintain level pathways,2,2,4
+Site Preparation,General work,Dust inhalation due to dry site conditions,3,3,9,Apply water suppression; Provide respiratory mask and ensure ventilation,2,2,4
+Work at Height,Scaffold work,Fall due to stepping onto partially secured working platform during erection,4,5,20,Restrict access until platform is secured and inspected; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Slip and fall caused by dust accumulation reducing surface friction,3,5,15,Clean surface and use anti-slip footwear,2,5,10
+Work at Height,Facade installation,Fall while adjusting panel due to improper anchorage of safety harness,4,5,20,Ensure proper anchorage before work; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Inspection,Fall due to misjudging edge distance under low visibility,3,5,15,Install edge markings and lighting; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Ladder work,Fall caused by ladder shifting due to uneven base,3,4,12,Stabilize ladder and inspect ground; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Platform work,Loss of balance during sudden equipment movement,3,5,15,Ensure stable operation of platform; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Maintenance,Fall due to fatigue from extended work hours,3,5,15,Implement work-rest cycles; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof access,Fall due to lack of designated access route,4,5,20,Provide secured access system; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Edge work,Fall caused by simultaneous operations causing distraction,3,5,15,Coordinate tasks and isolate work zones; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Scaffold dismantling,Fall due to premature removal of safety components,4,5,20,Follow proper dismantling sequence; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Cable installation,Electric shock due to contact with partially exposed live conductor,3,5,15,Ensure full isolation and insulation,1,5,5
+Electrical Works,Panel work,Arc flash caused by loose connections under load,3,5,15,Tighten and inspect all connections; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Maintenance,Shock due to backfeed from alternate power source,3,5,15,Verify isolation from all sources,1,5,5
+Electrical Works,Installation,Contact with concealed wiring during drilling,3,5,15,Use cable locator before drilling,1,5,5
+Electrical Works,Temporary wiring,Overheating cables due to excessive load demand,3,4,12,Use proper load-rated cables,2,3,6
+Electrical Works,Inspection,Exposure to live terminals due to missing covers,3,5,15,Install protective covers; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Testing,Arc flash during energization without proper PPE,3,5,15,Use arc-rated PPE,1,5,5
+Electrical Works,Repair,Shock caused by faulty insulated tools,3,5,15,Inspect tools before use; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Connection work,Short circuit due to incorrect wiring sequence,3,4,12,Follow approved wiring diagrams,2,3,6
+Electrical Works,DB setup,Fire hazard from uneven load distribution,3,4,12,Balance load across circuits; Obtain hot work permit and station fire extinguisher,2,3,6
+Excavation,Trenching,Collapse due to unsupported trench walls in loose soil,4,5,20,Install trench support systems,2,5,10
+Excavation,Deep excavation,Wall failure due to prolonged exposure without reinforcement,4,5,20,Provide staged reinforcement,2,5,10
+Excavation,Utility excavation,Damage to underground utility due to inaccurate mapping,3,5,15,Conduct utility scanning,1,5,5
+Excavation,Earthworks,Worker struck by excavator due to blind spot,4,5,20,Use banksman and alarms,2,5,10
+Excavation,Backfilling,Entrapment due to collapse during compaction,4,5,20,Stabilize trench before compaction,2,5,10
+Excavation,Pit excavation,Fall into pit due to lack of barricades,3,4,12,Install guardrails; Use safety harness and lanyard at all times,2,3,6
+Excavation,Manual digging,Injury from sharp buried objects,3,3,9,Use PPE and tools,2,2,4
+Excavation,Trenching,Collapse due to water ingress weakening soil,4,5,20,Provide dewatering system,2,5,10
+Excavation,Excavation near road,Collapse due to vibration from traffic,4,5,20,Reinforce trench walls; Wear hearing protection and ear defenders,2,5,10
+Excavation,Excavation work,Slip into trench due to loose soil conditions,3,4,12,Maintain safe edges,2,3,6
+Lifting Operations,Crane lifting,Load dropped due to failure of lifting sling,4,5,20,Inspect lifting gear before use,2,5,10
+Lifting Operations,Crane operation,Collision due to poor visibility during lift,3,5,15,Use signalman and cameras,2,5,10
+Lifting Operations,Rigging,Load imbalance due to incorrect sling angle,3,4,12,Ensure proper rigging techniques; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Material lifting,Load swing due to sudden crane movement,3,5,15,Use taglines,2,5,10
+Lifting Operations,Mobile crane,Crane tipping due to unstable ground,3,5,15,Assess ground stability,2,5,10
+Concrete Works,Concrete pouring,Formwork collapse due to excessive load,4,5,20,Follow design specifications,2,5,10
+Concrete Works,Rebar work,Injury from exposed reinforcement bars,3,5,15,Install protective caps,2,4,8
+Concrete Works,Formwork removal,Fall from height during dismantling,4,5,20,Use fall protection systems; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Finishing,Slip hazard from wet surface,3,2,6,Maintain housekeeping,2,2,4
+Concrete Works,Mixing,Dust inhalation from cement handling,3,3,9,Use masks and ventilation,2,2,4
+Welding Works,Arc welding,Eye injury due to exposure to arc light,3,3,9,Use welding helmet,1,2,2
+Welding Works,Hot work,Fire due to sparks contacting combustible materials,3,5,15,Clear flammable materials,1,5,5
+Welding Works,Gas cutting,Explosion due to gas leakage,3,5,15,Inspect hoses and regulators; Provide respiratory mask and ensure ventilation,1,5,5
+Welding Works,Grinding,Burn injury from sparks,3,4,12,Wear PPE,2,3,6
+Welding Works,Confined welding,Fume inhalation due to poor ventilation,3,5,15,Provide exhaust ventilation,1,5,5
+Material Handling,Manual lifting,Back strain from improper lifting technique,4,3,12,Provide training and aids,2,2,4
+Material Handling,Manual handling,Hand injury from sharp materials,3,3,9,Use gloves,2,2,4
+Material Handling,Forklift operation,Collision due to poor visibility,4,5,20,Use mirrors and alarms,2,5,10
+Material Handling,Forklift use,Load falling due to improper stacking,3,4,12,Secure loads; Use safety harness and lanyard at all times,2,3,6
+Material Handling,Storage,Collapse of stacked materials,3,4,12,Follow stacking limits,2,3,6
+Work at Height,Scaffold work,Fall due to unsecured toe boards allowing foot misplacement,4,5,20,Install toe boards and inspect platforms; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Fall caused by stepping on brittle roofing material,4,5,20,Identify fragile surfaces and install covers; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Facade work,Loss of balance while handling oversized panels in windy conditions,3,5,15,Suspend work during high winds and secure loads; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Inspection,Fall due to unclear demarcation of edge boundaries,3,5,15,Mark edges clearly with visual barriers,2,5,10
+Work at Height,Ladder work,Fall due to ladder placed at incorrect angle,3,4,12,Maintain correct ladder angle and secure top; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Platform work,Fall due to sudden jerking movement of mechanical platform,3,5,15,Operate platform smoothly and conduct maintenance; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Maintenance,Fall caused by carrying tools without proper storage while climbing,3,5,15,Use tool belts or hoisting systems; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof access,Fall due to absence of guardrails along access path,4,5,20,Install guardrails along all access routes; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Edge work,Fall while avoiding moving loads near edge area,3,5,15,Separate lifting and edge work zones; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Scaffold dismantling,Fall due to instability after partial removal of structural members,4,5,20,Follow dismantling plan step-by-step; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Cable installation,Electric shock from contact with damaged insulation in damp conditions,3,5,15,Inspect insulation and keep area dry; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Panel work,Arc flash due to incorrect tightening sequence of terminals,3,5,15,Follow correct sequence and supervision; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Maintenance,Shock caused by failure to identify multiple power sources,3,5,15,Isolate and verify all energy sources; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Installation,Contact with live conductor due to outdated circuit drawings,3,5,15,Verify drawings before work,1,5,5
+Electrical Works,Temporary wiring,Fire hazard from coiled cables generating heat,3,4,12,Uncoil cables and monitor load; Obtain hot work permit and station fire extinguisher,2,3,6
+Electrical Works,Inspection,Shock from exposed busbars due to missing covers,3,5,15,Install proper covers and barriers; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Testing,Arc flash during fault testing without proper PPE,3,5,15,Use arc-rated PPE and follow procedures,1,5,5
+Electrical Works,Repair,Electric shock from improper grounding during repair,3,5,15,Verify grounding system integrity; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Connection work,Short circuit caused by loose connections under vibration,3,4,12,Secure all connections firmly; Wear hearing protection and ear defenders,2,3,6
+Electrical Works,DB setup,Fire due to overheating from poor ventilation inside panel,3,4,12,Ensure adequate ventilation,2,3,6
+Excavation,Trenching,Collapse due to surcharge load placed near trench edge,4,5,20,Keep heavy loads away from trench edge; Use safety harness and lanyard at all times,2,5,10
+Excavation,Deep excavation,Soil collapse caused by inadequate benching in deep cuts,4,5,20,Provide proper benching and support,2,5,10
+Excavation,Utility excavation,Gas leak due to accidental strike on pipeline,3,5,15,Use detection equipment and permits; Provide respiratory mask and ensure ventilation,1,5,5
+Excavation,Earthworks,Worker struck due to reversing equipment in blind spot,4,5,20,Use reversing alarms and spotters,2,5,10
+Excavation,Backfilling,Entrapment due to collapse of side walls during filling,4,5,20,Compact gradually and monitor stability,2,5,10
+Excavation,Pit excavation,Fall into excavation during night work with poor lighting,3,4,12,Install adequate lighting and barriers; Use safety harness and lanyard at all times,2,3,6
+Excavation,Manual digging,Injury from contact with buried sharp debris,3,3,9,Wear gloves and use tools carefully,2,2,4
+Excavation,Trenching,Collapse due to vibration from nearby heavy machinery,4,5,20,Limit vibration and reinforce trench; Wear hearing protection and ear defenders,2,5,10
+Excavation,Excavation near structure,Settlement of adjacent structure due to excavation,4,5,20,Provide structural support,2,5,10
+Excavation,Excavation work,Slip hazard due to muddy conditions near trench edge,3,4,12,Improve ground condition; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Crane lifting,Load drop due to improper use of lifting accessories,4,5,20,Use certified lifting gear,2,5,10
+Lifting Operations,Crane operation,Collision with nearby structure due to poor planning,3,5,15,Conduct lift planning and clearance checks,2,5,10
+Lifting Operations,Rigging,Load imbalance caused by uneven sling length,3,4,12,Adjust sling lengths properly; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Material lifting,Load swing due to uncontrolled crane movement,3,5,15,Use taglines and trained operator,2,5,10
+Lifting Operations,Mobile crane,Crane instability due to uneven outrigger setup,3,5,15,Ensure proper outrigger deployment,2,5,10
+Lifting Operations,Hoisting,Load falling due to failure of lifting point,4,5,20,Verify lifting points before operation; Use safety harness and lanyard at all times,2,5,10
+Lifting Operations,Crane lifting,Load striking workers due to poor communication,4,5,20,Use standard hand signals,2,5,10
+Lifting Operations,Material handling,Load shift due to sudden stopping of crane,3,4,12,Operate crane smoothly,2,3,6
+Lifting Operations,Crane operation,Operator fatigue affecting judgment,3,5,15,Schedule adequate rest,2,5,10
+Lifting Operations,Rigging,Pinch point injury during sling adjustment,3,3,9,Keep hands clear and wear gloves,2,2,4
+Concrete Works,Concrete pouring,Formwork failure due to incorrect spacing of supports,4,5,20,Follow approved design drawings,2,5,10
+Concrete Works,Rebar work,Trip hazard due to loose reinforcement materials,3,3,9,Maintain proper storage,2,2,4
+Concrete Works,Formwork removal,Fall due to unstable access platform during dismantling,4,5,20,Use certified access systems; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Finishing,Slip due to wet surface combined with poor lighting,3,2,6,Improve lighting and housekeeping,2,2,4
+Concrete Works,Mixing,Dust inhalation due to improper handling of dry cement,3,3,9,Use masks and ventilation,2,2,4
+Welding Works,Arc welding,Eye injury from prolonged exposure to arc light,3,3,9,Use proper eye protection; Use full face shield and FR jacket,1,2,2
+Welding Works,Hot work,Fire caused by sparks igniting nearby insulation material,3,5,15,Remove combustibles and monitor area; Obtain hot work permit and station fire extinguisher,1,5,5
+Welding Works,Gas cutting,Explosion due to damaged gas cylinder valve,3,5,15,Inspect cylinders before use; Provide respiratory mask and ensure ventilation,1,5,5
+Welding Works,Grinding,Burn injury from hot debris contacting skin,3,4,12,Wear protective clothing,2,3,6
+Welding Works,Confined welding,Fume inhalation due to inadequate ventilation,3,5,15,Provide forced ventilation,1,5,5
+Material Handling,Manual lifting,Back injury from lifting heavy loads without proper posture,4,3,12,Provide lifting training,2,2,4
+Material Handling,Manual handling,Hand injury due to sharp material edges,3,3,9,Use protective gloves; Use safety harness and lanyard at all times,2,2,4
+Material Handling,Forklift operation,Collision with worker due to restricted visibility,4,5,20,Install mirrors and alarms,2,5,10
+Material Handling,Forklift use,Load falling due to improper pallet stacking,3,4,12,Ensure stable stacking; Use safety harness and lanyard at all times,2,3,6
+Material Handling,Storage,Collapse of stacked goods due to uneven base,3,4,12,Ensure level base,2,3,6
+Work at Height,Scaffold work,Fall due to loose scaffold fittings causing platform instability,4,5,20,Tighten and inspect all fittings before use; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Fall caused by stepping on wet moss-covered surface,3,5,15,Clean surface and use anti-slip footwear,2,5,10
+Work at Height,Facade work,Fall while handling materials due to loss of grip in humid conditions,3,5,15,Use proper gloves and secure materials; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Inspection,Fall due to absence of warning signs near open edges,3,5,15,Install signage and barriers; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Ladder work,Fall due to ladder not extending above landing point,3,4,12,Ensure ladder extends at least 1 meter above landing; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Platform work,Fall caused by overloading working platform beyond capacity,3,5,15,Follow platform load limits; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Maintenance,Fall due to improper use of fall arrest system,4,5,20,Train workers on correct harness use,2,5,10
+Work at Height,Roof access,Fall due to lack of secured access ladder,4,5,20,Install fixed access ladder; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Edge work,Fall caused by sudden movement of nearby suspended load,3,5,15,Maintain safe distance from lifting operations; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Scaffold dismantling,Fall due to inadequate supervision during dismantling process,4,5,20,Provide competent supervision; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Cable installation,Electric shock due to improper isolation procedure,3,5,15,Implement lockout-tagout system,1,5,5
+Electrical Works,Panel work,Arc flash due to accumulated dust inside electrical panel,3,5,15,Clean panels regularly; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Maintenance,Shock caused by damaged grounding system,3,5,15,Inspect grounding regularly; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Installation,Contact with live wire due to incorrect identification of circuits,3,5,15,Label and verify circuits; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Temporary wiring,Overheating due to poor ventilation around cables,3,4,12,Ensure proper airflow,2,3,6
+Electrical Works,Inspection,Shock due to exposed wiring during inspection,3,5,15,Cover exposed parts; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Testing,Arc flash caused by incorrect test procedure,3,5,15,Follow testing protocol; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Repair,Electric shock due to use of worn-out tools,3,5,15,Replace damaged tools; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Connection work,Short circuit due to improper tightening of terminals,3,4,12,Tighten connections properly; Apply lockout tagout and use insulated gloves,2,3,6
+Electrical Works,DB setup,Fire hazard due to cable congestion inside panel,3,4,12,Organize cable layout; Apply lockout tagout and use insulated gloves,2,3,6
+Excavation,Trenching,Collapse due to over-excavation beyond safe depth,4,5,20,Follow excavation depth limits,2,5,10
+Excavation,Deep excavation,Soil collapse due to lack of drainage system,4,5,20,Install drainage system,2,5,10
+Excavation,Utility excavation,Exposure to hazardous substance from damaged pipe,3,5,15,Identify and isolate utilities,1,5,5
+Excavation,Earthworks,Worker struck by moving dump truck in work zone,4,5,20,Use traffic management plan,2,5,10
+Excavation,Backfilling,Entrapment hazard due to sudden trench collapse,4,5,20,Stabilize trench before filling,2,5,10
+Excavation,Pit excavation,Fall into pit during poor lighting conditions,3,4,12,Install lighting and barricades; Use safety harness and lanyard at all times,2,3,6
+Excavation,Manual digging,Injury due to improper use of digging tools,3,3,9,Train workers on tool use,2,2,4
+Excavation,Trenching,Collapse due to adjacent excavation activity,4,5,20,Coordinate excavation works,2,5,10
+Excavation,Excavation near structure,Damage to nearby structure due to soil movement,4,5,20,Provide structural support,2,5,10
+Excavation,Excavation work,Slip hazard due to uneven ground surface,3,4,12,Level working surface,2,3,6
+Lifting Operations,Crane lifting,Load drop due to failure of lifting chain,4,5,20,Inspect chains before use,2,5,10
+Lifting Operations,Crane operation,Collision due to operator blind spot,3,5,15,Use cameras and spotters,2,5,10
+Lifting Operations,Rigging,Load imbalance due to incorrect rigging configuration,3,4,12,Use proper rigging plan; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Material lifting,Load swing due to sudden stopping of crane,3,5,15,Operate crane smoothly,2,5,10
+Lifting Operations,Mobile crane,Crane tipping due to incorrect outrigger setup,3,5,15,Deploy outriggers correctly,2,5,10
+Lifting Operations,Hoisting,Load falling due to damaged lifting hook,4,5,20,Inspect hooks regularly; Use safety harness and lanyard at all times,2,5,10
+Lifting Operations,Crane lifting,Load striking workers due to lack of exclusion zone,4,5,20,Establish exclusion zones,2,5,10
+Lifting Operations,Material handling,Load shift due to improper securing,3,4,12,Secure loads properly,2,3,6
+Lifting Operations,Crane operation,Operator fatigue leading to errors,3,5,15,Schedule adequate rest,2,5,10
+Lifting Operations,Rigging,Hand injury due to pinch point during rigging,3,3,9,Wear gloves and keep clear,2,2,4
+Concrete Works,Concrete pouring,Formwork collapse due to improper assembly,4,5,20,Inspect formwork before pouring,2,5,10
+Concrete Works,Rebar work,Injury due to tripping over reinforcement bars,3,3,9,Maintain clear pathways,2,2,4
+Concrete Works,Formwork removal,Fall from height during dismantling,4,5,20,Use fall protection systems; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Finishing,Slip hazard due to wet concrete surface,3,2,6,Use signage and clean area,2,2,4
+Concrete Works,Mixing,Dust inhalation from cement exposure,3,3,9,Use masks; Provide respiratory mask and ensure ventilation,2,2,4
+Welding Works,Arc welding,Eye injury due to lack of eye protection,3,3,9,Use welding helmet,1,2,2
+Welding Works,Hot work,Fire due to sparks igniting nearby materials,3,5,15,Clear flammable materials,1,5,5
+Welding Works,Gas cutting,Explosion due to improper handling of cylinders,3,5,15,Secure cylinders properly; Obtain hot work permit and station fire extinguisher,1,5,5
+Welding Works,Grinding,Burn injury from hot particles,3,4,12,Wear protective clothing,2,3,6
+Welding Works,Confined welding,Fume inhalation due to poor ventilation,3,5,15,Provide ventilation,1,5,5
+Material Handling,Manual lifting,Back injury from lifting heavy loads incorrectly,4,3,12,Provide ergonomic training,2,2,4
+Material Handling,Manual handling,Hand injury due to sharp edges,3,3,9,Use gloves; Use safety harness and lanyard at all times,2,2,4
+Material Handling,Forklift operation,Collision due to limited visibility,4,5,20,Install mirrors and alarms,2,5,10
+Material Handling,Forklift use,Load falling due to improper stacking,3,4,12,Stack materials properly; Use safety harness and lanyard at all times,2,3,6
+Material Handling,Storage,Collapse of stacked materials due to overloading,3,4,12,Limit stacking height,2,3,6
+Demolition,Wall demolition,Collapse due to improper demolition sequence,4,5,20,Follow demolition plan,2,5,10
+Demolition,Concrete breaking,Flying debris causing injury,4,4,16,Use barriers and PPE,2,3,6
+Demolition,Structural demolition,Collapse due to removal of key supports,4,5,20,Conduct engineering review,2,5,10
+Demolition,Interior work,Dust inhalation hazard,3,3,9,Use masks and ventilation,2,2,4
+Demolition,Equipment use,Noise exposure causing hearing loss,4,3,12,Use hearing protection,2,2,4
+Confined Space,Tank entry,Toxic gas exposure due to poor monitoring,3,5,15,Use gas detectors,1,5,5
+Confined Space,Sewer work,Oxygen deficiency causing suffocation risk,3,5,15,Provide continuous monitoring; Provide respiratory mask and ensure ventilation,1,5,5
+Confined Space,Maintenance,Delayed rescue due to lack of planning,3,5,15,Prepare rescue plan,1,5,5
+Confined Space,Inspection,Heat stress due to poor ventilation,3,4,12,Provide ventilation,2,3,6
+Confined Space,Entry,Slip hazard due to wet surface,3,3,9,Use anti-slip footwear,2,2,4
+Chemical Handling,Painting,Inhalation of fumes causing irritation,3,3,9,Use respirators,2,2,4
+Chemical Handling,Solvent use,Fire due to ignition of vapors,3,5,15,Eliminate ignition sources; Provide respiratory mask and ensure ventilation,1,5,5
+Chemical Handling,Mixing,Toxic reaction due to improper mixing,3,5,15,Follow SDS guidelines; Provide respiratory mask and ensure ventilation,1,5,5
+Chemical Handling,Storage,Leakage from containers,3,4,12,Inspect containers,2,3,6
+Chemical Handling,Application,Skin irritation due to chemical exposure,3,3,9,Use PPE; Wear chemical resistant gloves and protective apron,2,2,4
+Piling Works,Bored piling,Borehole collapse due to unstable soil,3,5,15,Install casing,2,5,10
+Piling Works,Pile driving,Noise exposure exceeding limits,4,3,12,Use hearing protection,2,2,4
+Piling Works,Setup,Instability due to uneven ground,3,5,15,Level equipment,2,5,10
+Piling Works,Drilling,Damage to underground utilities,3,5,15,Conduct survey,1,5,5
+Piling Works,Operation,Worker struck by equipment,4,5,20,Define exclusion zones,2,5,10
+Site Preparation,Land clearing,Worker struck by moving equipment,4,5,20,Use spotter,2,5,10
+Site Preparation,Grading,Vehicle skidding on wet ground,3,4,12,Stabilize surface,2,3,6
+Site Preparation,Cleanup,Injury from sharp debris,3,3,9,Wear gloves,2,2,4
+Site Preparation,Temporary access,Trip hazard due to uneven surface,3,2,6,Maintain pathways,2,2,4
+Site Preparation,General work,Dust inhalation due to dry conditions,3,3,9,Apply water suppression; Provide respiratory mask and ensure ventilation,2,2,4
+Work at Height,Scaffold work,Fall due to vibration loosening scaffold components during nearby machinery operation,4,5,20,Inspect scaffold regularly and secure components; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Fall caused by sudden loss of balance while stepping over uneven roof joints,3,5,15,Provide walking boards and fall protection; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Facade work,Fall while adjusting suspended platform under shifting load conditions,3,5,15,Stabilize load before adjustment; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Inspection,Fall due to reliance on temporary unsecured access during inspection,4,5,20,Use approved access systems only; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Ladder work,Fall caused by using damaged ladder with worn-out steps,3,4,12,Inspect and replace defective ladders; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Platform work,Fall due to overreaching while handling equipment at height,3,5,15,Reposition platform frequently; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Maintenance,Fall caused by slipping on oil-contaminated surface at height,3,5,15,Clean surfaces and use anti-slip footwear,2,5,10
+Work at Height,Roof access,Fall due to climbing without maintaining three-point contact,3,4,12,Train workers on safe climbing techniques; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Edge work,Fall caused by distraction from simultaneous lifting activity nearby,3,5,15,Isolate work zones and coordinate tasks; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Scaffold dismantling,Fall due to instability created during removal of diagonal braces,4,5,20,Follow dismantling sequence strictly; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Cable installation,Electric shock due to moisture penetration into cable insulation,3,5,15,Use waterproof insulation and inspect cables; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Panel work,Arc flash caused by accumulation of conductive dust inside panel,3,5,15,Clean and maintain panels regularly; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Maintenance,Shock due to incomplete isolation of multi-source power system,3,5,15,Verify all energy sources are isolated; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Installation,Contact with live conductor due to incorrect labeling of circuits,3,5,15,Ensure accurate labeling and verification,1,5,5
+Electrical Works,Temporary wiring,Overheating cables due to bundling without spacing,3,4,12,Provide spacing between cables,2,3,6
+Electrical Works,Inspection,Shock hazard from exposed terminals during inspection,3,5,15,Install protective covers; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Testing,Arc flash due to incorrect test equipment setup,3,5,15,Use proper test procedures; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Repair,Electric shock caused by damaged grounding connection,3,5,15,Check grounding integrity; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Connection work,Short circuit due to loose wiring under vibration,3,4,12,Secure connections properly; Wear hearing protection and ear defenders,2,3,6
+Electrical Works,DB setup,Fire hazard from overcrowded cable arrangement inside panel,3,4,12,Organize cable routing; Apply lockout tagout and use insulated gloves,2,3,6
+Excavation,Trenching,Collapse due to prolonged exposure to rain weakening trench walls,4,5,20,Install support and drainage systems,2,5,10
+Excavation,Deep excavation,Soil failure due to absence of benching in deep cuts,4,5,20,Provide benching and shoring,2,5,10
+Excavation,Utility excavation,Damage to underground gas line causing hazardous leak,3,5,15,Use detection tools before excavation; Provide respiratory mask and ensure ventilation,1,5,5
+Excavation,Earthworks,Worker struck by reversing machinery due to blind spot,4,5,20,Use spotter and alarms,2,5,10
+Excavation,Backfilling,Entrapment due to collapse of partially filled trench,4,5,20,Compact gradually and monitor stability,2,5,10
+Excavation,Pit excavation,Fall into excavation due to missing guardrails,3,4,12,Install barriers and signage; Use safety harness and lanyard at all times,2,3,6
+Excavation,Manual digging,Injury from contact with buried debris,3,3,9,Use protective gloves,2,2,4
+Excavation,Trenching,Collapse due to heavy load placed near trench edge,4,5,20,Restrict load near edges,2,5,10
+Excavation,Excavation near structure,Damage to nearby building due to soil displacement,4,5,20,Provide structural support,2,5,10
+Excavation,Excavation work,Slip hazard due to muddy conditions near excavation,3,4,12,Improve ground conditions,2,3,6
+Lifting Operations,Crane lifting,Load dropped due to failure of worn lifting accessories,4,5,20,Inspect lifting gear before use,2,5,10
+Lifting Operations,Crane operation,Collision due to limited visibility in congested area,3,5,15,Use cameras and signalman,2,5,10
+Lifting Operations,Rigging,Load imbalance caused by improper sling configuration,3,4,12,Follow rigging plan; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Material lifting,Load swing due to sudden crane acceleration,3,5,15,Control crane speed,2,5,10
+Lifting Operations,Mobile crane,Crane tipping due to inadequate ground compaction,3,5,15,Prepare stable ground,2,5,10
+Lifting Operations,Hoisting,Load falling due to failure of lifting point,4,5,20,Verify lifting points; Use safety harness and lanyard at all times,2,5,10
+Lifting Operations,Crane lifting,Load striking workers due to absence of exclusion zone,4,5,20,Establish exclusion zones,2,5,10
+Lifting Operations,Material handling,Load shift due to uneven weight distribution,3,4,12,Balance load properly,2,3,6
+Lifting Operations,Crane operation,Operator fatigue leading to delayed reaction,3,5,15,Ensure adequate rest,2,5,10
+Lifting Operations,Rigging,Pinch injury during rigging due to poor coordination,3,3,9,Improve communication and training,2,2,4
+Concrete Works,Concrete pouring,Formwork collapse due to improper alignment of supports,4,5,20,Align supports correctly,2,5,10
+Concrete Works,Rebar work,Trip hazard due to scattered reinforcement materials,3,3,9,Maintain housekeeping,2,2,4
+Concrete Works,Formwork removal,Fall during dismantling due to unstable access,4,5,20,Use proper platforms; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Finishing,Slip due to wet concrete surface,3,2,6,Maintain clean working area,2,2,4
+Concrete Works,Mixing,Dust inhalation due to dry cement handling,3,3,9,Use masks; Provide respiratory mask and ensure ventilation,2,2,4
+Work at Height,Scaffold work,Worker fell after stepping on plank displaced by repeated loading and vibration,4,5,20,Secure planks and inspect after heavy use; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Slip occurred when fine dust combined with morning dew reduced surface friction,3,5,15,Clean surface and delay work until dry; Provide respiratory mask and ensure ventilation,2,5,10
+Work at Height,Facade work,Loss of balance while aligning panel due to sudden shift in suspended load,3,5,15,Stabilize load before positioning; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Inspection,Fall during inspection due to reliance on temporary access not designed for load,4,5,20,Use certified access platforms; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Ladder work,Worker lost footing when ladder base shifted on loose gravel,3,4,12,Stabilize base and secure ladder; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Platform work,Operator movement caused platform sway leading to near fall,3,5,15,Operate within limits and avoid sudden shifts; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Maintenance,Fall occurred after stepping on surface contaminated with lubricant residue,3,5,15,Clean area and use anti-slip PPE; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof access,Worker slipped while transitioning from ladder to roof without proper handhold,3,5,15,Provide secure transition points; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Edge work,Fall risk increased due to simultaneous lifting operations causing distraction,3,5,15,Separate activities and enforce barriers; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Scaffold dismantling,Structure instability during dismantling caused loss of balance,4,5,20,Follow engineered dismantling sequence; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Cable installation,Electric shock occurred when moisture compromised cable insulation integrity,3,5,15,Use moisture-resistant cables and inspect; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Panel work,Arc flash triggered by conductive dust bridging terminals inside panel,3,5,15,Maintain cleanliness and install covers; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Maintenance,Worker exposed to live circuit due to unverified isolation in multi-feed system,3,5,15,Test all sources before work,1,5,5
+Electrical Works,Installation,Contact with energized conductor due to incorrect labeling of circuits,3,5,15,Verify labeling before work; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Temporary wiring,Cable insulation degraded due to heat buildup in tightly bundled arrangement,3,4,12,Allow spacing and ventilation,2,3,6
+Electrical Works,Inspection,Shock hazard from exposed conductive parts during routine inspection,3,5,15,Install barriers and covers; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Testing,Arc flash occurred due to improper sequencing during energization,3,5,15,Follow strict energization procedure; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Repair,Shock caused by damaged grounding path in system,3,5,15,Test grounding continuity; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Connection work,Short circuit developed due to loose terminal under vibration,3,4,12,Torque connections properly; Apply lockout tagout and use insulated gloves,2,3,6
+Electrical Works,DB setup,Fire initiated by overheating from poor cable arrangement,3,4,12,Organize and ventilate cables; Obtain hot work permit and station fire extinguisher,2,3,6
+Excavation,Trenching,Sidewall collapse occurred after rainfall saturated soil beyond stable condition,4,5,20,Install shoring and monitor weather; Use safety harness and lanyard at all times,2,5,10
+Excavation,Deep excavation,Progressive soil failure due to absence of staged support installation,4,5,20,Install support progressively,2,5,10
+Excavation,Utility excavation,Gas release occurred after accidental strike of unmarked pipeline,3,5,15,Conduct detailed utility survey; Provide respiratory mask and ensure ventilation,1,5,5
+Excavation,Earthworks,Worker struck when reversing equipment entered blind zone,4,5,20,Use spotter and alarms,2,5,10
+Excavation,Backfilling,Entrapment risk due to collapse during rapid compaction,4,5,20,Compact in layers and monitor,2,5,10
+Excavation,Pit excavation,Fall into excavation due to missing edge protection in low light,3,4,12,Install lighting and barriers; Use safety harness and lanyard at all times,2,3,6
+Excavation,Manual digging,Hand injury from sharp debris embedded in soil,3,3,9,Wear gloves and inspect area,2,2,4
+Excavation,Trenching,Collapse triggered by surcharge load placed near trench edge,4,5,20,Maintain safe distance from loads; Use safety harness and lanyard at all times,2,5,10
+Excavation,Excavation near structure,Adjacent structure settlement caused by soil removal,4,5,20,Provide structural support,2,5,10
+Excavation,Excavation work,Slip occurred on muddy incline near excavation edge,3,4,12,Stabilize access routes; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Crane lifting,Load dropped after sling failure caused by undetected wear,4,5,20,Inspect slings before use,2,5,10
+Lifting Operations,Crane operation,Collision occurred due to limited operator visibility in congested area,3,5,15,Use signalman and cameras,2,5,10
+Lifting Operations,Rigging,Load shifted due to uneven sling tension,3,4,12,Balance sling configuration,2,3,6
+Lifting Operations,Material lifting,Sudden load swing caused by abrupt crane acceleration,3,5,15,Control crane movement,2,5,10
+Lifting Operations,Mobile crane,Crane instability occurred due to inadequate ground preparation,3,5,15,Assess and compact ground,2,5,10
+Lifting Operations,Hoisting,Load detached due to failure of lifting point connection,4,5,20,Verify lifting points,2,5,10
+Lifting Operations,Crane lifting,Worker struck by load entering unprotected zone,4,5,20,Establish exclusion zone,2,5,10
+Lifting Operations,Material handling,Load shifted due to uneven distribution during lift,3,4,12,Balance load before lifting,2,3,6
+Lifting Operations,Crane operation,Delayed reaction due to operator fatigue increased risk,3,5,15,Manage work-rest schedule,2,5,10
+Lifting Operations,Rigging,Hand injury occurred due to pinch point during rigging adjustment,3,3,9,Keep hands clear and use gloves,2,2,4
+Work at Height,Scaffold work,Worker lost balance after stepping on a plank loosened by repeated dynamic loading,4,5,20,Secure planks and conduct frequent inspections; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Slip occurred when condensation formed on smooth metal roof surface in early hours,3,5,15,Delay work until dry and use anti-slip footwear,2,5,10
+Work at Height,Facade work,Fall risk increased when suspended platform shifted during uneven loading of materials,3,5,15,Distribute load evenly and secure platform; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Inspection,Worker nearly fell when temporary access shifted under body weight during inspection,4,5,20,Use certified access equipment only,2,5,10
+Work at Height,Ladder work,Ladder base slipped due to loose sand causing sudden instability,3,4,12,Stabilize base and use anti-slip feet; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Platform work,Platform oscillation caused by abrupt operator movement resulted in loss of balance,3,5,15,Operate smoothly and avoid sudden motion; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Maintenance,Slip hazard created by oil residue left on elevated surface during repair,3,5,15,Clean surface before work,2,5,10
+Work at Height,Roof access,Worker slipped during transition due to lack of handhold at access point,3,5,15,Install proper access handholds,2,5,10
+Work at Height,Edge work,Distraction from nearby lifting activity increased likelihood of stepping beyond safe boundary,3,5,15,Isolate work zones,2,5,10
+Work at Height,Scaffold dismantling,Partial removal of bracing reduced stability leading to fall hazard,4,5,20,Follow dismantling sequence strictly; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Cable installation,Electric shock occurred when damaged insulation exposed conductor under load,3,5,15,Inspect cables before energizing; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Panel work,Arc flash initiated by conductive dust bridging live terminals inside panel,3,5,15,Maintain panel cleanliness; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Maintenance,Shock occurred when secondary power source was not isolated during maintenance,3,5,15,Verify all sources isolated; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Installation,Worker contacted live conductor due to incorrect circuit identification,3,5,15,Confirm circuit status before work,1,5,5
+Electrical Works,Temporary wiring,Heat buildup in bundled cables led to insulation degradation,3,4,12,Separate cables and allow airflow,2,3,6
+Electrical Works,Inspection,Shock hazard due to exposed live terminals during routine checks,3,5,15,Install protective covers; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Testing,Arc flash occurred due to improper test connection sequence,3,5,15,Follow testing procedures strictly; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Repair,Grounding failure resulted in unexpected energization of equipment frame,3,5,15,Test grounding continuity; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Connection work,Loose terminal connection generated heat leading to short circuit,3,4,12,Torque connections correctly; Apply lockout tagout and use insulated gloves,2,3,6
+Electrical Works,DB setup,Fire initiated due to poor cable management restricting heat dissipation,3,4,12,Organize cables and ensure ventilation,2,3,6
+Excavation,Trenching,Heavy rainfall saturated soil causing sudden trench wall collapse,4,5,20,Install shoring and monitor weather; Use safety harness and lanyard at all times,2,5,10
+Excavation,Deep excavation,Progressive soil failure due to lack of staged reinforcement installation,4,5,20,Install supports progressively,2,5,10
+Excavation,Utility excavation,Gas leak occurred after striking unmarked underground pipeline,3,5,15,Conduct utility survey before digging; Provide respiratory mask and ensure ventilation,1,5,5
+Excavation,Earthworks,Worker struck by reversing loader entering blind spot area,4,5,20,Use spotter and alarms,2,5,10
+Excavation,Backfilling,Rapid compaction caused trench wall collapse leading to entrapment risk,4,5,20,Compact in layers and monitor stability,2,5,10
+Excavation,Pit excavation,Fall into excavation due to absence of barricades during night work,3,4,12,Install barriers and lighting; Use safety harness and lanyard at all times,2,3,6
+Excavation,Manual digging,Hand injury from sharp object embedded in soil during digging,3,3,9,Use gloves and inspect area,2,2,4
+Excavation,Trenching,Surcharge load placed too close to edge triggered collapse,4,5,20,Maintain safe distance from loads; Use safety harness and lanyard at all times,2,5,10
+Excavation,Excavation near structure,Soil movement caused structural instability in adjacent building,4,5,20,Provide structural support,2,5,10
+Excavation,Excavation work,Slip hazard due to muddy slope near trench edge,3,4,12,Stabilize access paths; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Crane lifting,Sling failure due to unnoticed wear caused load to fall,4,5,20,Inspect slings before use; Use safety harness and lanyard at all times,2,5,10
+Lifting Operations,Crane operation,Collision occurred due to restricted operator visibility in congested site,3,5,15,Use signalman and cameras,2,5,10
+Lifting Operations,Rigging,Uneven sling tension caused load instability during lift,3,4,12,Balance sling configuration,2,3,6
+Lifting Operations,Material lifting,Load swing caused by abrupt crane acceleration,3,5,15,Control crane movement,2,5,10
+Lifting Operations,Mobile crane,Crane instability due to insufficient ground bearing capacity,3,5,15,Assess ground conditions,2,5,10
+Lifting Operations,Hoisting,Load detached due to failure of lifting connection point,4,5,20,Verify lifting points before use,2,5,10
+Lifting Operations,Crane lifting,Worker struck by moving load entering uncontrolled zone,4,5,20,Establish exclusion zones,2,5,10
+Lifting Operations,Material handling,Load shifted due to improper weight distribution during lifting,3,4,12,Balance load,2,3,6
+Lifting Operations,Crane operation,Operator fatigue resulted in delayed response to hazard,3,5,15,Manage fatigue and rest periods,2,5,10
+Lifting Operations,Rigging,Pinch injury occurred during sling adjustment due to poor coordination,3,3,9,Use clear communication,2,2,4
+Work at Height,Scaffold work,Fall occurred when unsecured plank shifted under uneven worker movement,4,5,20,Secure all planks and inspect before use; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Worker slipped after fine dust mixed with moisture created low friction surface,3,5,15,Clean roof and use anti-slip footwear,2,5,10
+Work at Height,Facade work,Loss of balance while aligning panel due to unexpected load movement,3,5,15,Stabilize load prior to handling; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Inspection,Fall risk increased due to use of temporary platform not rated for load,4,5,20,Use certified access platforms; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Ladder work,Ladder shifted when placed on uneven compacted soil,3,4,12,Level ground and secure ladder; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Platform work,Platform sway caused by sudden operator input resulted in near fall,3,5,15,Operate equipment smoothly; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Maintenance,Slip hazard created by grease contamination on elevated surface,3,5,15,Clean work area before task,2,5,10
+Work at Height,Roof access,Worker lost footing while stepping from ladder onto roof edge,3,5,15,Install proper access transition; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Edge work,Fall hazard increased due to distraction from nearby crane operation,3,5,15,Separate activities with barriers; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Scaffold dismantling,Fall occurred when stability reduced after removing key brace prematurely,4,5,20,Follow dismantling sequence; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Cable installation,Electric shock when insulation failed under wet conditions,3,5,15,Use waterproof cables and inspect; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Panel work,Arc flash triggered by debris bridging live terminals,3,5,15,Maintain panel cleanliness; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Maintenance,Shock occurred due to unidentified secondary power source,3,5,15,Verify all energy sources; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Installation,Worker contacted live cable due to incorrect labeling,3,5,15,Confirm circuit status before work; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Temporary wiring,Heat buildup caused insulation damage in tightly packed cables,3,4,12,Allow spacing and airflow,2,3,6
+Electrical Works,Inspection,Shock hazard from exposed terminals during inspection,3,5,15,Install covers and barriers; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Testing,Arc flash due to incorrect testing sequence,3,5,15,Follow standard testing procedures; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Repair,Shock caused by poor grounding continuity,3,5,15,Test and maintain grounding; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Connection work,Loose connection caused overheating and short circuit,3,4,12,Secure connections properly,2,3,6
+Electrical Works,DB setup,Fire risk from congested wiring reducing heat dissipation,3,4,12,Organize cables properly; Obtain hot work permit and station fire extinguisher,2,3,6
+Excavation,Trenching,Collapse occurred after soil weakened due to prolonged rainfall exposure,4,5,20,Install shoring and drainage; Use safety harness and lanyard at all times,2,5,10
+Excavation,Deep excavation,Soil failure due to absence of staged reinforcement,4,5,20,Provide progressive support,2,5,10
+Excavation,Utility excavation,Gas leak occurred after striking unidentified pipeline,3,5,15,Conduct utility detection; Provide respiratory mask and ensure ventilation,1,5,5
+Excavation,Earthworks,Worker struck due to machinery entering blind spot area,4,5,20,Use spotter and alarms,2,5,10
+Excavation,Backfilling,Entrapment risk during rapid compaction causing wall collapse,4,5,20,Compact gradually,2,5,10
+Excavation,Pit excavation,Fall into pit due to missing edge protection,3,4,12,Install guardrails; Use safety harness and lanyard at all times,2,3,6
+Excavation,Manual digging,Hand injury caused by hidden sharp debris,3,3,9,Use gloves and inspect area,2,2,4
+Excavation,Trenching,Collapse triggered by load placed too close to trench edge,4,5,20,Keep loads away; Use safety harness and lanyard at all times,2,5,10
+Excavation,Excavation near structure,Adjacent structure destabilized due to soil removal,4,5,20,Provide structural support,2,5,10
+Excavation,Excavation work,Slip hazard from muddy surface near trench edge,3,4,12,Stabilize ground; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Crane lifting,Load dropped due to worn sling failing under load,4,5,20,Inspect lifting gear,2,5,10
+Lifting Operations,Crane operation,Collision occurred due to limited visibility in confined area,3,5,15,Use signalman; Provide respiratory mask and ensure ventilation,2,5,10
+Lifting Operations,Rigging,Load instability caused by incorrect sling configuration,3,4,12,Ensure proper rigging,2,3,6
+Lifting Operations,Material lifting,Load swing due to abrupt crane movement,3,5,15,Operate crane smoothly,2,5,10
+Lifting Operations,Mobile crane,Crane tipping due to soft ground conditions,3,5,15,Assess ground stability,2,5,10
+Lifting Operations,Hoisting,Load detached due to weak lifting point,4,5,20,Verify lifting points,2,5,10
+Lifting Operations,Crane lifting,Worker struck due to absence of exclusion zone,4,5,20,Set exclusion zones,2,5,10
+Lifting Operations,Material handling,Load shift caused by uneven weight distribution,3,4,12,Balance load,2,3,6
+Lifting Operations,Crane operation,Fatigue reduced operator reaction time increasing risk,3,5,15,Manage fatigue,2,5,10
+Lifting Operations,Rigging,Pinch injury occurred during sling positioning,3,3,9,Keep hands clear,2,2,4
+Concrete Works,Concrete pouring,Formwork collapsed due to uneven load distribution,4,5,20,Monitor pour sequence,2,5,10
+Concrete Works,Rebar work,Trip hazard from scattered reinforcement materials,3,3,9,Maintain housekeeping,2,2,4
+Concrete Works,Formwork removal,Fall occurred due to unstable platform during dismantling,4,5,20,Use proper access; Use safety harness and lanyard at all times,2,5,10
+Concrete Works,Finishing,Slip hazard due to wet slurry surface,3,2,6,Clean work area,2,2,4
+Concrete Works,Mixing,Dust inhalation from dry cement mixing,3,3,9,Use masks; Provide respiratory mask and ensure ventilation,2,2,4
+Welding Works,Arc welding,Eye injury due to exposure to arc light without protection,3,3,9,Use welding helmet,1,2,2
+Welding Works,Hot work,Fire caused by sparks igniting nearby materials,3,5,15,Remove combustibles; Obtain hot work permit and station fire extinguisher,1,5,5
+Welding Works,Gas cutting,Explosion risk from leaking gas hose,3,5,15,Inspect hoses; Provide respiratory mask and ensure ventilation,1,5,5
+Welding Works,Grinding,Burn injury from hot sparks contacting skin,3,4,12,Wear PPE,2,3,6
+Welding Works,Confined welding,Fume inhalation due to poor ventilation,3,5,15,Provide ventilation,1,5,5
+Work at Height,Scaffold work,Worker fell when a partially secured plank shifted after repeated loading and minor vibration from nearby equipment,4,5,20,Secure all planks and conduct periodic checks; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Slip occurred as early morning condensation combined with dust reduced surface grip significantly,3,5,15,Delay work until surface is dry and clean; Provide respiratory mask and ensure ventilation,2,5,10
+Work at Height,Facade work,Loss of balance while aligning panel due to unexpected movement of suspended load during positioning,3,5,15,Stabilize load before alignment; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Inspection,Fall risk increased when worker used temporary access not designed to support inspection load,4,5,20,Use certified inspection platforms; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Ladder work,Ladder base shifted on loose gravel causing sudden instability during ascent,3,4,12,Secure ladder base and level surface; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Platform work,Operator movement created oscillation in platform resulting in loss of balance,3,5,15,Operate platform within safe movement limits; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Maintenance,Slip hazard occurred due to unnoticed oil residue left from previous maintenance activity,3,5,15,Inspect and clean work area before use,2,5,10
+Work at Height,Roof access,Worker lost footing when stepping from ladder to roof without adequate handhold support,3,5,15,Install proper access transition systems; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Edge work,Fall hazard increased due to simultaneous crane operation creating distraction and reduced situational awareness,3,5,15,Separate work zones and coordinate tasks; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Scaffold dismantling,Instability developed during dismantling after removal of critical braces leading to fall risk,4,5,20,Follow engineered dismantling procedures; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Cable installation,Electric shock occurred when insulation degraded due to prolonged exposure to moisture and heat,3,5,15,Use suitable insulation and inspect regularly; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Panel work,Arc flash triggered when conductive dust accumulated and bridged live terminals inside panel,3,5,15,Maintain cleanliness and install covers; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Maintenance,Shock occurred due to incomplete isolation of multi-source electrical system during servicing,3,5,15,Verify full isolation before work,1,5,5
+Electrical Works,Installation,Worker contacted live conductor because circuit identification was inaccurate,3,5,15,Confirm circuit status prior to work,1,5,5
+Electrical Works,Temporary wiring,Heat buildup in bundled cables led to gradual insulation failure,3,4,12,Allow spacing and ventilation,2,3,6
+Electrical Works,Inspection,Shock hazard from exposed live terminals during inspection activity,3,5,15,Install protective covers; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Testing,Arc flash occurred due to improper sequencing during energization test,3,5,15,Follow strict testing procedures; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Repair,Grounding fault caused equipment casing to become energized,3,5,15,Test grounding system integrity; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Connection work,Loose terminal created resistance heating leading to electrical fault,3,4,12,Tighten terminals correctly; Apply lockout tagout and use insulated gloves,2,3,6
+Electrical Works,DB setup,Fire hazard developed due to poor cable arrangement restricting airflow,3,4,12,Organize cables and improve ventilation,2,3,6
+Excavation,Trenching,Trench wall collapsed after heavy rainfall weakened soil cohesion beyond safe limits,4,5,20,Install shoring and monitor weather conditions; Use safety harness and lanyard at all times,2,5,10
+Excavation,Deep excavation,Progressive soil failure occurred due to absence of staged structural support,4,5,20,Install support progressively,2,5,10
+Excavation,Utility excavation,Gas leak occurred when excavation struck unmarked underground pipeline,3,5,15,Conduct utility detection survey; Provide respiratory mask and ensure ventilation,1,5,5
+Excavation,Earthworks,Worker struck by reversing equipment entering blind zone without warning,4,5,20,Use spotter and alarms,2,5,10
+Excavation,Backfilling,Entrapment risk arose when rapid compaction caused trench wall collapse,4,5,20,Compact in layers and monitor stability,2,5,10
+Excavation,Pit excavation,Fall into excavation occurred due to lack of barricades during low visibility conditions,3,4,12,Install barriers and lighting; Use safety harness and lanyard at all times,2,3,6
+Excavation,Manual digging,Hand injury caused by contact with sharp debris hidden in soil,3,3,9,Wear gloves and inspect area,2,2,4
+Excavation,Trenching,Collapse triggered by heavy load placed too close to trench edge,4,5,20,Maintain safe distance from loads; Use safety harness and lanyard at all times,2,5,10
+Excavation,Excavation near structure,Adjacent structure destabilized due to soil displacement during excavation,4,5,20,Provide structural support,2,5,10
+Excavation,Excavation work,Slip occurred on muddy incline near trench edge during access,3,4,12,Stabilize access routes; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Crane lifting,Load dropped after sling failed due to unnoticed wear and tear,4,5,20,Inspect lifting gear before use,2,5,10
+Lifting Operations,Crane operation,Collision occurred due to restricted visibility in congested lifting area,3,5,15,Use signalman and visibility aids,2,5,10
+Lifting Operations,Rigging,Load became unstable due to uneven sling configuration and weight distribution,3,4,12,Balance sling setup properly,2,3,6
+Lifting Operations,Material lifting,Load swung unexpectedly due to sudden crane acceleration and wind,3,5,15,Control crane speed and monitor weather,2,5,10
+Lifting Operations,Mobile crane,Crane instability occurred due to insufficient ground bearing capacity under outriggers,3,5,15,Assess ground conditions,2,5,10
+Lifting Operations,Hoisting,Load detached when lifting point failed under stress,4,5,20,Verify lifting points before operation,2,5,10
+Lifting Operations,Crane lifting,Worker struck by load entering area without exclusion control,4,5,20,Establish exclusion zones,2,5,10
+Lifting Operations,Material handling,Load shifted mid-air due to uneven distribution,3,4,12,Balance load before lifting,2,3,6
+Lifting Operations,Crane operation,Operator fatigue reduced response time increasing incident risk,3,5,15,Implement fatigue management,2,5,10
+Lifting Operations,Rigging,Pinch injury occurred when worker adjusted sling without proper coordination,3,3,9,Improve communication and PPE use,2,2,4
+Work at Height,Scaffold work,A worker stepped onto a plank that had loosened over time leading to a sudden loss of footing,4,5,20,Check and secure all planks before use; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Facade work,While adjusting a panel the load shifted slightly causing the worker to lose balance,3,5,15,Stabilize panel before adjustment; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Inspection,Temporary access platform tilted slightly under load during inspection activity,4,5,20,Use certified platforms only; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Ladder work,Ladder base moved when pressure was applied unevenly during climbing,3,4,12,Secure ladder and ensure stable base; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Platform work,Platform swayed due to abrupt operator movement causing instability,3,5,15,Operate controls smoothly; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Maintenance,Oil residue left from earlier work created an unnoticed slip hazard,3,5,15,Clean work surfaces thoroughly,2,5,10
+Work at Height,Roof access,Transition from ladder to roof lacked proper hand support leading to imbalance,3,5,15,Install proper access points; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Edge work,Nearby lifting activity distracted worker resulting in unsafe positioning near edge,3,5,15,Separate work zones; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Scaffold dismantling,Structure became unstable as key components were removed out of sequence,4,5,20,Follow dismantling sequence strictly,2,5,10
+Electrical Works,Cable installation,Insulation breakdown due to moisture exposure resulted in electric shock risk,3,5,15,Use moisture-resistant cables; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Panel work,Dust accumulation inside panel created conductive path leading to arc flash,3,5,15,Maintain panel cleanliness; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Maintenance,Secondary power source remained live causing unexpected energization,3,5,15,Verify isolation completely,1,5,5
+Electrical Works,Installation,Circuit labeling error led to contact with live conductor,3,5,15,Confirm circuit identification,1,5,5
+Electrical Works,Temporary wiring,Cables bundled tightly caused overheating over time,3,4,12,Allow spacing between cables,2,3,6
+Electrical Works,Inspection,Exposed terminals identified during inspection posed shock hazard,3,5,15,Install protective covers; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Testing,Incorrect testing sequence triggered arc flash incident,3,5,15,Follow proper test procedures; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Repair,Grounding fault caused metal casing to become energized,3,5,15,Test grounding system; Apply lockout tagout and use insulated gloves,1,5,5
+Electrical Works,Connection work,Loose connection generated heat and led to short circuit,3,4,12,Tighten terminals correctly,2,3,6
+Electrical Works,DB setup,Overcrowded wiring restricted airflow leading to overheating,3,4,12,Improve cable management,2,3,6
+Excavation,Trenching,Heavy rain softened soil causing trench wall to collapse suddenly,4,5,20,Install shoring and monitor conditions,2,5,10
+Excavation,Deep excavation,Lack of staged support allowed gradual soil failure over time,4,5,20,Install supports progressively,2,5,10
+Excavation,Utility excavation,Excavation struck unknown gas line causing leak hazard,3,5,15,Conduct utility detection; Provide respiratory mask and ensure ventilation,1,5,5
+Excavation,Earthworks,Worker entered blind spot of moving equipment and was nearly struck,4,5,20,Use spotter and alarms,2,5,10
+Excavation,Backfilling,Rapid compaction destabilized trench wall leading to collapse risk,4,5,20,Compact in layers,2,5,10
+Excavation,Pit excavation,Unprotected edge resulted in worker slipping into excavation area,3,4,12,Install guardrails; Use safety harness and lanyard at all times,2,3,6
+Excavation,Manual digging,Sharp debris in soil caused hand injury during digging,3,3,9,Wear gloves,2,2,4
+Excavation,Trenching,Load placed too close to edge increased pressure causing collapse,4,5,20,Keep loads away from trench edge; Use safety harness and lanyard at all times,2,5,10
+Excavation,Excavation near structure,Soil removal caused settlement in adjacent structure,4,5,20,Provide structural support,2,5,10
+Excavation,Excavation work,Muddy slope near trench caused worker to slip during access,3,4,12,Stabilize access route,2,3,6
+Lifting Operations,Crane lifting,Sling failure due to wear caused load to drop unexpectedly,4,5,20,Inspect slings regularly,2,5,10
+Lifting Operations,Crane operation,Operator visibility was obstructed leading to near collision,3,5,15,Use signalman,2,5,10
+Lifting Operations,Rigging,Uneven sling setup resulted in unstable load during lifting,3,4,12,Balance sling configuration,2,3,6
+Lifting Operations,Material lifting,Load swing occurred due to sudden crane movement and wind,3,5,15,Control movement and monitor weather,2,5,10
+Lifting Operations,Mobile crane,Ground conditions were insufficient causing crane instability,3,5,15,Assess and prepare ground,2,5,10
+Lifting Operations,Hoisting,Lifting point failed leading to load detachment mid-air,4,5,20,Verify lifting points,2,5,10
+Lifting Operations,Crane lifting,Worker entered lifting zone and was struck by moving load,4,5,20,Establish exclusion zones,2,5,10
+Lifting Operations,Material handling,Load shifted due to poor weight distribution,3,4,12,Balance load,2,3,6
+Lifting Operations,Crane operation,Fatigue reduced operator awareness and reaction time,3,5,15,Implement fatigue management,2,5,10
+Lifting Operations,Rigging,Hand caught between sling and load during adjustment,3,3,9,Keep hands clear,2,2,4
+Lifting Operations,Crane operation,Collision due to operator blind spots,2,5,10,Use cameras and signalman,2,5,10
+Work at Height,Platform work,Fall due to sudden jerking movement of mechanical platform,2,5,10,Operate platform smoothly and conduct maintenance; Use safety harness and lanyard at all times,2,5,10
+Welding Works,Gas cutting,Improper cylinder handling causing hazard,2,5,10,Secure cylinders,1,5,5
+Concrete Works,Concrete pouring,Formwork failure due to inadequate support spacing,2,5,10,Follow design specifications,2,5,10
+Demolition,Structural removal,Collapse due to removal of load-bearing elements,2,5,10,Obtain engineering approval,2,5,10
+Work at Height,Scaffold work,Worker fell when a partially secured plank shifted after repeated loading and minor vibration from nearby equipment,2,5,10,Secure all planks and conduct periodic checks; Use safety harness and lanyard at all times,2,5,10
+Lifting Operations,Material lifting,Load falls due to improper securing,2,5,10,Secure load using proper techniques; Use safety harness and lanyard at all times,2,5,10
+Lifting Operations,Hoisting,Load detached due to failure of lifting point connection,2,5,10,Verify lifting points,2,5,10
+Confined Space,Maintenance,Heat stress due to confined environment,2,4,8,Provide cooling and rest breaks; Provide respiratory mask and ensure ventilation,2,3,6
+Lifting Operations,Material handling,Load shift due to sudden stopping of crane,2,4,8,Operate crane smoothly,2,3,6
+Chemical Handling,Storage,Leakage from improperly sealed chemical containers,2,4,8,Inspect and seal containers properly; Wear chemical resistant gloves and protective apron,2,3,6
+Confined Space,Maintenance,Delayed rescue due to lack of trained standby personnel,2,5,10,Assign trained standby,1,5,5
+Excavation,Excavation work,Slip hazard due to muddy conditions near trench edge,2,4,8,Improve ground condition; Use safety harness and lanyard at all times,2,3,6
+Work at Height,Roof repair,Fall while stepping on fragile roofing sheet,2,5,10,Provide crawl boards and warning signs,2,5,10
+Demolition,Structural demolition,Collapse due to removal of load-bearing components,2,5,10,Follow engineered demolition plan,2,5,10
+Excavation,Utility work,Damage to underground services causing hazardous exposure,2,5,10,Conduct utility mapping,1,5,5
+Work at Height,Roof access,Worker lost footing while stepping from ladder onto roof edge,2,5,10,Install proper access transition; Use safety harness and lanyard at all times,2,5,10
+Site Preparation,Grading,Vehicle slipping on loose surface,2,4,8,Compact surface,2,3,6
+Work at Height,Platform work,Platform sway caused by sudden operator input resulted in near fall,2,5,10,Operate equipment smoothly; Use safety harness and lanyard at all times,2,5,10
+Lifting Operations,Material handling,Load shift due to uneven distribution and sudden stop,2,4,8,Stabilize load,2,3,6
+Lifting Operations,Material lifting,Load swing occurred due to sudden crane movement and wind,2,5,10,Control movement and monitor weather,2,5,10
+Work at Height,Facade work,Fall caused by sudden wind while handling large panel at height,2,5,10,Suspend work during high wind conditions; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Temporary wiring,Overheating due to poor ventilation around cables,2,4,8,Ensure proper airflow,2,3,6
+Excavation,Excavation near road,Collapse due to vibration from traffic,2,5,10,Reinforce trench walls; Wear hearing protection and ear defenders,2,5,10
+Site Preparation,Grading,Vehicle skidding on loose or wet ground,2,4,8,Stabilize surface,2,3,6
+Lifting Operations,Crane lifting,Load dropped when lifting gear fails under excessive load,2,5,10,Verify load limits and inspect gear,2,5,10
+Work at Height,Ladder work,Fall caused by overreaching while performing task at height,2,4,8,Reposition ladder frequently; Use safety harness and lanyard at all times,2,3,6
+Demolition,Wall removal,Unexpected collapse due to hidden structural weakness,2,5,10,Conduct structural assessment,2,5,10
+Lifting Operations,Crane lifting,Load drop due to improper use of lifting accessories,2,5,10,Use certified lifting gear,2,5,10
+Concrete Works,Formwork erection,Collapse due to incorrect installation under time pressure,2,5,10,Inspect installation,2,5,10
+Concrete Works,Concrete pouring,Formwork collapse due to excessive loading during pour,2,5,10,Follow design limits and inspect formwork,2,5,10
+Lifting Operations,Rigging,Improper sling angle causing imbalance,2,4,8,Train riggers; Use safety harness and lanyard at all times,2,3,6
+Electrical Works,Cable installation,Insulation breakdown due to moisture exposure resulted in electric shock risk,2,5,10,Use moisture-resistant cables; Apply lockout tagout and use insulated gloves,1,5,5
+Excavation,Trenching,Collapse due to prolonged exposure to rain weakening trench walls,2,5,10,Install support and drainage systems,2,5,10
+Material Handling,Forklift operation,Collision with worker due to restricted visibility,2,5,10,Install mirrors and alarms,2,5,10
+Lifting Operations,Material hoisting,Load swing hitting nearby workers,2,5,10,Use taglines and restrict access,2,5,10
+Lifting Operations,Mobile crane,Crane tipping due to incorrect outrigger setup,2,5,10,Deploy outriggers correctly,2,5,10
+Excavation,Pit excavation,Fall into pit due to missing edge protection,2,4,8,Install guardrails; Use safety harness and lanyard at all times,2,3,6
+Material Handling,Forklift use,Load falling due to improper pallet stacking,2,4,8,Ensure stable stacking; Use safety harness and lanyard at all times,2,3,6
+Welding Works,Confined welding,Fume inhalation due to poor ventilation,2,5,10,Provide ventilation,1,5,5
+Excavation,Earthworks,Worker struck by reversing dump truck in active excavation zone,2,5,10,Use spotter and reversing alarms,2,5,10
+Lifting Operations,Crane operation,Collision occurred due to limited visibility in confined area,2,5,10,Use signalman; Provide respiratory mask and ensure ventilation,2,5,10
+Excavation,Utility excavation,Damage to underground gas line causing hazardous leak,2,5,10,Use detection tools before excavation; Provide respiratory mask and ensure ventilation,1,5,5
+Excavation,Trenching,Collapse due to heavy load placed near trench edge,2,5,10,Restrict load near edges,2,5,10
+Excavation,Utility excavation,Damage to underground cable causing hazard,2,5,10,Conduct utility scan,1,5,5
+Excavation,Excavation near structure,Damage to nearby structure due to soil movement,2,5,10,Provide structural support,2,5,10
+Site Preparation,Grading,Vehicle slipping on loose surface,2,4,8,Compact surface,2,3,6
+Work at Height,Roof access,Fall due to lack of secured access ladder,2,5,10,Install fixed access ladder; Use safety harness and lanyard at all times,2,5,10
+Excavation,Excavation work,Slip hazard due to muddy slope near trench edge,2,4,8,Stabilize access paths; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Material lifting,Load falls due to improper securing,2,5,10,Secure load using proper techniques; Use safety harness and lanyard at all times,2,5,10
+Confined Space,Inspection,Heat stress due to confined conditions,2,4,8,Provide rest breaks and ventilation,2,3,6
+Work at Height,Roof work,Fall caused by strong wind while handling large materials,2,5,10,Monitor weather and secure materials; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Roof work,Slip and fall caused by dust accumulation reducing surface friction,2,5,10,Clean surface and use anti-slip footwear,2,5,10
+Excavation,Trenching,Sidewall collapse occurred after rainfall saturated soil beyond stable condition,2,5,10,Install shoring and monitor weather; Use safety harness and lanyard at all times,2,5,10
+Welding Works,Gas cutting,Explosion risk from improper cylinder storage and handling,2,5,10,Secure and store cylinders properly; Obtain hot work permit and station fire extinguisher,1,5,5
+Excavation,Deep excavation,Ground collapse due to groundwater seepage,2,5,10,Implement dewatering system,2,5,10
+Excavation,Trenching,Collapse due to loose sandy soil without support,2,5,10,Install trench support,2,5,10
+Work at Height,Ladder work,Fall due to ladder placed on unstable ground surface,2,4,8,Secure ladder base and inspect ground; Use safety harness and lanyard at all times,2,3,6
+Excavation,Backfilling,Entrapment due to collapse of partially filled trench,2,5,10,Compact gradually and monitor stability,2,5,10
+Site Preparation,Land clearing,Worker struck by machinery due to poor visibility and coordination,2,5,10,Use spotter and signals,2,5,10
+Electrical Works,Installation,Shock from contact with concealed wiring during drilling,2,5,10,Use cable detection tools; Apply lockout tagout and use insulated gloves,1,5,5
+Welding Works,Confined welding,Fume accumulation due to lack of ventilation,2,5,10,Provide exhaust ventilation,1,5,5
+Excavation,Backfilling,Entrapment due to collapse of side walls during filling,2,5,10,Compact gradually and monitor stability,2,5,10
+Material Handling,Forklift operation,Collision due to poor visibility,2,5,10,Use mirrors and alarms,2,5,10
+Lifting Operations,Rigging,Load imbalance due to incorrect rigging configuration,2,4,8,Use proper rigging plan; Use safety harness and lanyard at all times,2,3,6
+Chemical Handling,Painting,Inhalation of solvent vapors in enclosed space,2,4,8,Use respirator and ventilation,2,3,6
+Demolition,Wall demolition,Unexpected collapse during partial removal of structure,2,5,10,Follow engineered demolition sequence,2,5,10
+Piling Works,Bored piling,Collapse of borehole due to unstable soil conditions,2,5,10,Install casing and monitor soil,2,5,10
+Excavation,Deep excavation,Soil failure due to absence of benching in deep cuts,2,5,10,Provide benching and shoring,2,5,10
+Work at Height,Roof work,Slip and fall caused by dust accumulation reducing surface friction,2,5,10,Clean surface and use anti-slip footwear,2,5,10
+Work at Height,Scaffold use,Worker falls from platform due to missing edge protection,2,5,10,Ensure guardrails and toe boards are in place; Use safety harness and lanyard at all times,2,5,10
+Work at Height,Inspection,Fall due to misjudging edge distance under low visibility,2,5,10,Install edge markings and lighting; Use safety harness and lanyard at all times,2,5,10
+Excavation,Pit excavation,Fall into excavation due to missing guardrails,2,4,8,Install barriers and signage; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Mobile crane,Instability due to improper outrigger deployment,2,5,10,Fully extend outriggers and level ground,2,5,10
+Lifting Operations,Hoisting,Lifting point failed leading to load detachment mid-air,2,5,10,Verify lifting points,2,5,10
+Material Handling,Storage,Collapse of stacked goods due to uneven base,2,4,8,Ensure level base,2,3,6
+Work at Height,Facade work,Loss of balance while aligning panel due to unexpected movement of suspended load during positioning,2,5,10,Stabilize load before alignment; Use safety harness and lanyard at all times,2,5,10
+Electrical Works,Inspection,Exposure to live terminals due to missing covers,2,5,10,Install protective covers; Apply lockout tagout and use insulated gloves,1,5,5
+Lifting Operations,Crane lifting,Load dropped after sling failed due to unnoticed wear and tear,2,5,10,Inspect lifting gear before use,2,5,10
+Electrical Works,Inspection,Shock hazard from exposed terminals during inspection,2,5,10,Install protective covers; Apply lockout tagout and use insulated gloves,1,5,5
+Demolition,Concrete breaking,Flying debris causing injury to nearby workers,2,4,8,Install barriers and PPE,2,3,6
+Welding Works,Confined welding,Toxic fumes accumulating in enclosed workspace,2,5,10,Install exhaust ventilation system,1,5,5
+Welding Works,Hot work,Burn injury from hot surfaces,2,4,8,Use gloves,2,3,6
+Welding Works,Gas cutting,Improper cylinder handling causing hazard,2,5,10,Secure cylinders,1,5,5
+Excavation,Pit excavation,Fall into excavation during night work with poor lighting,2,4,8,Install adequate lighting and barriers; Use safety harness and lanyard at all times,2,3,6
+Lifting Operations,Rigging,Load imbalance caused by uneven sling length,2,4,8,Adjust sling lengths properly; Use safety harness and lanyard at all times,2,3,6
+Excavation,Trenching,Collapse triggered by heavy load placed too close to trench edge,2,5,10,Maintain safe distance from loads; Use safety harness and lanyard at all times,2,5,10
+Lifting Operations,Crane work,Collision with structure due to poor planning,2,5,10,Plan lifting path,2,5,10
+Work at Height,Roof work,Slip occurred as early morning condensation combined with dust reduced surface grip significantly,2,5,10,Delay work until surface is dry and clean; Provide respiratory mask and ensure ventilation,2,5,10
+Excavation,Earthworks,Worker struck due to blind spot and poor communication,2,5,10,Assign banksman and communication system,2,5,10
+Excavation,Backfilling,Entrapment risk arose when rapid compaction caused trench wall collapse,2,5,10,Compact in layers and monitor stability,2,5,10
+Electrical Works,DB setup,Fire hazard developed due to poor cable arrangement restricting airflow,2,4,8,Organize cables and improve ventilation,2,3,6
+Electrical Works,Panel work,Dust accumulation inside panel created conductive path leading to arc flash,2,5,10,Maintain panel cleanliness; Apply lockout tagout and use insulated gloves,1,5,5
+Piling Works,Drilling,Damage to underground utilities due to lack of survey,2,5,10,Conduct survey,1,5,5
+Excavation,Manual digging,Worker injury from striking buried objects,2,4,8,Use detection tools and PPE,2,3,6
+Piling Works,Setup,Instability of piling rig due to uneven or soft ground,2,5,10,Prepare stable working platform,2,5,10
+Excavation,Trenching,Load placed too close to edge increased pressure causing collapse,2,5,10,Keep loads away from trench edge; Use safety harness and lanyard at all times,2,5,10
+Excavation,Deep excavation,Soil failure due to prolonged exposure without reinforcement,2,5,10,Provide staged support installation,2,5,10
+Chemical Handling,Storage,Leakage from improperly sealed containers,2,4,8,Inspect containers regularly,2,3,6
+Electrical Works,Inspection,Shock due to exposed wiring during inspection,2,5,10,Cover exposed parts; Apply lockout tagout and use insulated gloves,1,5,5
+Welding Works,Arc welding,Eye injury from prolonged exposure to arc light,2,3,6,Use proper eye protection; Use full face shield and FR jacket,1,2,2
+Site Preparation,General work,Dust inhalation due to dry site conditions,2,3,6,Apply water suppression; Provide respiratory mask and ensure ventilation,2,2,4
+Site Preparation,Debris removal,Injury from sharp debris during cleanup,2,3,6,Use gloves and PPE,2,2,4
+Lifting Operations,Rigging,Hand injury due to pinch point during rigging,2,3,6,Wear gloves and keep clear,2,2,4
+Material Handling,Manual handling,Hand injury due to improper grip on sharp materials,2,3,6,Use gloves,2,2,4
+Material Handling,Manual transport,Foot injury from dropped materials,2,3,6,Wear safety footwear,2,2,4
+Welding Works,Arc welding,Eye injury from prolonged exposure to arc light,2,3,6,Use proper eye protection; Use full face shield and FR jacket,1,2,2
+Lifting Operations,Rigging,Pinch injury during rigging due to poor coordination,2,3,6,Improve communication and training,2,2,4
+Confined Space,Entry,Slip hazard due to wet surfaces and limited space,2,3,6,Use anti-slip footwear,2,2,4
+Confined Space,Entry,Slip hazard from wet confined surfaces,2,3,6,Use anti-slip footwear,2,2,4
+Chemical Handling,Application,Skin irritation due to chemical exposure,2,3,6,Use PPE; Wear chemical resistant gloves and protective apron,2,2,4
+Lifting Operations,Rigging,Pinch point injury during sling adjustment,2,3,6,Keep hands clear and wear gloves,2,2,4
+Material Handling,Manual lifting,Back injury from lifting heavy loads without proper posture,2,3,6,Provide lifting training,2,2,4
+Concrete Works,Rebar work,Trip hazard from scattered reinforcement materials,2,3,6,Maintain housekeeping,2,2,4
+Piling Works,Pile driving,Noise exposure exceeding safe limits during prolonged operations,2,3,6,Use hearing protection,2,2,4
+Material Handling,Manual lifting,Back strain due to repetitive lifting of heavy loads,2,3,6,Provide mechanical aids and training,2,2,4
+Confined Space,Entry,Slip hazard from wet confined surfaces,2,3,6,Use anti-slip footwear,2,2,4
+Chemical Handling,Painting,Inhalation of paint fumes causing respiratory irritation,2,3,6,Use respirators,2,2,4
+Lifting Operations,Rigging,Pinch injury occurred during sling positioning,2,3,6,Keep hands clear,2,2,4
+Material Handling,Manual transport,Foot injury from dropped materials,2,3,6,Wear safety footwear,2,2,4
+Concrete Works,Mixing,Dust inhalation during mixing process,2,3,6,Use masks; Provide respiratory mask and ensure ventilation,2,2,4
+Demolition,Interior work,Dust exposure during demolition,2,3,6,Use dust suppression and masks; Provide respiratory mask and ensure ventilation,2,2,4
+Chemical Handling,Painting,Inhalation of paint fumes in enclosed space,2,3,6,Provide ventilation and respirators,2,2,4
+Demolition,Equipment use,Hearing damage from prolonged exposure to demolition noise,2,3,6,Provide hearing protection,2,2,4
+Concrete Works,Pouring,Concrete splash causing skin irritation,2,3,6,Use protective clothing,2,2,4
+Site Preparation,Debris removal,Injury from sharp debris during cleanup,2,3,6,Use gloves and PPE,2,2,4
+Chemical Handling,Painting,Inhalation of paint vapors in poorly ventilated indoor area,2,3,6,Provide ventilation and respirators,2,2,4
+Concrete Works,Rebar work,Injury due to tripping over reinforcement bars,2,3,6,Maintain clear pathways,2,2,4
+Site Preparation,General work,Dust inhalation due to dry environmental conditions,2,3,6,Apply water suppression techniques; Provide respiratory mask and ensure ventilation,2,2,4
+Lifting Operations,Rigging,Hand injury during rigging due to lack of coordination,2,3,6,Ensure clear communication,2,2,4
+Concrete Works,Rebar work,Trip hazard from scattered reinforcement materials,2,3,6,Maintain housekeeping,2,2,4
+Chemical Handling,Painting,Inhalation of paint vapors in poorly ventilated indoor area,2,3,6,Provide ventilation and respirators,2,2,4
+Lifting Operations,Rigging,Pinch injury occurred when worker adjusted sling without proper coordination,2,3,6,Improve communication and PPE use,2,2,4
+Material Handling,Manual transport,Foot injury from dropped materials,2,3,6,Wear safety footwear,2,2,4
+Demolition,Interior work,Dust inhalation due to lack of suppression measures,2,3,6,Use water spray; Provide respiratory mask and ensure ventilation,2,2,4
+Concrete Works,Mixing operation,Exposure to airborne cement dust,2,3,6,Use masks and ventilation,2,2,4
+Concrete Works,Mixing,Dust inhalation from dry cement mixing,2,3,6,Use masks; Provide respiratory mask and ensure ventilation,2,2,4
+Chemical Handling,Painting,Inhalation of paint fumes in enclosed space,2,3,6,Provide ventilation and respirators,2,2,4
+Concrete Works,Material handling,Back injury from lifting cement bags,2,3,6,Use lifting aids,2,2,4
+Piling Works,Pile driving,Exposure to excessive noise from piling equipment,2,3,6,Use hearing protection,2,2,4
+Material Handling,Manual lifting,Muscle strain from lifting heavy materials repeatedly,2,3,6,Provide lifting aids and training,2,2,4
+Chemical Handling,Application,Skin irritation from repeated exposure to chemicals,2,3,6,Use protective clothing,2,2,4
+Piling Works,Pile driving,Noise exposure exceeding safe limits during prolonged operations,2,3,6,Use hearing protection,2,2,4
+Lifting Operations,Rigging,Pinch injury occurred during sling positioning,2,3,6,Keep hands clear,2,2,4
+Material Handling,Manual lifting,Back strain from lifting heavy loads without assistance,2,3,6,Use mechanical aids,2,2,4
+Site Preparation,Cleanup,Injury from sharp debris during manual handling,2,3,6,Wear gloves,2,2,4
+Material Handling,Manual lifting,Back injury from lifting heavy loads incorrectly,2,3,6,Provide ergonomic training,2,2,4
+Welding Works,Arc welding,Exposure to intense light causing eye injury,2,3,6,Use welding helmet with proper filter,1,2,2
+Demolition,Interior work,Dust inhalation from demolition debris,2,3,6,Use dust suppression and masks; Provide respiratory mask and ensure ventilation,2,2,4
+Concrete Works,Rebar work,Trip hazard caused by protruding reinforcement bars,2,3,6,Install protective caps,2,2,4
+Confined Space,Entry,Slip hazard due to wet internal surfaces and poor footing,2,3,6,Use anti-slip footwear,2,2,4
+Material Handling,Manual lifting,Back injury from lifting heavy loads without proper posture,2,3,6,Provide lifting training,2,2,4
+Concrete Works,Mixing,Dust inhalation from dry cement mixing,2,3,6,Use masks; Provide respiratory mask and ensure ventilation,2,2,4
+Material Handling,Manual lifting,Back strain due to repetitive lifting of heavy loads,2,3,6,Provide mechanical aids and training,2,2,4
+Excavation,Manual digging,Hand injury caused by contact with sharp debris hidden in soil,2,3,6,Wear gloves and inspect area,2,2,4
+Site Preparation,Cleanup,Injury caused by sharp debris during manual handling,2,3,6,Wear appropriate PPE,2,2,4
+Excavation,Manual digging,Injury due to improper use of digging tools,2,3,6,Train workers on tool use,2,2,4
+Demolition,Interior demolition,Exposure to airborne dust particles,2,3,6,Use respiratory protection,2,2,4
+Site Preparation,Cleanup,Injury caused by sharp debris during manual handling,2,3,6,Wear appropriate PPE,2,2,4
+Concrete Works,Mixing,Exposure to airborne cement particles during dry mixing process,2,3,6,Use dust control measures,2,2,4
+Piling Works,Pile driving,Exposure to excessive noise from piling equipment,2,3,6,Use hearing protection,2,2,4
+Concrete Works,Mixing,Dust inhalation from cement handling,2,3,6,Use masks and ventilation,2,2,4
+Demolition,Interior work,Dust exposure from demolition activities affecting breathing,2,3,6,Use dust suppression and PPE; Provide respiratory mask and ensure ventilation,2,2,4
+Site Preparation,Debris removal,Injury from sharp debris during cleanup,2,3,6,Use gloves and PPE,2,2,4
+Piling Works,Pile driving,Noise hazard from continuous piling operations,2,3,6,Provide hearing protection,2,2,4
+Concrete Works,Mixing,Dust inhalation from dry cement mixing process,2,3,6,Use masks and ventilation,2,2,4
+Material Handling,Manual lifting,Back injury from lifting heavy loads incorrectly,2,3,6,Provide ergonomic training,2,2,4
+Piling Works,Pile driving,Noise exposure exceeding safe limits during prolonged operations,2,3,6,Use hearing protection,2,2,4
+Confined Space,Entry,Slip hazard due to wet surfaces,2,3,6,Use anti-slip footwear,2,2,4
+Concrete Works,Mixing,Dust inhalation due to dry cement handling,2,3,6,Use masks; Provide respiratory mask and ensure ventilation,2,2,4
+Site Preparation,Cleanup,Injury from handling sharp construction debris,2,3,6,Use gloves and PPE,2,2,4
+Site Preparation,Debris removal,Injury from sharp debris during cleanup,2,3,6,Use gloves and PPE,2,2,4
+Welding Works,Arc welding,Eye injury from exposure to welding arc without proper shield,2,3,6,Ensure use of welding helmet,1,2,2
+Concrete Works,Rebar work,Trip hazard from scattered materials and poor housekeeping,2,3,6,Maintain clean work area,2,2,4
+Chemical Handling,Painting,Inhalation of paint fumes in enclosed space,2,3,6,Provide ventilation and respirators,2,2,4
+Material Handling,Manual lifting,Muscle strain due to repetitive lifting under time pressure,2,3,6,Provide mechanical aids,2,2,4
+Material Handling,Manual lifting,Muscle strain from lifting heavy materials repeatedly,2,3,6,Provide lifting aids and training,2,2,4
+Confined Space,Entry,Slip hazard from wet confined surfaces,2,3,6,Use anti-slip footwear,2,2,4
+Excavation,Manual digging,Hand injury caused by hidden sharp debris,2,3,6,Use gloves and inspect area,2,2,4
+Excavation,Manual digging,Sharp debris in soil caused hand injury during digging,2,3,6,Wear gloves,2,2,4
+Concrete Works,Surface work,Slip due to spilled concrete on walking path,1,2,2,Clean spills immediately,1,2,2
+Concrete Works,Finishing,Slip hazard from wet surface,1,2,2,Maintain housekeeping,1,2,2
+Concrete Works,Finishing,Slip due to wet surface and poor lighting conditions,1,2,2,Improve lighting and housekeeping,1,2,2
+Concrete Works,Finishing,Slip hazard caused by wet slurry left unattended,1,2,2,Clean area promptly,1,2,2
+Site Preparation,Access setup,Trip hazard from uneven temporary walkways,1,2,2,Level walkways,1,2,2
+Concrete Works,Finishing,Slip due to wet surface combined with poor lighting,1,2,2,Improve lighting and housekeeping,1,2,2
+Concrete Works,Surface work,Slip due to spilled concrete on walking path,1,2,2,Clean spills immediately,1,2,2
+Site Preparation,Temporary access,Trip hazard from uneven walking surfaces,1,2,2,Maintain level pathways,1,2,2
+Site Preparation,Temporary access,Trip hazard due to uneven surface,1,2,2,Maintain pathways,1,2,2
+Concrete Works,Finishing,Slip hazard caused by wet slurry left unattended,1,2,2,Clean area promptly,1,2,2
+Concrete Works,Finishing,Slip hazard caused by wet slurry left unattended,1,2,2,Clean area promptly,1,2,2
+Concrete Works,Finishing,Slip due to wet concrete surface,1,2,2,Maintain clean working area,1,2,2
+Concrete Works,Finishing,Slip due to wet surface combined with poor lighting,1,2,2,Improve lighting and housekeeping,1,2,2
+Concrete Works,Surface finishing,Slip due to wet and uneven concrete surface,1,2,2,Maintain clean working area,1,2,2
+Site Preparation,Access setup,Trip hazard from uneven temporary walkways,1,2,2,Level walkways,1,2,2
+Concrete Works,Finishing,Slip due to wet concrete surface,1,2,2,Maintain clean working area,1,2,2
+Site Preparation,General work,Trip hazard due to scattered debris,1,2,2,Maintain housekeeping,1,2,2
+Concrete Works,Finishing,Slip hazard due to wet concrete surface,1,2,2,Use signage and clean area,1,2,2
+Concrete Works,Finishing,Slip due to wet surface combined with poor lighting,1,2,2,Improve lighting and housekeeping,1,2,2
+Chemical Handling,Epoxy application,Skin irritation due to chemical exposure,1,2,2,Use gloves and protective clothing,1,2,2
+Concrete Works,Finishing,Slip due to wet concrete surface,1,2,2,Maintain clean working area,1,2,2
+Site Preparation,Temporary access,Trip hazard from uneven temporary walkways,1,2,2,Maintain even walking surfaces,1,2,2
+Site Preparation,Temporary access,Trip hazard from uneven temporary pathways,1,2,2,Level surfaces and maintain paths,1,2,2
+Chemical Handling,Epoxy application,Skin irritation due to chemical exposure,1,2,2,Use gloves and protective clothing,1,2,2
+Concrete Works,Finishing,Slip due to wet surface combined with poor lighting,1,2,2,Improve lighting and housekeeping,1,2,2

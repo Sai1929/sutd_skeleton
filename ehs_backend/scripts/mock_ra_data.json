@@ -1,0 +1,386 @@
+[
+  {
+    "ra_number": "RA/1753",
+    "activity": "EnRoot Group 5 Event",
+    "location": "Campus Centre",
+    "team": [
+      {"student_id": "STU001", "full_name": "Aisha Rahman", "email": "stu001@ehs.test", "role": "leader"},
+      {"student_id": "STU002", "full_name": "Ben Lim", "email": "stu002@ehs.test", "role": "member"},
+      {"student_id": "STU003", "full_name": "Caleb Tan", "email": "stu003@ehs.test", "role": "member"}
+    ],
+    "sub_activities": [
+      {
+        "name": "Animal Crossing - Fishing",
+        "hazard_type": "Struck by object",
+        "hazard_description": "Being struck by the fishing rod during gameplay",
+        "possible_injury": "Cuts and bruises on body or face",
+        "severity": 2,
+        "likelihood": 2,
+        "risk_controls": "Provide ample space for the game; brief participants on safe rod handling",
+        "additional_controls": "Designate a safety buffer zone around the fishing station"
+      },
+      {
+        "name": "Animal Crossing - Parcel Delivery",
+        "hazard_type": "Overexertion",
+        "hazard_description": "High intensity movement during parcel delivery game",
+        "possible_injury": "Back and body strains; discomfort on fingers, arms, wrist and neck",
+        "severity": 1,
+        "likelihood": 2,
+        "risk_controls": "Share game instructions before start; provide ample space; limit play duration per session",
+        "additional_controls": "Encourage participants to warm up before playing"
+      },
+      {
+        "name": "Pac-Man Maze Chase",
+        "hazard_type": "Slip/Trip",
+        "hazard_description": "Fall to same level during fast-paced maze navigation",
+        "possible_injury": "Bodily injury from fall",
+        "severity": 2,
+        "likelihood": 2,
+        "risk_controls": "Require proper footwear; maintain housekeeping of play area; provide ample space",
+        "additional_controls": "Mark boundaries of play zone clearly"
+      },
+      {
+        "name": "Mario Obstacle Course",
+        "hazard_type": "Overexertion",
+        "hazard_description": "Overexertion from forceful hand and arm movements",
+        "possible_injury": "Back and body strains; discomfort on fingers, arms, wrist and neck",
+        "severity": 1,
+        "likelihood": 2,
+        "risk_controls": "Monitor the game actively; share instructions; remind participants to take precautions and stop if feeling pain",
+        "additional_controls": "Limit consecutive play time to 10 minutes"
+      },
+      {
+        "name": "Pokemon Accuracy Throw",
+        "hazard_type": "Overexertion",
+        "hazard_description": "Overexertion from repetitive throwing action",
+        "possible_injury": "Back and body strains; discomfort on fingers, arms, wrist and neck",
+        "severity": 1,
+        "likelihood": 2,
+        "risk_controls": "Monitor the game; share throwing technique instructions; remind participants to stop if discomfort arises",
+        "additional_controls": "Set maximum number of throws per participant per round"
+      },
+      {
+        "name": "Donkey Kong Dodgeball",
+        "hazard_type": "Overexertion",
+        "hazard_description": "Overexertion from forceful dodging and throwing movements",
+        "possible_injury": "Back and body strains; discomfort on fingers, arms, wrist and neck",
+        "severity": 1,
+        "likelihood": 3,
+        "risk_controls": "Monitor game intensity; share instructions and warm-up routine; remind participants to take precautions",
+        "additional_controls": "Use soft foam balls only; referee to monitor play intensity"
+      },
+      {
+        "name": "Pokemon Catch Party - Extra Game",
+        "hazard_type": "Slip/Trip",
+        "hazard_description": "Slip, trip or fall while moving around to collect Pokemon cards",
+        "possible_injury": "Bodily injury from fall",
+        "severity": 3,
+        "likelihood": 2,
+        "risk_controls": "Place Pokemon cards at convenient and accessible areas; avoid narrow spaces; remind participants to watch their pathway",
+        "additional_controls": "Ensure adequate lighting in all areas where cards are placed"
+      }
+    ]
+  },
+  {
+    "ra_number": "RA/1754",
+    "activity": "Welding",
+    "location": "Fabrication Lab",
+    "team": [
+      {"student_id": "STU004", "full_name": "Diana Ng", "email": "stu004@ehs.test", "role": "leader"},
+      {"student_id": "STU005", "full_name": "Ethan Koh", "email": "stu005@ehs.test", "role": "member"},
+      {"student_id": "STU006", "full_name": "Fiona Teo", "email": "stu006@ehs.test", "role": "member"}
+    ],
+    "sub_activities": [
+      {
+        "name": "MIG Welding - Steel Frame",
+        "hazard_type": "Arc Flash",
+        "hazard_description": "Intense UV and IR radiation from welding arc causing eye and skin burns",
+        "possible_injury": "Eye injury, skin burns, arc eye",
+        "severity": 4,
+        "likelihood": 3,
+        "risk_controls": "Full face shield with shade 10 filter; FR jacket; leather welding gloves; welding curtains around workstation",
+        "additional_controls": "Barricade area; post warning signs; conduct toolbox talk before starting"
+      },
+      {
+        "name": "Welding - Fume Exposure",
+        "hazard_type": "Fume Inhalation",
+        "hazard_description": "Inhalation of metal fumes and gases produced during welding",
+        "possible_injury": "Respiratory irritation, metal fume fever, long-term lung damage",
+        "severity": 3,
+        "likelihood": 3,
+        "risk_controls": "Local exhaust ventilation (LEV) at source; half-face respirator with P2 filter; work in ventilated area",
+        "additional_controls": "Review SDS for base metal and filler; monitor air quality; no welding in confined space without forced ventilation"
+      },
+      {
+        "name": "Welding - Fire Risk",
+        "hazard_type": "Fire/Explosion",
+        "hazard_description": "Sparks and spatter from welding igniting nearby flammable materials",
+        "possible_injury": "Burns, smoke inhalation",
+        "severity": 4,
+        "likelihood": 2,
+        "risk_controls": "Hot work permit required; remove all flammables within 11m radius; CO2 fire extinguisher on standby; fire watch for 30 min after work",
+        "additional_controls": "Inspect area for hidden flammables; designate a fire watcher"
+      },
+      {
+        "name": "Grinding - Metal Sparks",
+        "hazard_type": "UV Radiation",
+        "hazard_description": "Flying sparks and debris from angle grinding operations",
+        "possible_injury": "Eye injury, skin lacerations, hearing damage",
+        "severity": 3,
+        "likelihood": 3,
+        "risk_controls": "Safety goggles or face shield; leather gloves; FR clothing; hearing protection; spark deflector guards",
+        "additional_controls": "Ensure grinding disc is rated for the RPM; inspect disc for cracks before use"
+      }
+    ]
+  },
+  {
+    "ra_number": "RA/1755",
+    "activity": "Chemical Handling",
+    "location": "Chemical Storage and Lab",
+    "team": [
+      {"student_id": "STU007", "full_name": "Gabriel Lee", "email": "stu007@ehs.test", "role": "leader"},
+      {"student_id": "STU008", "full_name": "Hannah Wong", "email": "stu008@ehs.test", "role": "member"},
+      {"student_id": "STU009", "full_name": "Isaac Chen", "email": "stu009@ehs.test", "role": "member"}
+    ],
+    "sub_activities": [
+      {
+        "name": "Acid Handling - HCl Transfer",
+        "hazard_type": "Chemical Burn",
+        "hazard_description": "Skin or eye contact with hydrochloric acid during transfer",
+        "possible_injury": "Chemical burns to skin and eyes, respiratory irritation",
+        "severity": 4,
+        "likelihood": 3,
+        "risk_controls": "Chemical resistant nitrile gloves; splash goggles; acid-resistant apron; work in fume cupboard",
+        "additional_controls": "Check SDS before handling; ensure eyewash station is accessible within 10 seconds; buddy system required"
+      },
+      {
+        "name": "Solvent Use - Acetone",
+        "hazard_type": "Fire/Explosion",
+        "hazard_description": "Ignition of flammable acetone vapours near ignition sources",
+        "possible_injury": "Burns from flash fire, explosion injuries",
+        "severity": 4,
+        "likelihood": 2,
+        "risk_controls": "No ignition sources in lab; anti-static footwear; grounding strap on containers; store in approved flammable cabinet",
+        "additional_controls": "Limit quantities to minimum needed; work in ventilated area; have dry powder extinguisher available"
+      },
+      {
+        "name": "Chemical Spill Response",
+        "hazard_type": "Chemical Burn",
+        "hazard_description": "Exposure to spilled chemicals during cleanup operations",
+        "possible_injury": "Skin burns, eye injury, inhalation of vapours",
+        "severity": 3,
+        "likelihood": 2,
+        "risk_controls": "Chemical spill kit available; full PPE during cleanup; ventilate area; absorb with appropriate material",
+        "additional_controls": "Train all lab users on spill response procedure; post emergency contacts visibly"
+      }
+    ]
+  },
+  {
+    "ra_number": "RA/1756",
+    "activity": "Electrical Work",
+    "location": "Electrical Workshop",
+    "team": [
+      {"student_id": "STU010", "full_name": "Jaya Patel", "email": "stu010@ehs.test", "role": "leader"},
+      {"student_id": "STU011", "full_name": "Kevin Ong", "email": "stu011@ehs.test", "role": "member"},
+      {"student_id": "STU012", "full_name": "Linh Tran", "email": "stu012@ehs.test", "role": "member"}
+    ],
+    "sub_activities": [
+      {
+        "name": "LV Panel Maintenance - 415V",
+        "hazard_type": "Electric Shock",
+        "hazard_description": "Contact with live 415V conductors during panel maintenance",
+        "possible_injury": "Electric shock, cardiac arrest, severe burns",
+        "severity": 5,
+        "likelihood": 2,
+        "risk_controls": "Lockout/Tagout (LOTO) procedure; insulated gloves rated 1000V; arc flash suit; verify zero energy with tester",
+        "additional_controls": "Only authorised electrical workers; two-person rule; permit-to-work required"
+      },
+      {
+        "name": "Arc Flash Risk - Switchboard",
+        "hazard_type": "Arc Flash",
+        "hazard_description": "Arc flash event during energised switchboard operation",
+        "possible_injury": "Severe burns, blast pressure injury, vision loss",
+        "severity": 5,
+        "likelihood": 2,
+        "risk_controls": "Arc rated PPE (cal/cm2 rated); face shield; maintain safe working distance; use insulated tools only",
+        "additional_controls": "Conduct arc flash study; post incident energy label on panel; restricted access zone"
+      },
+      {
+        "name": "Cable Installation - Overhead",
+        "hazard_type": "Electric Shock",
+        "hazard_description": "Inadvertent contact with live cables during installation",
+        "possible_injury": "Electric shock, fall from ladder",
+        "severity": 3,
+        "likelihood": 2,
+        "risk_controls": "De-energise and LOTO before work; rubber insulating mat; insulated tools; non-conductive ladder",
+        "additional_controls": "Use voltage detector before touching any conductor; wear safety shoes"
+      }
+    ]
+  },
+  {
+    "ra_number": "RA/1757",
+    "activity": "Working at Height",
+    "location": "Rooftop and External Structures",
+    "team": [
+      {"student_id": "STU013", "full_name": "Marcus Ho", "email": "stu013@ehs.test", "role": "leader"},
+      {"student_id": "STU014", "full_name": "Nadia Singh", "email": "stu014@ehs.test", "role": "member"},
+      {"student_id": "STU015", "full_name": "Owen Chua", "email": "stu015@ehs.test", "role": "member"}
+    ],
+    "sub_activities": [
+      {
+        "name": "Rooftop Equipment Inspection",
+        "hazard_type": "Fall from Height",
+        "hazard_description": "Fall from rooftop edge or through fragile roofing material",
+        "possible_injury": "Fatal or serious injuries from fall",
+        "severity": 5,
+        "likelihood": 2,
+        "risk_controls": "Full body harness with double lanyard; anchor point rated >15kN; guardrails at roof edge; anti-fall netting",
+        "additional_controls": "Inspect harness before every use; toolbox talk; do not work during adverse weather"
+      },
+      {
+        "name": "Scaffold Erection and Dismantling",
+        "hazard_type": "Fall from Height",
+        "hazard_description": "Workers falling during scaffold erection or dismantling",
+        "possible_injury": "Severe injuries or fatality from fall",
+        "severity": 5,
+        "likelihood": 3,
+        "risk_controls": "Safety net below scaffold; harness and lanyard during erection; trained scaffold erectors only; scaffold inspection tag",
+        "additional_controls": "Establish exclusion zone below; daily scaffold inspection; no overloading"
+      },
+      {
+        "name": "Dropped Objects - Tools and Materials",
+        "hazard_type": "Crush Injury",
+        "hazard_description": "Tools or materials dropped from height onto workers below",
+        "possible_injury": "Head injury, crush injury to workers below",
+        "severity": 4,
+        "likelihood": 3,
+        "risk_controls": "Hard hat mandatory for all below; tool lanyards for all hand tools; toe boards on scaffold platforms; exclusion zone below",
+        "additional_controls": "Barricade and signpost exclusion zone; use tool bags to transport materials"
+      }
+    ]
+  },
+  {
+    "ra_number": "RA/1758",
+    "activity": "Machine Operation",
+    "location": "Workshop",
+    "team": [
+      {"student_id": "STU016", "full_name": "Priya Sharma", "email": "stu016@ehs.test", "role": "leader"},
+      {"student_id": "STU017", "full_name": "Quincy Yap", "email": "stu017@ehs.test", "role": "member"}
+    ],
+    "sub_activities": [
+      {
+        "name": "CNC Milling Machine Operation",
+        "hazard_type": "Crush Injury",
+        "hazard_description": "Contact with rotating spindle or moving table of CNC machine",
+        "possible_injury": "Crush injury, degloving, amputation",
+        "severity": 4,
+        "likelihood": 3,
+        "risk_controls": "Machine guards in place and interlocked; emergency stop tested before operation; safety shoes; no loose clothing or jewellery",
+        "additional_controls": "Only trained operators; never bypass guards; LOTO before tool change or maintenance"
+      },
+      {
+        "name": "Lathe Operation - Metal Turning",
+        "hazard_type": "Noise",
+        "hazard_description": "High noise levels from metal cutting on lathe exceeding 85dB",
+        "possible_injury": "Noise-induced hearing loss",
+        "severity": 3,
+        "likelihood": 4,
+        "risk_controls": "Ear defenders rated 30dB SNR; noise barriers around lathe area; limit exposure duration",
+        "additional_controls": "Regular hearing tests for frequent users; post noise level signage at machine"
+      }
+    ]
+  },
+  {
+    "ra_number": "RA/1759",
+    "activity": "Material Handling",
+    "location": "Loading Bay and Warehouse",
+    "team": [
+      {"student_id": "STU018", "full_name": "Rachel Lim", "email": "stu018@ehs.test", "role": "leader"},
+      {"student_id": "STU019", "full_name": "Samuel Goh", "email": "stu019@ehs.test", "role": "member"}
+    ],
+    "sub_activities": [
+      {
+        "name": "Forklift Loading - Heavy Pallets",
+        "hazard_type": "Crush Injury",
+        "hazard_description": "Pedestrian struck by forklift or crushed by falling load",
+        "possible_injury": "Fatal crush injury, fractures",
+        "severity": 5,
+        "likelihood": 3,
+        "risk_controls": "Forklift exclusion zone for pedestrians; hi-vis vest; hard hat; safety shoes; proximity warning system",
+        "additional_controls": "Designated pedestrian walkways; forklift operator certified; spotters for blind corners"
+      },
+      {
+        "name": "Manual Handling - Boxes >15kg",
+        "hazard_type": "Slip/Trip",
+        "hazard_description": "Musculoskeletal injury from manual lifting of heavy boxes",
+        "possible_injury": "Back strain, musculoskeletal disorder",
+        "severity": 3,
+        "likelihood": 3,
+        "risk_controls": "Use mechanical lifting aids for loads >15kg; team lift for bulky items; proper lifting technique training",
+        "additional_controls": "Keep aisles clear; wear safety shoes with ankle support; assess load before lifting"
+      }
+    ]
+  },
+  {
+    "ra_number": "RA/1760",
+    "activity": "Cleaning",
+    "location": "Pantry and Common Areas",
+    "team": [
+      {"student_id": "STU020", "full_name": "Tanya Kumar", "email": "stu020@ehs.test", "role": "leader"},
+      {"student_id": "STU021", "full_name": "Uma Nair", "email": "stu021@ehs.test", "role": "member"}
+    ],
+    "sub_activities": [
+      {
+        "name": "Floor Mopping - Wet Surfaces",
+        "hazard_type": "Slip/Trip",
+        "hazard_description": "Slip on wet floor surface during or after mopping",
+        "possible_injury": "Fall causing fractures, head injury, soft tissue injury",
+        "severity": 3,
+        "likelihood": 3,
+        "risk_controls": "Non-slip footwear; wet floor warning signs placed before mopping; work from exit to entrance; dry mop in sections",
+        "additional_controls": "Ensure adequate lighting; avoid mopping during peak traffic hours"
+      },
+      {
+        "name": "Chemical Cleaning Agent Use",
+        "hazard_type": "Chemical Burn",
+        "hazard_description": "Skin or eye contact with cleaning chemicals such as bleach or caustic cleaners",
+        "possible_injury": "Chemical burns to skin and eyes; respiratory irritation",
+        "severity": 3,
+        "likelihood": 2,
+        "risk_controls": "Nitrile gloves; safety glasses; ventilate area; do not mix bleach with ammonia or acid-based cleaners",
+        "additional_controls": "Check SDS before use; use pre-diluted products where possible; store in original labelled containers"
+      }
+    ]
+  },
+  {
+    "ra_number": "RA/1761",
+    "activity": "Hot Work",
+    "location": "Construction Site - Block 1",
+    "team": [
+      {"student_id": "STU022", "full_name": "Vikram Singh", "email": "stu022@ehs.test", "role": "leader"},
+      {"student_id": "STU023", "full_name": "Wei Xin Tan", "email": "stu023@ehs.test", "role": "member"}
+    ],
+    "sub_activities": [
+      {
+        "name": "Pipe Cutting - Oxy-Acetylene",
+        "hazard_type": "Fire/Explosion",
+        "hazard_description": "Ignition of flammable materials from oxy-acetylene cutting sparks",
+        "possible_injury": "Burns, fire damage, explosion injury",
+        "severity": 5,
+        "likelihood": 3,
+        "risk_controls": "Hot work permit issued; remove all flammables within 11m; CO2 extinguisher on standby; designated fire watcher; fire watch 30 min post work",
+        "additional_controls": "Inspect hoses and regulators before use; no hot work near gas lines; post area as hot work zone"
+      },
+      {
+        "name": "Grinding - UV Fume Exposure",
+        "hazard_type": "Fume Inhalation",
+        "hazard_description": "Inhalation of metal dust and fumes from cutting and grinding",
+        "possible_injury": "Respiratory irritation, lung damage from prolonged exposure",
+        "severity": 3,
+        "likelihood": 3,
+        "risk_controls": "Half-face respirator with P3 filter; LEV or forced ventilation; limit exposure duration; work upwind of fume source",
+        "additional_controls": "Monitor air quality; rotate workers to limit individual exposure; no eating or drinking in work area"
+      }
+    ]
+  }
+]

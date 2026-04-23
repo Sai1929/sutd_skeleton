@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(.venv/Scripts/pip install:*)",
+      "Bash(../. venv/Scripts/python -c \":*)",
+      "Bash(\"d:/projects/SUTD/.venv/Scripts/python\":*)",
+      "Bash(\"d:/projects/SUTD/.venv/Scripts/python\" -c \":*)",
+      "Bash(\"d:/projects/SUTD/.venv/Scripts/pip\" show bcrypt passlib)",
+      "Bash(\"d:/projects/SUTD/.venv/Scripts/pip\" install \"bcrypt==4.0.1\")",
+      "Bash(\"d:/projects/SUTD/.venv/Scripts/python\" -c \"import bcrypt; print\\(''bcrypt version:'', bcrypt.__version__\\)\")",
+      "Bash(\"d:/projects/SUTD/.venv/Scripts/python\" scripts/seed_db.py)",
+      "Bash(\"d:/projects/SUTD/.venv/Scripts/pip\" show python-multipart)",
+      "Bash(pip show:*)",
+      "Bash(python -m pip:*)",
+      "Bash(.venv/Scripts/python.exe -m pip show:*)",
+      "Bash(.venv/Scripts/pip.exe install:*)",
+      "Bash(.venv/Scripts/streamlit.exe run:*)",
+      "Bash(.venv/Scripts/python.exe:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git add:*)",
+      "Bash(\"d:/projects/SUTD/ehs_backend/.env.example\":*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(source:*)",
+      "Bash(python scripts/load_mock_data.py:*)",
+      "Bash(TOKEN=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzYmY5NDQzYi0yYWM5LTRjN2YtOGRjMC1iN2RkYjJlMzQ2NjUiLCJleHAiOjE3NzQ0NDQyNDAsInR5cGUiOiJhY2Nlc3MiLCJyb2xlIjoic3R1ZGVudCJ9.dXlpqRGLKZBhU1n15KpPAWjl_Av111nHifeRfQFJ6-o\")",
+      "Bash(__NEW_LINE_b7074a44bdd2eb69__ echo \"=== GET /submissions \\(runs on every Streamlit render\\) ===\")",
+      "Bash(__NEW_LINE_6b66377f90a6a693__ echo \"=== 1. Auth/me ===\")",
+      "Bash(__NEW_LINE_6b66377f90a6a693__ echo \"\")",
+      "Read(//c/Users/SaivenkatB/AppData/Local/Temp/claude/d--projects-SUTD/tasks/**)",
+      "Bash(python -m json.tool:*)",
+      "Bash(# Check seeded passwords cd /d/projects/SUTD/ehs_backend && grep -i \"\"password\\\\|STU001\"\" scripts/seed_db.py)"
+    ],
+    "additionalDirectories": [
+      "D:\\projects\\SUTD"
+    ]
+  }
+}
