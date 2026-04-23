@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-EHS (Environment, Health & Safety) Inspection Portal for SUTD. Three-tier system: **Streamlit frontend** → **FastAPI backend** → **PostgreSQL + pgvector**.
+EHS (Environment, Health & Safety) Inspection Portal for SUTD. **Stateless FastAPI backend only** — no auth, no database required for active endpoints. React UI to be built separately.
 
 ## Commands
 
@@ -13,24 +13,19 @@ EHS (Environment, Health & Safety) Inspection Portal for SUTD. Three-tier system
 ```bash
 # Install
 pip install -e ".[all]"
-python -m spacy download en_core_web_sm
 
 # Dev server
 uvicorn app.main:app --reload --port 8000
 
-# Database migrations
-alembic upgrade head              # apply all migrations
-alembic revision --autogenerate -m "description"  # create new migration
+# Train DistilBERT model (use GPU — see ehs_distilbert_training.ipynb)
+python scripts/train_distilbert.py \
+  --data_path data/sample.csv \
+  --output_dir models/ehs_distilbert \
+  --strategy per_step \
+  --device cuda
 
-# Seed data
-python scripts/seed_db.py
-python scripts/ingest_historical_data.py  # ingest submissions into RAG vector store
-
-# Tests
-pytest                            # all tests
-pytest tests/unit/                # unit tests only (SQLite in-memory, no Postgres needed)
-pytest tests/integration/         # integration tests (requires running Postgres)
-pytest tests/unit/test_foo.py::test_bar  # single test
+# Test trained model
+python scripts/test_model.py --model_dir models/ehs_distilbert
 
 # Lint & type check
 ruff check .
@@ -38,59 +33,102 @@ ruff format .
 mypy app/
 ```
 
-### Frontend (run from project root)
+### Training Notebook
 
-```bash
-streamlit run ehs_frontend.py     # full portal (needs backend running on :8000)
-streamlit run chatbot1.py         # standalone risk assessment chatbot (Groq, no backend needed)
-```
-
-### Database setup (first time)
-
-```bash
-python db_setup.py                # creates ehs_user, ehs_db, extensions (edit passwords in file)
-```
+`ehs_distilbert_training.ipynb` — self-contained Jupyter notebook for RunPod GPU training.
+Upload notebook + `ehs_backend/data/sample.csv`, run all cells, download `ehs_distilbert_model.zip`,
+extract to `ehs_backend/models/ehs_distilbert/`.
 
 ## Architecture
 
-### Three Components in the Backend
+### Stateless Backend — 3 Active Endpoints
 
-The backend (`ehs_backend/app/`) has three independent service components that share the same PostgreSQL database:
+```
+POST /api/v1/inspect/recommend   — DistilBERT inspection recommendations (no DB)
+POST /api/v1/quiz/generate       — Groq/Llama quiz generation (no DB)
+POST /api/v1/chat/query          — Groq/Llama WSH risk assessment chatbot (no DB)
+```
 
-1. **Recommendation Engine** (`services/recommendation/`) — Frequency-based sequential ranker. Students walk through a 4-step inspection: Activity → Hazard Type → Severity/Likelihood → MOC/PPE → Remarks. The engine ranks options at each step based on historical frequency. No ML model, purely DB-backed counts.
+No authentication. No database required. All endpoints are fully stateless.
 
-2. **Quiz Generation** (`services/quiz/`) — After submission, Azure GPT-4o mini generates 3 MCQ + 2 short-answer questions. Short answers are graded by GPT with a 0.0–1.0 rubric score. Quiz Q&A is also ingested into the RAG vector store.
+### Recommendation Engine (`app/api/v1/inspect.py`)
 
-3. **Hybrid RAG Chatbot** (`services/rag/`) — Intent classification → query routing:
-   - `structured` queries → SelfQueryParser extracts filters (activity/date/hazard)
-   - `vague` queries → HyDE generates hypothetical doc for embedding
-   - Retrieval: pgvector HNSW (semantic) + PostgreSQL FTS BM25 (keyword) → RRF fusion → BGE cross-encoder reranker → GPT-4o mini answer generation
+Stateless HTTP — single endpoint. Client sends `{activity, selections}`, server returns
+`predictions` only for fields **below** the last confirmed selection.
 
-### Request Flow
+- Step order: `activity → hazard_type → severity_likelihood → moc_ppe → remarks`
+- Model: `EHSMultiStepPredictor` (per-step) or `EHSPredictor` (shared) — auto-detected at startup
+- If no selection is confirmed, all 4 fields are predicted
+- If user overrides step N, only steps N+1 onward are re-predicted
 
-- API routes: `app/api/v1/` — `auth.py`, `sessions.py`, `submissions.py`, `quiz.py`, `chatbot.py`
-- All routes under `/api/v1/` prefix
-- Auth: JWT tokens via `app/core/security.py`
-- DB session injection via `app/dependencies.py`
-- ML models loaded at startup in `app/main.py` lifespan handler and stored on `app.state`
+### Quiz Generation (`app/api/v1/quiz.py`)
 
-### Frontend
+- `POST /quiz/generate` — takes inspection data, returns 5 MCQ questions via Groq
+- Questions probe admin understanding: hazard comprehension, risk reasoning, control effectiveness,
+  alternative scenarios, regulatory awareness (Singapore WSH)
 
-- `ehs_frontend.py` — Full Streamlit portal with 4 tabs: Inspection, Submissions, Quiz, Risk Assessment Chatbot. Communicates with backend REST API. The chatbot tab uses Groq (Llama 4 Scout) directly, not the backend RAG pipeline.
-- `chatbot1.py` — Standalone Streamlit chatbot for WSH risk assessments (Groq, no backend dependency).
+### Chatbot (`app/api/v1/chat.py`)
 
-### Other
+- `POST /chat/query` — client sends full `history` array + `message` on every request
+- Server holds no conversation state — frontend owns history
+- System prompt: Singapore WSH risk assessment advisor
 
-- `SUTD_SUMANTH/recommendation/` — Separate standalone recommendation service with its own FastAPI app, alembic migrations, and scripts. Not integrated with the main backend.
+### Parked (code preserved, not in router)
 
-## Key Configuration
+- `app/api/v1/sessions.py` — inspection session management (requires DB)
+- `app/api/v1/submissions.py` — submission storage (requires DB)
+- `app/api/v1/chatbot.py` — hybrid RAG chatbot (pgvector + BM25 + BGE reranker + GPT-4o mini)
+- `app/services/rag/` — full RAG pipeline
 
-- Backend config via `ehs_backend/.env` (copy from `.env.example`). Requires: `DATABASE_URL`, `SECRET_KEY`, Azure OpenAI credentials.
-- Frontend chatbot requires `GROQ_API_KEY` in `.env` at project root.
-- Python 3.11+. Ruff line length: 100. pytest asyncio_mode: auto.
+### ML Model
 
-## Database
+- Architecture: 4 separate `DistilBertForSequenceClassification` models (one per step)
+- Trained with `--strategy per_step` (best accuracy ~82-87%)
+- Saved to `models/ehs_distilbert/step_{hazard_type,severity_likelihood,moc_ppe,remarks}/`
+- Input: activity + prior selections joined with ` [SEP] `
+- Output: ranked list of labels with probability scores
 
-PostgreSQL with extensions: `vector` (pgvector), `pg_trgm`, `uuid-ossp`. Async driver: `asyncpg`. ORM: SQLAlchemy 2.0 async. Migrations: Alembic.
+## Key Configuration (`ehs_backend/.env`)
 
-Models defined in `app/db/base.py`. Schemas (Pydantic) in `app/schemas/`.
+```env
+DEBUG=true
+GROQ_API_KEY=gsk_...
+GROQ_MODEL=meta-llama/llama-4-scout-17b-16e-instruct
+DISTILBERT_MODEL_PATH=./models/ehs_distilbert
+DISTILBERT_DEVICE=cpu
+```
+
+No database, no Azure OpenAI needed for active endpoints.
+
+## File Structure
+
+```
+ehs_backend/
+  app/
+    api/v1/
+      inspect.py      — /inspect/recommend (active)
+      quiz.py         — /quiz/generate (active)
+      chat.py         — /chat/query (active)
+      sessions.py     — parked
+      submissions.py  — parked
+      chatbot.py      — parked (RAG)
+    ml/
+      distilbert/     — model, predictor, tokenizer
+      training/       — dataset builder, trainer
+    services/
+      chat/           — GroqChatClient, WSH system prompt
+      quiz/           — QuizGenerator (Groq)
+      rag/            — parked RAG pipeline
+  models/
+    ehs_distilbert/   — trained model weights
+  data/
+    sample.csv        — 1,142 row training dataset
+  scripts/
+    train_distilbert.py
+    test_model.py
+ehs_distilbert_training.ipynb  — RunPod GPU training notebook
+```
+
+## Python
+
+Python 3.11+. Ruff line length: 100.

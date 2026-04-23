@@ -72,5 +72,9 @@ class Settings(BaseSettings):
     EMBED_MAX_RETRIES: int = 3
     EMBED_RETRY_BASE_DELAY: float = 1.0
 
+    # ── Groq (risk assessment chatbot) ─────────────────────────
+    GROQ_API_KEY: str = ""
+    GROQ_MODEL: str = "meta-llama/llama-4-scout-17b-16e-instruct"
+
 
 settings = Settings()

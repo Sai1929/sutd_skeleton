@@ -38,6 +38,9 @@ dependencies = [
     # Azure OpenAI
     "openai>=1.54.0",
 
+    # Groq (risk assessment chatbot)
+    "groq>=0.11.0",
+
     # NLP (semantic chunking)
     "spacy>=3.7.0",
 

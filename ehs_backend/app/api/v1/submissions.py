@@ -8,8 +8,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.exceptions import BadRequestError, NotFoundError
 from app.db.models.inspection import InspectionSession, InspectionSubmission, RecommendationStep
 from app.db.models.quiz import Quiz
-from app.db.models.user import User
-from app.dependencies import get_azure_llm, get_current_user, get_db
+from app.dependencies import get_azure_llm, get_db
 from app.schemas.submission import SubmissionCreate, SubmissionOut
 
 log = structlog.get_logger()
@@ -58,14 +57,6 @@ async def _background_quiz_and_ingest(
             except Exception as e:
                 log.error("background.quiz_failed", submission_id=str(submission_id), error=str(e))
 
-            try:
-                from app.services.rag.ingestion.pipeline import IngestionPipeline
-                pipeline = IngestionPipeline(client, db)
-                await pipeline.ingest_submission(submission)
-                log.info("background.rag_ingested", submission_id=str(submission_id))
-            except Exception as e:
-                log.error("background.rag_failed", submission_id=str(submission_id), error=str(e))
-
     except Exception as e:
         log.error("background.task_failed", submission_id=str(submission_id), error=str(e))
     finally:
@@ -76,20 +67,16 @@ async def _background_quiz_and_ingest(
 async def create_submission(
     body: SubmissionCreate,
     background_tasks: BackgroundTasks,
-    current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
     azure_llm=Depends(get_azure_llm),
 ) -> SubmissionOut:
-    # Validate session belongs to user and is ready
+    # Validate session exists and is ready
     result = await db.execute(
         select(InspectionSession).where(InspectionSession.id == body.session_id)
     )
     session = result.scalar_one_or_none()
     if session is None:
         raise NotFoundError("Session not found")
-    if session.user_id != current_user.id:
-        from app.core.exceptions import ForbiddenError
-        raise ForbiddenError("Not your session")
     if session.status not in ("ready_to_submit", "in_progress"):
         raise BadRequestError(f"Session status '{session.status}' cannot be submitted")
 
@@ -117,7 +104,7 @@ async def create_submission(
 
     submission = InspectionSubmission(
         session_id=body.session_id,
-        user_id=current_user.id,
+        user_id=session.user_id or uuid.uuid4(),
         activity_name=activity.name,
         hazard_type=selections.get("hazard_type"),
         severity_likelihood=selections.get("severity_likelihood"),
@@ -129,7 +116,7 @@ async def create_submission(
     await db.commit()
     await db.refresh(submission)
 
-    # Background: quiz generation + RAG ingestion
+    # Background: quiz generation
     from app.config import settings
     background_tasks.add_task(
         _background_quiz_and_ingest,
@@ -152,12 +139,10 @@ async def create_submission(
 
 @router.get("", response_model=list[SubmissionOut])
 async def list_submissions(
-    current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> list[SubmissionOut]:
     result = await db.execute(
         select(InspectionSubmission)
-        .where(InspectionSubmission.user_id == current_user.id)
         .order_by(InspectionSubmission.submitted_at.desc())
     )
     submissions = result.scalars().all()
@@ -175,7 +160,6 @@ async def list_submissions(
 @router.get("/{submission_id}", response_model=SubmissionOut)
 async def get_submission(
     submission_id: uuid.UUID,
-    current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> SubmissionOut:
     result = await db.execute(
@@ -184,9 +168,6 @@ async def get_submission(
     sub = result.scalar_one_or_none()
     if sub is None:
         raise NotFoundError("Submission not found")
-    if sub.user_id != current_user.id and current_user.role not in ("admin", "lead"):
-        from app.core.exceptions import ForbiddenError
-        raise ForbiddenError("Access denied")
 
     quiz_result = await db.execute(select(Quiz).where(Quiz.session_id == sub.session_id))
     quiz = quiz_result.scalar_one_or_none()

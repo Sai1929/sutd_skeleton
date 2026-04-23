@@ -37,6 +37,10 @@ async def get_rag_chain(request: Request):
     return request.app.state.rag_chain
 
 
+async def get_chat_client(request: Request):
+    return request.app.state.chat_client
+
+
 async def get_current_user(
     token: str = Depends(oauth2_scheme),
     db: AsyncSession = Depends(get_db),

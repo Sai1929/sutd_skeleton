@@ -1,14 +1,13 @@
 """
 FastAPI application factory.
-Lifespan: loads all ML models, connects to DB + Redis at startup.
+Lifespan: loads ML models, connects to DB at startup.
 """
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 import structlog
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from langchain_openai import AzureChatOpenAI
-from openai import AsyncAzureOpenAI
 
 from app.api.health import router as health_router
 from app.api.v1.router import router as v1_router
@@ -18,10 +17,36 @@ from app.core.logging import setup_logging
 from app.core.middleware import RequestIDMiddleware
 from app.db.session import close_engine, init_engine
 from app.services.recommendation.engine import RecommendationEngine
-from app.services.rag.retrieval.reranker import BGEReranker
-from app.services.rag.chain import HybridRAGChain
+from app.services.chat.client import GroqChatClient
 
 log = structlog.get_logger()
+
+
+def _load_predictor():
+    """Load trained DistilBERT predictor. Auto-detects shared vs per-step model."""
+    model_dir = settings.DISTILBERT_MODEL_PATH
+    if not Path(model_dir).exists():
+        log.warning("predictor.skipped", reason=f"Model dir not found: {model_dir}")
+        return None
+
+    from app.ml.training.dataset import EHSDatasetBuilder
+    label_vocab = EHSDatasetBuilder.load_vocab(model_dir)
+
+    per_step_dir = Path(model_dir) / "step_hazard_type"
+    if per_step_dir.exists():
+        from app.ml.distilbert.predictor import EHSMultiStepPredictor
+        predictor = EHSMultiStepPredictor.from_checkpoint(
+            model_dir, label_vocab, device=settings.DISTILBERT_DEVICE
+        )
+        log.info("predictor.loaded", type="per_step", model_dir=model_dir)
+    else:
+        from app.ml.distilbert.predictor import EHSPredictor
+        predictor = EHSPredictor.from_checkpoint(
+            model_dir, label_vocab, device=settings.DISTILBERT_DEVICE
+        )
+        log.info("predictor.loaded", type="shared", model_dir=model_dir)
+
+    return predictor
 
 
 @asynccontextmanager
@@ -30,47 +55,29 @@ async def lifespan(app: FastAPI):
     log.info("app.starting", version=settings.APP_VERSION)
 
     # ── DB ──────────────────────────────────────────────────────
-    await init_engine()
-    log.info("db.connected")
+    try:
+        await init_engine()
+        app.state.db_available = True
+        log.info("db.connected")
+    except Exception as exc:
+        app.state.db_available = False
+        log.warning("db.unavailable", reason=str(exc))
 
-    # ── Azure OpenAI client ─────────────────────────────────────
-    azure_client = AsyncAzureOpenAI(
-        azure_endpoint=settings.AZURE_OPENAI_ENDPOINT,
-        api_key=settings.AZURE_OPENAI_API_KEY,
-        api_version=settings.AZURE_OPENAI_API_VERSION,
-    )
-    app.state.azure_llm = azure_client
-
-    # LangChain AzureChatOpenAI for LCEL chain
-    langchain_llm = AzureChatOpenAI(
-        azure_endpoint=settings.AZURE_OPENAI_ENDPOINT,
-        api_key=settings.AZURE_OPENAI_API_KEY,
-        api_version=settings.AZURE_OPENAI_API_VERSION,
-        azure_deployment=settings.AZURE_OPENAI_CHAT_DEPLOYMENT,
-        temperature=0.7,
-        streaming=False,
-    )
-
-    # ── Frequency recommendation engine (no model — DB-backed) ──
+    # ── Frequency recommendation engine (DB-backed fallback) ────
     rec_engine = RecommendationEngine()
     app.state.rec_engine = rec_engine
     log.info("rec_engine.ready")
 
-    # ── BGE Reranker ────────────────────────────────────────────
-    reranker = BGEReranker()
-    await reranker.load()
-    app.state.reranker = reranker
+    # ── DistilBERT predictor (for /inspect/recommend) ───────────
+    app.state.predictor = _load_predictor()
 
-    # ── RAG chain (prototype — DB session injected per-request) ─
-    # We store components on app.state; the actual chain is built per request
-    # in the chatbot router to get the request-scoped DB session.
-    app.state.rag_chain = HybridRAGChain(
-        azure_client=azure_client,
-        langchain_llm=langchain_llm,
-        reranker=reranker,
-        db=None,       # placeholder — overridden per request
-    )
-    app.state.azure_embedder = azure_client
+    # ── Groq chat client (risk assessment chatbot) ──────────────
+    if settings.GROQ_API_KEY:
+        app.state.chat_client = GroqChatClient()
+        log.info("chat_client.ready", model=settings.GROQ_MODEL)
+    else:
+        app.state.chat_client = None
+        log.warning("chat_client.skipped", reason="GROQ_API_KEY not set")
 
     log.info("app.ready")
     yield
@@ -94,7 +101,7 @@ def create_app() -> FastAPI:
     app.add_middleware(RequestIDMiddleware)
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["*"],  # Tighten in production
+        allow_origins=["*"],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
