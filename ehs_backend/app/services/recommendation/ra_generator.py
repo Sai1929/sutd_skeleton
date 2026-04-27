@@ -29,10 +29,6 @@ Given a project name and description, generate a COMPLETE top-to-bottom Risk Ass
 
   "purpose": "string — 1-2 sentences on the purpose of this RA and the regulations it fulfils (cite WSH Act, WSH (Construction) Regulations etc.)",
 
-  "assumptions": [
-    "string — list of 6-8 standard WSH assumptions e.g. workers are trained, permit-to-work systems in place, PPE provided, etc."
-  ],
-
   "rows": [
     {
       "main_activity": "string — broad activity group",

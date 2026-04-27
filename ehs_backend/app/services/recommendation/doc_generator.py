@@ -24,7 +24,6 @@ an existing or partial Risk Assessment. Your job is to:
 
 {
   "project": "string — project/activity name from document",
-  "assumptions": ["string — standard WSH assumptions, 6-7 items"],
   "rows": [
     {
       "main_activity": "string",

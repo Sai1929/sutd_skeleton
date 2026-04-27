@@ -76,20 +76,10 @@ function FullRAView({ ra }: { ra: FullRA }) {
         </>
       )}
 
-      {/* Assumptions */}
-      {ra.assumptions?.length > 0 && (
-        <>
-          <SectionLabel n="§3" text="Assumptions" />
-          <ol style={{ margin: 0, paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 4 }}>
-            {ra.assumptions.map((a, i) => <li key={i} style={{ fontFamily: 'Inter, system-ui', fontSize: 13, color: '#0B1220', lineHeight: 1.6 }}>{a}</li>)}
-          </ol>
-        </>
-      )}
-
       {/* RA Table */}
       {ra.rows?.length > 0 && (
         <>
-          <SectionLabel n="§4" text="Risk Assessment Table" />
+          <SectionLabel n="§3" text="Risk Assessment Table" />
           <div style={{ overflowX: 'auto', borderRadius: 4, border: '1px solid #E4DFD3', boxShadow: '0 1px 3px rgba(11,18,32,0.07)' }}>
             <table style={{ borderCollapse: 'collapse', width: '100%', minWidth: 1100 }}>
               <thead><tr>{RA_COLS.map(c => <th key={c} style={TH}>{c}</th>)}</tr></thead>
@@ -118,7 +108,7 @@ function FullRAView({ ra }: { ra: FullRA }) {
       {/* Risk Matrix */}
       {ra.risk_matrix && (
         <>
-          <SectionLabel n="§5" text="Risk Matrix" />
+          <SectionLabel n="§4" text="Risk Matrix" />
           <p style={{ fontFamily: 'Inter, system-ui', fontSize: 12, color: '#5A6272', marginBottom: 10, lineHeight: 1.5 }}>{ra.risk_matrix.note}</p>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {ra.risk_matrix.bands?.map((b: RiskBand) => (
@@ -134,7 +124,7 @@ function FullRAView({ ra }: { ra: FullRA }) {
       {/* Emergency Response */}
       {ra.emergency_response && ra.emergency_response.length > 0 && (
         <>
-          <SectionLabel n="§6" text="Emergency Response" />
+          <SectionLabel n="§5" text="Emergency Response" />
           <ul style={{ margin: 0, paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 6 }}>
             {ra.emergency_response.map((e, i) => <li key={i} style={{ fontFamily: 'Inter, system-ui', fontSize: 13, color: '#0B1220', lineHeight: 1.6 }}>{e}</li>)}
           </ul>
@@ -144,7 +134,7 @@ function FullRAView({ ra }: { ra: FullRA }) {
       {/* Chemical Note */}
       {ra.chemical_note && (
         <>
-          <SectionLabel n="§7" text="Chemical Hazards Note" />
+          <SectionLabel n="§6" text="Chemical Hazards Note" />
           <p style={{ fontFamily: 'Inter, system-ui', fontSize: 13, color: '#0B1220', lineHeight: 1.6, margin: 0, padding: '12px 16px', background: '#FFFFFF', border: '1px solid #E4DFD3', borderRadius: 4 }}>{ra.chemical_note}</p>
         </>
       )}
@@ -152,7 +142,7 @@ function FullRAView({ ra }: { ra: FullRA }) {
       {/* References */}
       {ra.references && ra.references.length > 0 && (
         <>
-          <SectionLabel n="§8" text="References" />
+          <SectionLabel n="§7" text="References" />
           <ul style={{ margin: 0, paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 4 }}>
             {ra.references.map((r, i) => <li key={i} style={{ fontFamily: 'Inter, system-ui', fontSize: 12, color: '#5A6272', lineHeight: 1.6 }}>{r}</li>)}
           </ul>
@@ -162,7 +152,7 @@ function FullRAView({ ra }: { ra: FullRA }) {
       {/* Review Schedule */}
       {ra.review_schedule && (
         <>
-          <SectionLabel n="§9" text="Review Schedule" />
+          <SectionLabel n="§8" text="Review Schedule" />
           <p style={{ fontFamily: 'Inter, system-ui', fontSize: 13, color: '#0B1220', lineHeight: 1.6, margin: 0, padding: '12px 16px', background: '#FFFFFF', border: '1px solid #E4DFD3', borderRadius: 4 }}>{ra.review_schedule}</p>
         </>
       )}
@@ -223,7 +213,7 @@ export function RAPage() {
           Generate a <em style={{ fontStyle: 'italic' }}>risk assessment</em>.
         </h1>
         <p style={{ fontFamily: '"Source Serif 4", serif', fontSize: 18, color: '#5A6272', lineHeight: 1.55, marginTop: 18, letterSpacing: '-0.005em', fontWeight: 400 }}>
-          Enter a project description. System generates a complete WSH-compliant RA — scope, purpose, assumptions, RA table, risk matrix, emergency response, and references.
+          Enter a project description. System generates a complete WSH-compliant RA — scope, purpose, RA table, risk matrix, emergency response, and references.
         </p>
       </div>
 

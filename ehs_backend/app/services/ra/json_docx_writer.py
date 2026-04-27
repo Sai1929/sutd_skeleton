@@ -128,18 +128,10 @@ def json_to_docx(ra: dict, project_name: str = "Risk Assessment") -> bytes:
         _section_heading(doc, "1. Purpose")
         doc.add_paragraph(purpose)
 
-    # ── Assumptions ──────────────────────────────────────────────────────────
-    assumptions = ra.get("assumptions", [])
-    if assumptions:
-        _section_heading(doc, "2. Assumptions")
-        for a in assumptions:
-            p = doc.add_paragraph(style="List Bullet")
-            p.add_run(a).font.size = Pt(9)
-
     # ── RA Table ─────────────────────────────────────────────────────────────
     rows = ra.get("rows", [])
     if rows:
-        _section_heading(doc, "3. Risk Assessment")
+        _section_heading(doc, "2. Risk Assessment")
         RA_COLS = [
             "Main Activity", "Sub-Activity", "Hazard", "Consequences",
             "L", "S", "Initial Risk", "Control Measures", "R-L", "R-S", "Residual Risk",
@@ -183,7 +175,7 @@ def json_to_docx(ra: dict, project_name: str = "Risk Assessment") -> bytes:
     # ── Risk Matrix ───────────────────────────────────────────────────────────
     risk_matrix = ra.get("risk_matrix", {})
     if risk_matrix:
-        _section_heading(doc, "4. Risk Matrix")
+        _section_heading(doc, "3. Risk Matrix")
         note = risk_matrix.get("note", "")
         if note:
             p = doc.add_paragraph(note)
@@ -208,7 +200,7 @@ def json_to_docx(ra: dict, project_name: str = "Risk Assessment") -> bytes:
     # ── Emergency Response ────────────────────────────────────────────────────
     emergency = ra.get("emergency_response", [])
     if emergency:
-        _section_heading(doc, "5. Emergency Response")
+        _section_heading(doc, "4. Emergency Response")
         for item in emergency:
             p = doc.add_paragraph(style="List Bullet")
             p.add_run(item).font.size = Pt(9)
@@ -217,7 +209,7 @@ def json_to_docx(ra: dict, project_name: str = "Risk Assessment") -> bytes:
     # ── Chemical Note ─────────────────────────────────────────────────────────
     chem = ra.get("chemical_note", "")
     if chem:
-        _section_heading(doc, "6. Chemical Hazards Note")
+        _section_heading(doc, "5. Chemical Hazards Note")
         p = doc.add_paragraph(chem)
         p.runs[0].font.size = Pt(9)
         doc.add_paragraph()
@@ -225,7 +217,7 @@ def json_to_docx(ra: dict, project_name: str = "Risk Assessment") -> bytes:
     # ── References ────────────────────────────────────────────────────────────
     references = ra.get("references", [])
     if references:
-        _section_heading(doc, "7. References")
+        _section_heading(doc, "6. References")
         for ref in references:
             p = doc.add_paragraph(style="List Bullet")
             p.add_run(ref).font.size = Pt(9)
@@ -234,13 +226,13 @@ def json_to_docx(ra: dict, project_name: str = "Risk Assessment") -> bytes:
     # ── Review Schedule ───────────────────────────────────────────────────────
     review = ra.get("review_schedule", "")
     if review:
-        _section_heading(doc, "8. Review Schedule")
+        _section_heading(doc, "7. Review Schedule")
         p = doc.add_paragraph(review)
         p.runs[0].font.size = Pt(9)
 
     # ── Sign-off table ────────────────────────────────────────────────────────
     doc.add_paragraph()
-    _section_heading(doc, "9. Sign-off")
+    _section_heading(doc, "8. Sign-off")
     sign_table = doc.add_table(rows=2, cols=3)
     sign_table.style = "Table Grid"
     _header_row(sign_table, ["Prepared By", "Reviewed By", "Approved By"])

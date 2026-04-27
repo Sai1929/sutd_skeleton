@@ -23,6 +23,5 @@ class RecommendResponse(BaseModel):
     activity: str
     from_db: bool
     project: str
-    assumptions: list[str]
     rows: list[RARow]
     full_ra: dict | None = None

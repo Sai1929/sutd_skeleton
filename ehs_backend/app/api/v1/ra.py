@@ -40,7 +40,6 @@ async def generate_json(
         activity=resolved_name,
         from_db=False,
         project=ra_dict.get("project", resolved_name),
-        assumptions=ra_dict.get("assumptions", []),
         rows=[RARow(**r) for r in ra_dict.get("rows", [])],
         full_ra=ra_dict,
     )

@@ -149,18 +149,6 @@ export function DocumentRAPage() {
           </div>
 
           {/* Assumptions */}
-          {S.result.assumptions.length > 0 && (
-            <details style={{ marginBottom: 20 }}>
-              <summary style={{ fontFamily: 'Inter, system-ui', fontSize: 12, fontWeight: 600, color: '#5A6272', cursor: 'pointer', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                Assumptions ({S.result.assumptions.length})
-              </summary>
-              <ol style={{ marginTop: 10, paddingLeft: 20 }}>
-                {S.result.assumptions.map((a, i) => (
-                  <li key={i} style={{ fontFamily: 'Inter, system-ui', fontSize: 12, color: '#5A6272', lineHeight: 1.6, marginBottom: 4 }}>{a}</li>
-                ))}
-              </ol>
-            </details>
-          )}
 
           {/* RA Table */}
           <div style={{ overflowX: 'auto', borderRadius: 4, border: '1px solid #E4DFD3', boxShadow: '0 1px 3px rgba(11,18,32,0.07)' }}>

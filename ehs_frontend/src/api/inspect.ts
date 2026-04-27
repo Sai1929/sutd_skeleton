@@ -30,7 +30,6 @@ export interface FullRA {
   approved_by?: string
   scope?: string
   purpose?: string
-  assumptions: string[]
   rows: RARow[]
   risk_matrix?: { note: string; bands: RiskBand[] }
   emergency_response?: string[]
@@ -44,7 +43,6 @@ export interface RecommendResponse {
   activity: string
   from_db: boolean
   project: string
-  assumptions: string[]
   rows: RARow[]
   full_ra?: FullRA | null
 }

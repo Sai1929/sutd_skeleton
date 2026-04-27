@@ -11,7 +11,6 @@ def _build_response(activity: str, ra_dict: dict, from_db: bool, include_full: b
         activity=activity,
         from_db=from_db,
         project=ra_dict.get("project", ""),
-        assumptions=ra_dict.get("assumptions", []),
         rows=[RARow(**r) for r in ra_dict.get("rows", [])],
         full_ra=ra_dict if include_full else None,
     )
