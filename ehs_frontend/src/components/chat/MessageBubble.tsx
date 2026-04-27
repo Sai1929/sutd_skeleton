@@ -17,15 +17,21 @@ export function MessageBubble({ msg }: Props) {
         }}>A</div>
       )}
       <div style={{
-        maxWidth: '82%', padding: isUser ? '10px 16px' : '14px 18px',
+        maxWidth: isUser ? '82%' : '96%', padding: isUser ? '10px 16px' : '14px 18px',
         background: isUser ? '#0B1220' : '#FFFFFF',
         color: isUser ? '#FFFFFF' : '#0B1220',
         border: isUser ? 'none' : '1px solid #E4DFD3',
         borderRadius: isUser ? '10px 10px 2px 10px' : '10px 10px 10px 2px',
         fontFamily: 'Inter, system-ui', fontSize: 14, lineHeight: 1.55,
+        minWidth: 0, overflow: 'hidden',
       }}>
         {isUser ? (
-          <span style={{ whiteSpace: 'pre-wrap' }}>{msg.content}</span>
+          <div>
+            {msg.imagePreview && (
+              <img src={msg.imagePreview} alt="attachment" style={{ maxWidth: 220, maxHeight: 160, borderRadius: 4, display: 'block', marginBottom: msg.content ? 8 : 0, objectFit: 'cover' }} />
+            )}
+            {msg.content && <span style={{ whiteSpace: 'pre-wrap' }}>{msg.content}</span>}
+          </div>
         ) : (
           <div className="md-body">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>

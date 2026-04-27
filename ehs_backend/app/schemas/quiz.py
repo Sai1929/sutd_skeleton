@@ -1,3 +1,4 @@
+from typing import Literal
 from pydantic import BaseModel
 
 
@@ -11,9 +12,10 @@ class QuizGenerateRequest(BaseModel):
 
 class QuestionOut(BaseModel):
     question_number: int
+    question_type: Literal["mcq", "descriptive", "scenario"]
     question_text: str
-    options: list[str] | None
-    correct_answer: str
+    options: list[str] | None        # MCQ only: ["A. ...", "B. ...", "C. ...", "D. ..."]
+    correct_answer: str              # MCQ: "A"/"B"/"C"/"D" | descriptive/scenario: model answer text
     explanation: str | None
 
 

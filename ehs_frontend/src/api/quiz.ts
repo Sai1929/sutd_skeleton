@@ -2,9 +2,10 @@ import { api } from './client'
 
 export interface QuizQuestion {
   question_number: number
+  question_type: 'mcq' | 'descriptive' | 'scenario'
   question_text: string
-  options: string[]
-  correct_answer: string   // "A" | "B" | "C" | "D"
+  options: string[] | null   // MCQ only
+  correct_answer: string     // MCQ: "A"/"B"/"C"/"D" | descriptive/scenario: model answer text
   explanation: string | null
 }
 export interface QuizResponse { questions: QuizQuestion[] }

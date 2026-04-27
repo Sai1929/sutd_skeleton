@@ -9,6 +9,8 @@ class ChatMessage(BaseModel):
 class ChatRequest(BaseModel):
     message: str
     history: list[ChatMessage] = []
+    image_b64: str | None = None
+    image_mime: str = "image/jpeg"
 
 
 class ChatResponseOut(BaseModel):

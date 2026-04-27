@@ -3,10 +3,10 @@ from fastapi import APIRouter, HTTPException, Request
 from app.schemas.quiz import QuizGenerateRequest, QuizGenerateResponse
 from app.services.quiz.generator import QuizGenerator
 
-router = APIRouter(prefix="/quiz", tags=["quiz"])
+router = APIRouter(prefix="/quiz")
 
 
-@router.post("/generate", response_model=QuizGenerateResponse)
+@router.post("/generate", tags=["Req4 · RA → Compliance Quiz"], response_model=QuizGenerateResponse)
 async def generate_quiz(body: QuizGenerateRequest, request: Request) -> QuizGenerateResponse:
     chat_client = getattr(request.app.state, "chat_client", None)
     if chat_client is None:

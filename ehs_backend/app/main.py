@@ -1,9 +1,7 @@
-"""
-FastAPI application factory.
-Lifespan: loads ML models, connects to DB at startup.
+"""FastAPI application factory.
+Lifespan: loads embedding model + DB at startup.
 """
 from contextlib import asynccontextmanager
-from pathlib import Path
 
 import structlog
 from fastapi import FastAPI, HTTPException
@@ -15,38 +13,9 @@ from app.config import settings
 from app.core.exceptions import http_exception_handler, unhandled_exception_handler
 from app.core.logging import setup_logging
 from app.core.middleware import RequestIDMiddleware
-from app.db.session import close_engine, init_engine
-from app.services.recommendation.engine import RecommendationEngine
-from app.services.chat.client import GroqChatClient
+from app.db.session import AsyncSessionLocal, close_engine, init_engine
 
 log = structlog.get_logger()
-
-
-def _load_predictor():
-    """Load trained DistilBERT predictor. Auto-detects shared vs per-step model."""
-    model_dir = settings.DISTILBERT_MODEL_PATH
-    if not Path(model_dir).exists():
-        log.warning("predictor.skipped", reason=f"Model dir not found: {model_dir}")
-        return None
-
-    from app.ml.training.dataset import EHSDatasetBuilder
-    label_vocab = EHSDatasetBuilder.load_vocab(model_dir)
-
-    per_step_dir = Path(model_dir) / "step_hazard_type"
-    if per_step_dir.exists():
-        from app.ml.distilbert.predictor import EHSMultiStepPredictor
-        predictor = EHSMultiStepPredictor.from_checkpoint(
-            model_dir, label_vocab, device=settings.DISTILBERT_DEVICE
-        )
-        log.info("predictor.loaded", type="per_step", model_dir=model_dir)
-    else:
-        from app.ml.distilbert.predictor import EHSPredictor
-        predictor = EHSPredictor.from_checkpoint(
-            model_dir, label_vocab, device=settings.DISTILBERT_DEVICE
-        )
-        log.info("predictor.loaded", type="shared", model_dir=model_dir)
-
-    return predictor
 
 
 @asynccontextmanager
@@ -63,41 +32,61 @@ async def lifespan(app: FastAPI):
         app.state.db_available = False
         log.warning("db.unavailable", reason=str(exc))
 
-    # ── Frequency recommendation engine (DB-backed fallback) ────
-    rec_engine = RecommendationEngine()
-    app.state.rec_engine = rec_engine
-    log.info("rec_engine.ready")
+    # ── Sentence-transformer embedding model ────────────────────
+    try:
+        from sentence_transformers import SentenceTransformer
+        embed_model = SentenceTransformer(settings.EMBED_MODEL_NAME)
+        log.info("embed_model.loaded", name=settings.EMBED_MODEL_NAME)
+    except Exception as exc:
+        embed_model = None
+        log.warning("embed_model.failed", reason=str(exc))
 
-    # ── DistilBERT predictor (for /inspect/recommend) ───────────
-    app.state.predictor = _load_predictor()
+    # ── Hybrid lookup (pgvector + trgm + LLM fallback) ─────────
+    if embed_model is not None and app.state.db_available:
+        from app.services.recommendation.hybrid_lookup import HybridLookup
+        app.state.hybrid_lookup = HybridLookup(embed_model, AsyncSessionLocal)
+        log.info("hybrid_lookup.ready")
+    else:
+        app.state.hybrid_lookup = None
+        log.warning("hybrid_lookup.unavailable", embed_ok=embed_model is not None, db_ok=app.state.db_available)
 
-    # ── Groq chat client (risk assessment chatbot) ──────────────
+    # ── Groq client (used by Req4 Quiz) ────────────────────────
     if settings.GROQ_API_KEY:
+        from app.services.chat.client import GroqChatClient
         app.state.chat_client = GroqChatClient()
-        log.info("chat_client.ready", model=settings.GROQ_MODEL)
+        log.info("groq_client.ready", model=settings.GROQ_MODEL)
     else:
         app.state.chat_client = None
-        log.warning("chat_client.skipped", reason="GROQ_API_KEY not set")
+        log.warning("groq_client.skipped", reason="GROQ_API_KEY not set")
 
     log.info("app.ready")
     yield
 
-    # ── Shutdown ────────────────────────────────────────────────
     log.info("app.shutting_down")
     await close_engine()
     log.info("app.stopped")
+
+
+_TAGS_METADATA = [
+    {"name": "Req1 · Activity → RA JSON", "description": "Activity text → structured RA JSON (DB lookup + LLM fallback)"},
+    {"name": "Req2 · Description → Word Doc RA", "description": "Project description → /generate returns RA JSON | /generate/docx downloads .docx"},
+    {"name": "Req3 · Document → RA JSON", "description": "Upload .docx → extract + normalise → structured RA JSON"},
+    {"name": "Req4 · RA → Compliance Quiz", "description": "RA details → generate mixed quiz (MCQ + descriptive + scenario)"},
+    {"name": "Req5 · Hazard → Risk Controls", "description": "Text or image → identify hazard + risk level + control measures + mitigation activities"},
+    {"name": "health", "description": "Health checks"},
+]
 
 
 def create_app() -> FastAPI:
     app = FastAPI(
         title=settings.APP_NAME,
         version=settings.APP_VERSION,
+        openapi_tags=_TAGS_METADATA,
         docs_url="/docs" if settings.DEBUG else None,
         redoc_url="/redoc" if settings.DEBUG else None,
         lifespan=lifespan,
     )
 
-    # ── Middleware ───────────────────────────────────────────────
     app.add_middleware(RequestIDMiddleware)
     app.add_middleware(
         CORSMiddleware,
@@ -107,11 +96,9 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    # ── Exception handlers ───────────────────────────────────────
     app.add_exception_handler(HTTPException, http_exception_handler)
     app.add_exception_handler(Exception, unhandled_exception_handler)
 
-    # ── Routers ──────────────────────────────────────────────────
     app.include_router(health_router)
     app.include_router(v1_router)
 

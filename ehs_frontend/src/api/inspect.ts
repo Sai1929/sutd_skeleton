@@ -1,16 +1,48 @@
 import { api } from './client'
 
-export interface Prediction { label: string; score: number; rank: number }
-export interface RecommendResponse {
-  activity: string
-  selections: Record<string, string>
-  predictions: Partial<Record<'hazard_type' | 'severity_likelihood' | 'moc_ppe' | 'remarks', Prediction[]>>
+export interface RARow {
+  main_activity: string
+  sub_activity: string
+  hazard: string
+  consequences: string
+  initial_l: number
+  initial_s: number
+  initial_risk: string
+  control_measures: string
+  residual_l: number
+  residual_s: number
+  residual_risk: string
 }
 
-export async function recommend(
-  activity: string,
-  selections: Record<string, string>
-): Promise<RecommendResponse> {
-  const { data } = await api.post('/api/v1/inspect/recommend', { activity, selections })
+export interface FullRA {
+  project: string
+  assumptions: string[]
+  rows: RARow[]
+  risk_matrix_note?: string
+  chemical_note?: string
+  references?: string[]
+  [key: string]: unknown
+}
+
+export interface RecommendResponse {
+  activity: string
+  from_db: boolean
+  project: string
+  assumptions: string[]
+  rows: RARow[]
+  full_ra?: FullRA | null
+}
+
+export async function recommend(activity: string): Promise<RecommendResponse> {
+  const { data } = await api.post('/api/v1/inspect/recommend', { activity })
+  return data
+}
+
+export async function recommendFromDocument(file: File): Promise<RecommendResponse> {
+  const form = new FormData()
+  form.append('file', file)
+  const { data } = await api.post('/api/v1/inspect/from-document', form, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+  })
   return data
 }

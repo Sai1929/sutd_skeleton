@@ -1,6 +1,6 @@
 """
-QuizGenerator — generates EHS understanding-check questions from inspection data
-using Groq/Llama. Stateless: no DB, returns question list directly.
+QuizGenerator — generates mixed EHS questions (MCQ + descriptive + scenario)
+from inspection data using Groq/Llama. Stateless: no DB, returns question list directly.
 """
 from __future__ import annotations
 
@@ -15,9 +15,9 @@ from app.schemas.quiz import QuestionOut
 log = structlog.get_logger()
 
 QUIZ_PROMPT = """\
-You are an EHS safety assessor. A student has just submitted an inspection report. \
-Your job is to generate questions that help an admin understand how well this student \
-grasps the hazard, its consequences, and the controls they selected.
+You are an EHS safety assessor. A student has just submitted an inspection report.
+Generate exactly {n_questions} questions that test genuine understanding of the hazard, \
+its consequences, and the controls selected — not just memorisation.
 
 Inspection Report:
   Activity:          {activity}
@@ -26,38 +26,62 @@ Inspection Report:
   Controls / PPE:    {moc_ppe}
   Remarks:           {remarks}
 
-Generate exactly {n_questions} multiple-choice questions that probe the student's \
-understanding of this specific inspection. Each question should test whether the \
-student genuinely understands what they submitted — not just that they can repeat it.
+Generate questions using this EXACT distribution:
+- Questions 1–2: MCQ (multiple-choice, 4 options A/B/C/D)
+- Questions 3–4: Descriptive (open-ended, written answer required)
+- Question 5:    Scenario-based (a situation is described, student explains what to do)
 
-Use these 5 understanding categories (one question each):
-1. Hazard comprehension — Why is this hazard dangerous for this activity? \
-   What could actually happen if it is not controlled?
-2. Risk reasoning — Why was this severity/likelihood rating appropriate? \
-   What factors make this risk higher or lower?
-3. Control effectiveness — Why were these specific controls chosen? \
-   What would happen if one of them was missing?
-4. Alternative scenarios — What other hazards could arise from this activity? \
-   What would change if conditions were different?
-5. Regulatory awareness — Which WSH regulation or standard applies here? \
-   What is the legal requirement?
+Categories to cover (one per question):
+1. Hazard comprehension — Why is this hazard dangerous? What happens if uncontrolled? (MCQ)
+2. Regulatory awareness — Which WSH regulation/standard applies? What is the legal requirement? (MCQ)
+3. Control effectiveness — Why were these specific controls chosen? What if one was missing? (Descriptive)
+4. Risk reasoning — Why was this severity/likelihood rating appropriate? (Descriptive)
+5. Scenario — Describe a realistic incident scenario related to this activity. Ask the student what \
+   immediate actions to take, who to notify, and which WSH regulation governs the response. (Scenario)
 
-Rules for every question:
-- Ask questions that reveal understanding, not just memorisation
-- Provide exactly 4 options labelled A, B, C, D with specific, realistic values
-- The CORRECT answer should demonstrate genuine understanding of the hazard and controls
-- Wrong options should be plausible misconceptions a student might have
-- Explanation must state WHY the correct answer demonstrates proper understanding
+Rules:
+MCQ:
+  - Exactly 4 options labelled "A. ...", "B. ...", "C. ...", "D. ..."
+  - correct_answer: single letter "A", "B", "C", or "D"
+  - Wrong options must be plausible misconceptions
 
-Return ONLY a valid JSON object with a "questions" key (no markdown, no text outside JSON):
+Descriptive:
+  - options: null
+  - correct_answer: a 2–4 sentence model answer demonstrating genuine understanding
+  - explanation: key points an assessor should look for
+
+Scenario:
+  - options: null
+  - question_text: set the scene clearly (2–3 sentences) then ask what the student should do
+  - correct_answer: model response covering immediate action, escalation, and relevant WSH regulation
+  - explanation: key points an assessor should look for
+
+Return ONLY valid JSON, no markdown:
 {{
   "questions": [
     {{
       "question_number": 1,
+      "question_type": "mcq",
       "question_text": "...",
       "options": ["A. ...", "B. ...", "C. ...", "D. ..."],
       "correct_answer": "A",
       "explanation": "..."
+    }},
+    {{
+      "question_number": 3,
+      "question_type": "descriptive",
+      "question_text": "...",
+      "options": null,
+      "correct_answer": "Model answer text here...",
+      "explanation": "Key points: ..."
+    }},
+    {{
+      "question_number": 5,
+      "question_type": "scenario",
+      "question_text": "Scenario: ... What should the worker do?",
+      "options": null,
+      "correct_answer": "Model response: ...",
+      "explanation": "Key points: ..."
     }}
   ]
 }}
@@ -109,6 +133,7 @@ class QuizGenerator:
         return [
             QuestionOut(
                 question_number=q["question_number"],
+                question_type=q.get("question_type", "mcq"),
                 question_text=q["question_text"],
                 options=q.get("options"),
                 correct_answer=q["correct_answer"],

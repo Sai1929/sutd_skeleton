@@ -6,6 +6,7 @@ class Settings(BaseSettings):
         env_file=".env",
         env_file_encoding="utf-8",
         case_sensitive=False,
+        extra="ignore",
     )
 
     # ── App ──────────────────────────────────────────────────────
@@ -35,12 +36,10 @@ class Settings(BaseSettings):
     AZURE_OPENAI_EMBED_DEPLOYMENT: str = "text-embedding-3-small"
     AZURE_OPENAI_EMBED_DIMS: int = 1536
 
-    # ── DistilBERT ───────────────────────────────────────────────
-    DISTILBERT_MODEL_PATH: str = "./models/ehs_distilbert"
-    DISTILBERT_MAX_SEQ_LEN: int = 128
-    DISTILBERT_BATCH_SIZE: int = 32
-    DISTILBERT_DEVICE: str = "cpu"
-    DISTILBERT_TOP_K_OPTIONS: int = 10
+    # ── Embedding model (sentence-transformers) ──────────────────
+    EMBED_MODEL_NAME: str = "all-MiniLM-L6-v2"
+    HYBRID_VECTOR_THRESHOLD: float = 0.82
+    HYBRID_TRGM_THRESHOLD: float = 0.45
 
     # ── pgvector / HNSW ──────────────────────────────────────────
     HNSW_M: int = 12

@@ -1,21 +1,24 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { useChat } from '../hooks/useChat'
 import { ChatSidebar } from '../components/chat/ChatSidebar'
 import { MessageBubble } from '../components/chat/MessageBubble'
-import { TypingIndicator } from '../components/chat/TypingIndicator'
 import { ChatInput } from '../components/chat/ChatInput'
 
 export function ChatPage() {
   const { messages, input, isStreaming, send, setInput, clear } = useChat()
   const scrollRef = useRef<HTMLDivElement>(null)
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
 
   useEffect(() => {
-    if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight
+    const el = scrollRef.current
+    if (!el) return
+    const isNearBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 120
+    if (isNearBottom) el.scrollTop = el.scrollHeight
   }, [messages])
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr', height: 'calc(100vh - 68px)' }}>
-      <ChatSidebar onSend={send} hasMessages={messages.length > 0} onClear={clear} isStreaming={isStreaming} />
+    <div style={{ display: 'grid', gridTemplateColumns: sidebarCollapsed ? '48px 1fr' : '300px 1fr', height: 'calc(100vh - 68px)', transition: 'grid-template-columns 0.2s ease' }}>
+      <ChatSidebar onSend={send} hasMessages={messages.length > 0} onClear={clear} isStreaming={isStreaming} collapsed={sidebarCollapsed} onToggle={() => setSidebarCollapsed(v => !v)} />
       <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0, overflow: 'hidden' }}>
         <div ref={scrollRef} style={{ flex: 1, overflowY: 'auto', padding: '32px 48px 16px' }}>
           {messages.length === 0 ? (
@@ -35,11 +38,10 @@ export function ChatPage() {
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 18, maxWidth: 720, margin: '0 auto' }}>
               {messages.map((m, i) => <MessageBubble key={i} msg={m} />)}
-              {isStreaming && <TypingIndicator />}
             </div>
           )}
         </div>
-        <ChatInput value={input} onChange={setInput} onSend={() => send(input)} disabled={isStreaming} />
+        <ChatInput value={input} onChange={setInput} onSend={(img) => send(input, img)} disabled={isStreaming} />
       </div>
     </div>
   )

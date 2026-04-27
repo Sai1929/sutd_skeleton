@@ -1,0 +1,126 @@
+{
+  "base_url": "http://localhost:8001",
+  "endpoints": [
+    {
+      "name": "Inspection Recommendation",
+      "method": "POST",
+      "path": "/api/v1/inspect/recommend",
+      "description": "Given an activity name or description, returns hazard data. Checks DB cache first (hybrid vector + trigram search), falls back to LLM generation and saves result for future use.",
+      "request": {
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+          "activity": "string — activity name or description"
+        }
+      },
+      "request_example": {
+        "activity": "welding"
+      },
+      "response_example": {
+        "activity": "welding",
+        "hazard_types": [
+          "Arc Flash / UV Radiation",
+          "Fume Inhalation",
+          "Fire and Explosion",
+          "Electric Shock"
+        ],
+        "severity_likelihood": "High x Likely",
+        "moc_ppe": "Engineering controls (ventilation), Welding helmet with face shield, gloves, flame-resistant clothing",
+        "remarks": "Ensure proper ventilation and use of PPE to prevent exposure to hazardous fumes and radiation.",
+        "from_db": false
+      },
+      "response_fields": {
+        "activity": "string — echoes the input",
+        "hazard_types": "string[] — 3 to 4 specific named hazards",
+        "severity_likelihood": "string — one of: 'High x Likely', 'High x Unlikely', 'Medium x Likely', 'Medium x Unlikely', 'Low x Likely', 'Low x Unlikely'",
+        "moc_ppe": "string — control measure and required PPE",
+        "remarks": "string — single actionable safety remark",
+        "from_db": "boolean — true = retrieved from DB cache, false = LLM-generated"
+      }
+    },
+    {
+      "name": "Quiz Generation",
+      "method": "POST",
+      "path": "/api/v1/quiz/generate",
+      "description": "Generates 5 multiple-choice quiz questions from completed inspection data.",
+      "request": {
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+          "activity": "string",
+          "hazard_type": "string",
+          "severity_likelihood": "string",
+          "moc_ppe": "string",
+          "remarks": "string"
+        }
+      },
+      "request_example": {
+        "activity": "welding",
+        "hazard_type": "Arc Flash / UV Radiation, Fume Inhalation, Fire and Explosion, Electric Shock",
+        "severity_likelihood": "High x Likely",
+        "moc_ppe": "Engineering controls (ventilation), Welding helmet with face shield, gloves, flame-resistant clothing",
+        "remarks": "Ensure proper ventilation and use of PPE to prevent exposure to hazardous fumes and radiation."
+      },
+      "response_example": {
+        "questions": [
+          {
+            "question": "Which PPE is most critical when performing welding tasks?",
+            "options": [
+              "A) Hard hat",
+              "B) Welding helmet with face shield",
+              "C) High-visibility vest",
+              "D) Earplugs only"
+            ],
+            "answer": "B"
+          }
+        ]
+      },
+      "response_fields": {
+        "questions": "array of 5 question objects",
+        "questions[].question": "string — the question text",
+        "questions[].options": "string[] — 4 answer choices (A–D)",
+        "questions[].answer": "string — correct option letter"
+      }
+    },
+    {
+      "name": "WSH Risk Assessment Chatbot",
+      "method": "POST",
+      "path": "/api/v1/chat/query",
+      "description": "Stateless chatbot. Frontend owns full conversation history and sends it on every request. Returns structured risk assessment table in Markdown.",
+      "request": {
+        "headers": { "Content-Type": "application/json" },
+        "body": {
+          "message": "string — latest user message",
+          "history": "array of prior turn objects (can be empty on first turn)"
+        }
+      },
+      "request_example": {
+        "message": "Provide a risk assessment for confined space entry.",
+        "history": []
+      },
+      "response_example": {
+        "reply": "## Risk Assessment — Confined Space Entry\n\n| # | Activity | Hazard | ... |\n|---|----------|--------|-----|\n..."
+      },
+      "response_fields": {
+        "reply": "string — full Markdown response including RA table, risk matrix, references"
+      },
+      "history_format": {
+        "description": "Each prior turn is an object with role and content",
+        "example": [
+          { "role": "user", "content": "What are the risks of confined space entry?" },
+          { "role": "assistant", "content": "..." }
+        ]
+      }
+    },
+    {
+      "name": "Health Check",
+      "method": "GET",
+      "path": "/health/ready",
+      "response_example": {
+        "status": "ok",
+        "checks": {
+          "database": "ok",
+          "rec_engine": "ok"
+        }
+      }
+    }
+  ]
+}

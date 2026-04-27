@@ -1,4 +1,13 @@
-interface Props { activeTab: 'Inspection' | 'Chat'; onTab: (t: 'Inspection' | 'Chat') => void }
+type Tab = 'Activity RA' | 'Generate RA' | 'Document RA' | 'Quiz' | 'Hazard'
+interface Props { activeTab: Tab; onTab: (t: Tab) => void }
+
+const TAB_LABELS: { tab: Tab; label: string; sub: string }[] = [
+  { tab: 'Activity RA', label: 'Activity RA', sub: '§ 01' },
+  { tab: 'Generate RA', label: 'Generate RA', sub: '§ 02' },
+  { tab: 'Document RA', label: 'Document RA', sub: '§ 03' },
+  { tab: 'Quiz', label: 'Quiz', sub: '§ 04' },
+  { tab: 'Hazard', label: 'Hazard', sub: '§ 05' },
+]
 
 export function NavBar({ activeTab, onTab }: Props) {
   return (
@@ -23,16 +32,20 @@ export function NavBar({ activeTab, onTab }: Props) {
         </div>
       </div>
       <div style={{ display: 'flex', background: '#F5F2EC', borderRadius: 8, padding: 3, border: '1px solid #E4DFD3' }}>
-        {(['Inspection', 'Chat'] as const).map(tab => (
+        {TAB_LABELS.map(({ tab, label, sub }) => (
           <button key={tab} onClick={() => onTab(tab)} style={{
-            padding: '7px 18px', border: 'none', borderRadius: 6,
+            padding: '7px 16px', border: 'none', borderRadius: 6,
             background: activeTab === tab ? '#FFFFFF' : 'transparent',
             boxShadow: activeTab === tab ? '0 1px 2px rgba(11,18,32,0.08)' : 'none',
-            fontFamily: 'Inter, system-ui', fontSize: 13,
+            fontFamily: 'Inter, system-ui', fontSize: 12,
             fontWeight: activeTab === tab ? 600 : 500,
             color: activeTab === tab ? '#0B1220' : '#5A6272',
             cursor: 'pointer', letterSpacing: '-0.005em',
-          }}>{tab}</button>
+            display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1,
+          }}>
+            <span style={{ fontSize: 9, fontWeight: 500, letterSpacing: '0.1em', color: activeTab === tab ? '#1F3A8A' : '#9CA3AF', textTransform: 'uppercase' }}>{sub}</span>
+            {label}
+          </button>
         ))}
       </div>
     </nav>
