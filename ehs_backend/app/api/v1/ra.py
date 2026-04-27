@@ -7,8 +7,7 @@ from fastapi import APIRouter, Form, HTTPException
 from fastapi.responses import StreamingResponse
 
 from app.schemas.inspect import RARow, RecommendResponse
-from app.services.ra.generator import generate_ra
-from app.services.ra.docx_writer import markdown_to_docx
+from app.services.ra.json_docx_writer import json_to_docx
 from app.services.recommendation.ra_generator import generate_ra_json
 
 router = APIRouter(prefix="/ra")
@@ -29,7 +28,7 @@ async def generate_json(
     project_name: Annotated[str, Form()] = "",
     description: Annotated[str, Form()] = "",
 ) -> RecommendResponse:
-    """Project description → structured RA JSON (same schema as Req1)."""
+    """Project description → structured full RA JSON."""
     project_text = description.strip() or project_name.strip()
     if not project_text:
         raise HTTPException(status_code=422, detail="Provide a project description or project name.")
@@ -61,8 +60,8 @@ async def generate_docx(
         raise HTTPException(status_code=422, detail="Provide a project description or project name.")
 
     resolved_name = project_name.strip() or "Untitled Project"
-    ra_markdown = await generate_ra(project_text, resolved_name)
-    docx_bytes = markdown_to_docx(ra_markdown, resolved_name)
+    ra_dict = await generate_ra_json(project_text)
+    docx_bytes = json_to_docx(ra_dict, resolved_name)
 
     filename = _safe_filename(resolved_name) + ".docx"
     return StreamingResponse(

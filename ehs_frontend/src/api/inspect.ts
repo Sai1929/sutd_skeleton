@@ -14,13 +14,29 @@ export interface RARow {
   residual_risk: string
 }
 
+export interface RiskBand {
+  range: string
+  level: string
+  action: string
+}
+
 export interface FullRA {
   project: string
+  document_no?: string
+  revision?: string
+  date?: string
+  prepared_by?: string
+  reviewed_by?: string
+  approved_by?: string
+  scope?: string
+  purpose?: string
   assumptions: string[]
   rows: RARow[]
-  risk_matrix_note?: string
+  risk_matrix?: { note: string; bands: RiskBand[] }
+  emergency_response?: string[]
   chemical_note?: string
   references?: string[]
+  review_schedule?: string
   [key: string]: unknown
 }
 
