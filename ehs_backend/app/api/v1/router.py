@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.v1 import inspect, ra, quiz, hazard
+from app.api.v1 import admin, hazard, inspect, quiz, ra
 
 router = APIRouter(prefix="/api/v1")
 
@@ -17,3 +17,6 @@ router.include_router(quiz.router)
 
 # Req 5: Text/image → Hazard analysis + risk control measures
 router.include_router(hazard.router)
+
+# Admin — token usage reporting
+router.include_router(admin.router)

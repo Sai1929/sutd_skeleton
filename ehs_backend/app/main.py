@@ -14,6 +14,7 @@ from app.config import settings
 from app.core.exceptions import http_exception_handler, unhandled_exception_handler
 from app.core.logging import setup_logging
 from app.core.middleware import RequestIDMiddleware
+from app.core.auth_middleware import B2BAuthMiddleware
 from app.core.rate_limit import limiter
 from app.core.security_headers import SecurityHeadersMiddleware
 from app.db.session import AsyncSessionLocal, close_engine, init_engine
@@ -102,6 +103,9 @@ def create_app() -> FastAPI:
 
     # ── Security headers ─────────────────────────────────────────
     app.add_middleware(SecurityHeadersMiddleware)
+
+    # ── B2B auth (X-API-Key + X-Student-ID) ─────────────────────
+    app.add_middleware(B2BAuthMiddleware)
 
     # ── Request ID ──────────────────────────────────────────────
     app.add_middleware(RequestIDMiddleware)

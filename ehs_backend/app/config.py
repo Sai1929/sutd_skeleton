@@ -29,6 +29,13 @@ class Settings(BaseSettings):
             return [o.strip() for o in v.split(",") if o.strip()]
         return v
 
+    # ── B2B Auth ─────────────────────────────────────────────────
+    # Shared secret — SUTD app backend sends this in X-API-Key header
+    B2B_API_KEY: str = "change-me-b2b-secret"
+
+    # ── Token quota ───────────────────────────────────────────────
+    TOKEN_DAILY_LIMIT: int = 50000  # tokens per student per day
+
     # ── Rate limiting ─────────────────────────────────────────────
     RATE_LIMIT_DEFAULT: str = "200/minute"
     RATE_LIMIT_HEAVY: str = "20/minute"   # for LLM-heavy endpoints

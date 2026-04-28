@@ -1,6 +1,7 @@
-from fastapi import APIRouter, File, HTTPException, Request, UploadFile
+from fastapi import APIRouter, Depends, File, HTTPException, Request, UploadFile
 
 from app.config import settings
+from app.core.quota_depends import QuotaCtx, quota_dependency
 from app.core.rate_limit import limiter
 from app.schemas.inspect import RARow, RecommendRequest, RecommendResponse
 
@@ -19,9 +20,18 @@ def _build_response(activity: str, ra_dict: dict, from_db: bool, include_full: b
     )
 
 
+def _estimate_tokens(text: str) -> int:
+    """Rough token estimate: ~4 chars per token."""
+    return max(1, len(text) // 4)
+
+
 @router.post("/recommend", tags=["Req1 · Activity → RA JSON"], response_model=RecommendResponse)
 @limiter.limit(settings.RATE_LIMIT_HEAVY)
-async def recommend(body: RecommendRequest, request: Request) -> RecommendResponse:
+async def recommend(
+    body: RecommendRequest,
+    request: Request,
+    ctx: QuotaCtx = Depends(quota_dependency),
+) -> RecommendResponse:
     """Activity text → RA JSON (DB lookup + LLM fallback)."""
     if not body.activity.strip():
         raise HTTPException(status_code=422, detail="activity must not be empty")
@@ -32,7 +42,6 @@ async def recommend(body: RecommendRequest, request: Request) -> RecommendRespon
     if lookup is not None:
         ra_dict, from_db = await lookup.lookup(activity)
     else:
-        # No DB/embed — fall back to direct LLM generation
         if not settings.GROQ_API_KEY:
             raise HTTPException(
                 status_code=503,
@@ -42,6 +51,13 @@ async def recommend(body: RecommendRequest, request: Request) -> RecommendRespon
         ra_dict = await generate_ra_json(activity)
         from_db = False
 
+    import json
+    response_text = json.dumps(ra_dict)
+    await ctx.record(
+        tokens_in=_estimate_tokens(activity),
+        tokens_out=_estimate_tokens(response_text),
+    )
+
     return _build_response(activity, ra_dict, from_db)
 
 
@@ -49,6 +65,7 @@ async def recommend(body: RecommendRequest, request: Request) -> RecommendRespon
 @limiter.limit(settings.RATE_LIMIT_HEAVY)
 async def from_document(
     request: Request,
+    ctx: QuotaCtx = Depends(quota_dependency),
     file: UploadFile = File(..., description="Word document (.docx) containing RA data"),
 ) -> RecommendResponse:
     """Upload .docx → extract RA data → normalise to JSON."""
@@ -67,4 +84,11 @@ async def from_document(
 
     ra_dict = await generate_ra_from_document(doc_text, file.filename or "upload.docx")
     activity = ra_dict.get("project", file.filename or "Uploaded Document")
+
+    import json
+    await ctx.record(
+        tokens_in=_estimate_tokens(doc_text),
+        tokens_out=_estimate_tokens(json.dumps(ra_dict)),
+    )
+
     return _build_response(activity, ra_dict, from_db=False, include_full=True)

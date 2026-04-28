@@ -1,12 +1,14 @@
 """Req2 · Description → RA JSON + Word document download."""
 import io
+import json
 import re
 from typing import Annotated
 
-from fastapi import APIRouter, Form, HTTPException, Request
+from fastapi import APIRouter, Depends, Form, HTTPException, Request
 from fastapi.responses import StreamingResponse
 
 from app.config import settings
+from app.core.quota_depends import QuotaCtx, quota_dependency
 from app.core.rate_limit import limiter
 from app.schemas.inspect import RARow, RecommendResponse
 from app.services.ra.json_docx_writer import json_to_docx
@@ -21,6 +23,10 @@ def _safe_filename(name: str) -> str:
     return re.sub(r"[^\w\- ]", "", name).strip().replace(" ", "_") or "risk_assessment"
 
 
+def _est(text: str) -> int:
+    return max(1, len(text) // 4)
+
+
 @router.post(
     "/generate",
     tags=["Req2 · Description → Word Doc RA"],
@@ -29,6 +35,7 @@ def _safe_filename(name: str) -> str:
 @limiter.limit(settings.RATE_LIMIT_HEAVY)
 async def generate_json(
     request: Request,
+    ctx: QuotaCtx = Depends(quota_dependency),
     project_name: Annotated[str, Form()] = "",
     description: Annotated[str, Form()] = "",
 ) -> RecommendResponse:
@@ -39,6 +46,9 @@ async def generate_json(
 
     resolved_name = project_name.strip() or project_text
     ra_dict = await generate_ra_json(project_text)
+    ra_str = json.dumps(ra_dict)
+
+    await ctx.record(tokens_in=_est(project_text), tokens_out=_est(ra_str))
 
     return RecommendResponse(
         activity=resolved_name,
@@ -56,6 +66,7 @@ async def generate_json(
 @limiter.limit(settings.RATE_LIMIT_HEAVY)
 async def generate_docx(
     request: Request,
+    ctx: QuotaCtx = Depends(quota_dependency),
     project_name: Annotated[str, Form()] = "",
     description: Annotated[str, Form()] = "",
 ) -> StreamingResponse:
@@ -66,8 +77,11 @@ async def generate_docx(
 
     resolved_name = project_name.strip() or "Untitled Project"
     ra_dict = await generate_ra_json(project_text)
-    docx_bytes = json_to_docx(ra_dict, resolved_name)
+    ra_str = json.dumps(ra_dict)
 
+    await ctx.record(tokens_in=_est(project_text), tokens_out=_est(ra_str))
+
+    docx_bytes = json_to_docx(ra_dict, resolved_name)
     filename = _safe_filename(resolved_name) + ".docx"
     return StreamingResponse(
         io.BytesIO(docx_bytes),
