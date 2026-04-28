@@ -1,11 +1,12 @@
-"""FastAPI application factory.
-Lifespan: loads embedding model + DB at startup.
-"""
+"""FastAPI application factory."""
 from contextlib import asynccontextmanager
 
 import structlog
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
+from slowapi import _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
 
 from app.api.health import router as health_router
 from app.api.v1.router import router as v1_router
@@ -13,6 +14,8 @@ from app.config import settings
 from app.core.exceptions import http_exception_handler, unhandled_exception_handler
 from app.core.logging import setup_logging
 from app.core.middleware import RequestIDMiddleware
+from app.core.rate_limit import limiter
+from app.core.security_headers import SecurityHeadersMiddleware
 from app.db.session import AsyncSessionLocal, close_engine, init_engine
 
 log = structlog.get_logger()
@@ -33,12 +36,12 @@ async def lifespan(app: FastAPI):
         log.warning("db.unavailable", reason=str(exc))
 
     # ── Sentence-transformer embedding model ────────────────────
+    embed_model = None
     try:
         from sentence_transformers import SentenceTransformer
         embed_model = SentenceTransformer(settings.EMBED_MODEL_NAME)
         log.info("embed_model.loaded", name=settings.EMBED_MODEL_NAME)
     except Exception as exc:
-        embed_model = None
         log.warning("embed_model.failed", reason=str(exc))
 
     # ── Hybrid lookup (pgvector + trgm + LLM fallback) ─────────
@@ -48,9 +51,14 @@ async def lifespan(app: FastAPI):
         log.info("hybrid_lookup.ready")
     else:
         app.state.hybrid_lookup = None
-        log.warning("hybrid_lookup.unavailable", embed_ok=embed_model is not None, db_ok=app.state.db_available)
+        log.warning(
+            "hybrid_lookup.unavailable",
+            embed_ok=embed_model is not None,
+            db_ok=app.state.db_available,
+            fallback="LLM direct generation",
+        )
 
-    # ── Groq client (used by Req4 Quiz) ────────────────────────
+    # ── Groq client ─────────────────────────────────────────────
     if settings.GROQ_API_KEY:
         from app.services.chat.client import GroqChatClient
         app.state.chat_client = GroqChatClient()
@@ -87,18 +95,31 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
 
+    # ── Rate limiting ────────────────────────────────────────────
+    app.state.limiter = limiter
+    app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+    app.add_middleware(SlowAPIMiddleware)
+
+    # ── Security headers ─────────────────────────────────────────
+    app.add_middleware(SecurityHeadersMiddleware)
+
+    # ── Request ID ──────────────────────────────────────────────
     app.add_middleware(RequestIDMiddleware)
+
+    # ── CORS ────────────────────────────────────────────────────
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["*"],
+        allow_origins=settings.ALLOWED_ORIGINS,
         allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
+        allow_methods=["GET", "POST", "OPTIONS"],
+        allow_headers=["Content-Type", "Authorization", "X-Request-ID"],
     )
 
+    # ── Exception handlers ───────────────────────────────────────
     app.add_exception_handler(HTTPException, http_exception_handler)
     app.add_exception_handler(Exception, unhandled_exception_handler)
 
+    # ── Routers ──────────────────────────────────────────────────
     app.include_router(health_router)
     app.include_router(v1_router)
 

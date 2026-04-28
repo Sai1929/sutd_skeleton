@@ -1,9 +1,11 @@
 """Req5 · Hazard Analysis — text or image → risk control measures."""
 import base64
-
-from fastapi import APIRouter, File, Form, HTTPException, UploadFile
 from typing import Annotated
 
+from fastapi import APIRouter, File, Form, HTTPException, Request, UploadFile
+
+from app.config import settings
+from app.core.rate_limit import limiter
 from app.schemas.hazard import HazardAnalysisResponse
 from app.services.hazard.analyser import analyse_hazard
 
@@ -18,7 +20,9 @@ _ALLOWED_MIME = {"image/jpeg", "image/png", "image/webp", "image/gif"}
     tags=["Req5 · Hazard → Risk Controls"],
     response_model=HazardAnalysisResponse,
 )
+@limiter.limit(settings.RATE_LIMIT_HEAVY)
 async def analyse(
+    request: Request,
     text: Annotated[str, Form()] = "",
     image: Annotated[UploadFile | None, File()] = None,
 ) -> HazardAnalysisResponse:

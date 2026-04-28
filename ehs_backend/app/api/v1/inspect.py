@@ -1,4 +1,7 @@
 from fastapi import APIRouter, File, HTTPException, Request, UploadFile
+
+from app.config import settings
+from app.core.rate_limit import limiter
 from app.schemas.inspect import RARow, RecommendRequest, RecommendResponse
 
 router = APIRouter(prefix="/inspect")
@@ -17,17 +20,35 @@ def _build_response(activity: str, ra_dict: dict, from_db: bool, include_full: b
 
 
 @router.post("/recommend", tags=["Req1 · Activity → RA JSON"], response_model=RecommendResponse)
+@limiter.limit(settings.RATE_LIMIT_HEAVY)
 async def recommend(body: RecommendRequest, request: Request) -> RecommendResponse:
     """Activity text → RA JSON (DB lookup + LLM fallback)."""
     if not body.activity.strip():
         raise HTTPException(status_code=422, detail="activity must not be empty")
-    lookup = request.app.state.hybrid_lookup
-    ra_dict, from_db = await lookup.lookup(body.activity.strip())
-    return _build_response(body.activity.strip(), ra_dict, from_db)
+
+    activity = body.activity.strip()
+    lookup = getattr(request.app.state, "hybrid_lookup", None)
+
+    if lookup is not None:
+        ra_dict, from_db = await lookup.lookup(activity)
+    else:
+        # No DB/embed — fall back to direct LLM generation
+        if not settings.GROQ_API_KEY:
+            raise HTTPException(
+                status_code=503,
+                detail="Service unavailable: no database and no GROQ_API_KEY configured.",
+            )
+        from app.services.recommendation.ra_generator import generate_ra_json
+        ra_dict = await generate_ra_json(activity)
+        from_db = False
+
+    return _build_response(activity, ra_dict, from_db)
 
 
 @router.post("/from-document", tags=["Req3 · Document → RA JSON"], response_model=RecommendResponse)
+@limiter.limit(settings.RATE_LIMIT_HEAVY)
 async def from_document(
+    request: Request,
     file: UploadFile = File(..., description="Word document (.docx) containing RA data"),
 ) -> RecommendResponse:
     """Upload .docx → extract RA data → normalise to JSON."""

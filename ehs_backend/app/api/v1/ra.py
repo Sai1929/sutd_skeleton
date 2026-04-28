@@ -3,9 +3,11 @@ import io
 import re
 from typing import Annotated
 
-from fastapi import APIRouter, Form, HTTPException
+from fastapi import APIRouter, Form, HTTPException, Request
 from fastapi.responses import StreamingResponse
 
+from app.config import settings
+from app.core.rate_limit import limiter
 from app.schemas.inspect import RARow, RecommendResponse
 from app.services.ra.json_docx_writer import json_to_docx
 from app.services.recommendation.ra_generator import generate_ra_json
@@ -24,7 +26,9 @@ def _safe_filename(name: str) -> str:
     tags=["Req2 · Description → Word Doc RA"],
     response_model=RecommendResponse,
 )
+@limiter.limit(settings.RATE_LIMIT_HEAVY)
 async def generate_json(
+    request: Request,
     project_name: Annotated[str, Form()] = "",
     description: Annotated[str, Form()] = "",
 ) -> RecommendResponse:
@@ -49,7 +53,9 @@ async def generate_json(
     "/generate/docx",
     tags=["Req2 · Description → Word Doc RA"],
 )
+@limiter.limit(settings.RATE_LIMIT_HEAVY)
 async def generate_docx(
+    request: Request,
     project_name: Annotated[str, Form()] = "",
     description: Annotated[str, Form()] = "",
 ) -> StreamingResponse:

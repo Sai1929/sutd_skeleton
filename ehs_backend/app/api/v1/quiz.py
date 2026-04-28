@@ -1,5 +1,7 @@
 from fastapi import APIRouter, HTTPException, Request
 
+from app.config import settings
+from app.core.rate_limit import limiter
 from app.schemas.quiz import QuizGenerateRequest, QuizGenerateResponse
 from app.services.quiz.generator import QuizGenerator
 
@@ -7,6 +9,7 @@ router = APIRouter(prefix="/quiz")
 
 
 @router.post("/generate", tags=["Req4 · RA → Compliance Quiz"], response_model=QuizGenerateResponse)
+@limiter.limit(settings.RATE_LIMIT_HEAVY)
 async def generate_quiz(body: QuizGenerateRequest, request: Request) -> QuizGenerateResponse:
     chat_client = getattr(request.app.state, "chat_client", None)
     if chat_client is None:

@@ -1,3 +1,6 @@
+from typing import List
+
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -14,27 +17,27 @@ class Settings(BaseSettings):
     APP_VERSION: str = "1.0.0"
     DEBUG: bool = False
     SECRET_KEY: str = "change-me"
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440  # 24 hours
-    REFRESH_TOKEN_EXPIRE_DAYS: int = 7
+
+    # ── CORS ─────────────────────────────────────────────────────
+    # Comma-separated in .env: ALLOWED_ORIGINS=https://app.example.com,https://admin.example.com
+    ALLOWED_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:3000"]
+
+    @field_validator("ALLOWED_ORIGINS", mode="before")
+    @classmethod
+    def parse_origins(cls, v):
+        if isinstance(v, str):
+            return [o.strip() for o in v.split(",") if o.strip()]
+        return v
+
+    # ── Rate limiting ─────────────────────────────────────────────
+    RATE_LIMIT_DEFAULT: str = "200/minute"
+    RATE_LIMIT_HEAVY: str = "20/minute"   # for LLM-heavy endpoints
 
     # ── Database ─────────────────────────────────────────────────
     DATABASE_URL: str = "postgresql+asyncpg://ehs_user:password@localhost:5432/ehs_db"
     DB_POOL_SIZE: int = 10
     DB_MAX_OVERFLOW: int = 20
     DB_POOL_TIMEOUT: int = 30
-
-    # ── Session / conversation cleanup thresholds ────────────────
-    SESSION_TTL_SECONDS: int = 3600   # stale sessions deleted after this many seconds
-    CONV_TTL_SECONDS: int = 7200      # stale conversations deleted after this many seconds
-    CONV_MAX_TURNS: int = 10          # sliding window: keep last N human+ai turn pairs
-
-    # ── Azure OpenAI ─────────────────────────────────────────────
-    AZURE_OPENAI_ENDPOINT: str = ""
-    AZURE_OPENAI_API_KEY: str = ""
-    AZURE_OPENAI_API_VERSION: str = "2024-02-01"
-    AZURE_OPENAI_CHAT_DEPLOYMENT: str = "gpt-4o-mini"
-    AZURE_OPENAI_EMBED_DEPLOYMENT: str = "text-embedding-3-small"
-    AZURE_OPENAI_EMBED_DIMS: int = 1536
 
     # ── Embedding model (sentence-transformers) ──────────────────
     EMBED_MODEL_NAME: str = "all-MiniLM-L6-v2"
@@ -47,31 +50,11 @@ class Settings(BaseSettings):
     HNSW_EF_SEARCH: int = 100
     VECTOR_SEARCH_TOP_K: int = 20
 
-    # ── BM25 ─────────────────────────────────────────────────────
-    BM25_SEARCH_TOP_K: int = 20
-
-    # ── RRF ──────────────────────────────────────────────────────
-    RRF_K: int = 60
-
-    # ── Reranker ─────────────────────────────────────────────────
-    RERANKER_MODEL: str = "BAAI/bge-reranker-base"
-    RERANKER_TOP_K: int = 5
-    RERANKER_BATCH_SIZE: int = 32
-
-    # ── Chunking ─────────────────────────────────────────────────
-    CHUNK_TARGET_TOKENS: int = 400
-    CHUNK_OVERLAP_TOKENS: int = 50
-
     # ── Quiz ─────────────────────────────────────────────────────
     QUIZ_NUM_QUESTIONS: int = 5
     QUIZ_MCQ_RATIO: float = 1.0
 
-    # ── Embedding batching ───────────────────────────────────────
-    EMBED_BATCH_SIZE: int = 16
-    EMBED_MAX_RETRIES: int = 3
-    EMBED_RETRY_BASE_DELAY: float = 1.0
-
-    # ── Groq (risk assessment chatbot) ─────────────────────────
+    # ── Groq ─────────────────────────────────────────────────────
     GROQ_API_KEY: str = ""
     GROQ_MODEL: str = "meta-llama/llama-4-scout-17b-16e-instruct"
 
